@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AF973C72F20689414B07D0F /* Pods_BreadCrumbs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5CA6AEAE24E5B73FCF0F78B /* Pods_BreadCrumbs.framework */; };
 		5603AFCF1C742FA5001DA97F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5603AFCE1C742FA5001DA97F /* main.m */; };
 		5603AFD21C742FA5001DA97F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5603AFD11C742FA5001DA97F /* AppDelegate.m */; };
 		5603AFD51C742FA5001DA97F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5603AFD41C742FA5001DA97F /* ViewController.m */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1654A3AAFF7BB1D5D20A5120 /* Pods-BreadCrumbs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreadCrumbs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BreadCrumbs/Pods-BreadCrumbs.debug.xcconfig"; sourceTree = "<group>"; };
 		5603AFCA1C742FA5001DA97F /* BreadCrumbs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreadCrumbs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5603AFCE1C742FA5001DA97F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5603AFD01C742FA5001DA97F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -27,8 +29,10 @@
 		5603AFD91C742FA5001DA97F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5603AFDC1C742FA5001DA97F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5603AFDE1C742FA5001DA97F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E205C0A63F3494F313DC1F3 /* Pods-BreadCrumbs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreadCrumbs.release.xcconfig"; path = "Pods/Target Support Files/Pods-BreadCrumbs/Pods-BreadCrumbs.release.xcconfig"; sourceTree = "<group>"; };
 		7797B2216EC4B82A7BC7D36E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		79C35D91502A109FB0BFDDF6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A5CA6AEAE24E5B73FCF0F78B /* Pods_BreadCrumbs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreadCrumbs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3FED0B1D1011768696C815A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -38,6 +42,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8261190B830013CF66F1C038 /* libPods.a in Frameworks */,
+				1AF973C72F20689414B07D0F /* Pods_BreadCrumbs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +54,8 @@
 			children = (
 				7797B2216EC4B82A7BC7D36E /* Pods.debug.xcconfig */,
 				79C35D91502A109FB0BFDDF6 /* Pods.release.xcconfig */,
+				1654A3AAFF7BB1D5D20A5120 /* Pods-BreadCrumbs.debug.xcconfig */,
+				6E205C0A63F3494F313DC1F3 /* Pods-BreadCrumbs.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -99,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				E3FED0B1D1011768696C815A /* libPods.a */,
+				A5CA6AEAE24E5B73FCF0F78B /* Pods_BreadCrumbs.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -200,7 +208,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BreadCrumbs/Pods-BreadCrumbs-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		75ED0D07A50EA18862CB44D5 /* Copy Pods Resources */ = {
@@ -215,7 +223,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BreadCrumbs/Pods-BreadCrumbs-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -335,7 +343,7 @@
 		};
 		5603AFE21C742FA5001DA97F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7797B2216EC4B82A7BC7D36E /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 1654A3AAFF7BB1D5D20A5120 /* Pods-BreadCrumbs.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -348,7 +356,7 @@
 		};
 		5603AFE31C742FA5001DA97F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 79C35D91502A109FB0BFDDF6 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 6E205C0A63F3494F313DC1F3 /* Pods-BreadCrumbs.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

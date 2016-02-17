@@ -1,0 +1,162 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "RAMItemAnimationProtocol"
+- "RAMItemAnimation"
+provides-nominal:
+- "P27RAMAnimatedTabBarController24RAMItemAnimationProtocol"
+- "C27RAMAnimatedTabBarController16RAMItemAnimation"
+- "VC27RAMAnimatedTabBarController16RAMItemAnimation9Constants"
+- "VVC27RAMAnimatedTabBarController16RAMItemAnimation9Constants13AnimationKeys"
+provides-member:
+- ["P27RAMAnimatedTabBarController24RAMItemAnimationProtocol", ""]
+- ["C27RAMAnimatedTabBarController16RAMItemAnimation", ""]
+- ["VC27RAMAnimatedTabBarController16RAMItemAnimation9Constants", ""]
+- ["VVC27RAMAnimatedTabBarController16RAMItemAnimation9Constants13AnimationKeys", ""]
+provides-dynamic-lookup:
+- "playAnimation"
+- "selectedState"
+- "iconSelectedColor"
+- "duration"
+- "deselectAnimation"
+- "textSelectedColor"
+depends-top-level:
+- "RAMItemAnimationProtocol"
+- "UILabel"
+- "StringLiteralType"
+- "NSObject"
+- "UIColor"
+- "CGFloat"
+- "RAMItemAnimation"
+- "UIImageView"
+depends-member:
+- ["VVC27RAMAnimatedTabBarController16RAMItemAnimation9Constants13AnimationKeys", "KeyFrame"]
+- ["VVC27RAMAnimatedTabBarController16RAMItemAnimation9Constants13AnimationKeys", "Opacity"]
+- ["VVC27RAMAnimatedTabBarController16RAMItemAnimation9Constants13AnimationKeys", "PositionY"]
+- ["VVC27RAMAnimatedTabBarController16RAMItemAnimation9Constants13AnimationKeys", "Rotation"]
+- ["VVC27RAMAnimatedTabBarController16RAMItemAnimation9Constants13AnimationKeys", "Scale"]
+- ["VVC27RAMAnimatedTabBarController16RAMItemAnimation9Constants13AnimationKeys", "init"]
+- ["PSs9AnyObject", "UIColor"]
+- ["PSs9AnyObject", "deselectAnimation"]
+- ["PSs9AnyObject", "duration"]
+- ["PSs9AnyObject", "iconSelectedColor"]
+- ["PSs9AnyObject", "init"]
+- ["PSs9AnyObject", "playAnimation"]
+- ["PSs9AnyObject", "selectedState"]
+- ["PSs9AnyObject", "textSelectedColor"]
+- ["PSs9AnyObject", ""]
+- ["V12CoreGraphics7CGFloat", "deinit"]
+- ["PSs11CVarArgType", "UIColor"]
+- ["PSs11CVarArgType", "deselectAnimation"]
+- ["PSs11CVarArgType", "duration"]
+- ["PSs11CVarArgType", "iconSelectedColor"]
+- ["PSs11CVarArgType", "init"]
+- ["PSs11CVarArgType", "playAnimation"]
+- ["PSs11CVarArgType", "selectedState"]
+- ["PSs11CVarArgType", "textSelectedColor"]
+- ["PSs11CVarArgType", ""]
+- ["VC27RAMAnimatedTabBarController16RAMItemAnimation9Constants", "AnimationKeys"]
+- ["VC27RAMAnimatedTabBarController16RAMItemAnimation9Constants", "init"]
+- ["PSs23CustomStringConvertible", "UIColor"]
+- ["PSs23CustomStringConvertible", "deselectAnimation"]
+- ["PSs23CustomStringConvertible", "duration"]
+- ["PSs23CustomStringConvertible", "iconSelectedColor"]
+- ["PSs23CustomStringConvertible", "init"]
+- ["PSs23CustomStringConvertible", "playAnimation"]
+- ["PSs23CustomStringConvertible", "selectedState"]
+- ["PSs23CustomStringConvertible", "textSelectedColor"]
+- ["PSs23CustomStringConvertible", ""]
+- ["PSs9Equatable", "UIColor"]
+- ["PSs9Equatable", "deselectAnimation"]
+- ["PSs9Equatable", "duration"]
+- ["PSs9Equatable", "iconSelectedColor"]
+- ["PSs9Equatable", "init"]
+- ["PSs9Equatable", "playAnimation"]
+- ["PSs9Equatable", "selectedState"]
+- ["PSs9Equatable", "textSelectedColor"]
+- ["PSs9Equatable", ""]
+- ["PSs8Hashable", "UIColor"]
+- ["PSs8Hashable", "deselectAnimation"]
+- ["PSs8Hashable", "duration"]
+- ["PSs8Hashable", "iconSelectedColor"]
+- ["PSs8Hashable", "init"]
+- ["PSs8Hashable", "playAnimation"]
+- ["PSs8Hashable", "selectedState"]
+- ["PSs8Hashable", "textSelectedColor"]
+- ["PSs8Hashable", ""]
+- ["PSo8NSCoding", "init"]
+- ["PSo9NSCopying", "init"]
+- ["CSo8NSObject", "CGFloat"]
+- ["CSo8NSObject", "UIColor"]
+- ["CSo8NSObject", "UIImageView"]
+- ["CSo8NSObject", "UILabel"]
+- ["CSo8NSObject", "deselectAnimation"]
+- ["CSo8NSObject", "duration"]
+- ["CSo8NSObject", "iconSelectedColor"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "playAnimation"]
+- ["CSo8NSObject", "selectedState"]
+- ["CSo8NSObject", "textSelectedColor"]
+- ["CSo8NSObject", ""]
+- ["PSo16NSObjectProtocol", "UIColor"]
+- ["PSo16NSObjectProtocol", "deselectAnimation"]
+- ["PSo16NSObjectProtocol", "duration"]
+- ["PSo16NSObjectProtocol", "iconSelectedColor"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "playAnimation"]
+- ["PSo16NSObjectProtocol", "selectedState"]
+- ["PSo16NSObjectProtocol", "textSelectedColor"]
+- ["PSo16NSObjectProtocol", ""]
+- ["PSo14NSSecureCoding", "init"]
+- ["C27RAMAnimatedTabBarController16RAMItemAnimation", "CGFloat"]
+- ["C27RAMAnimatedTabBarController16RAMItemAnimation", "Constants"]
+- ["C27RAMAnimatedTabBarController16RAMItemAnimation", "UIColor"]
+- ["C27RAMAnimatedTabBarController16RAMItemAnimation", "UIImageView"]
+- ["C27RAMAnimatedTabBarController16RAMItemAnimation", "UILabel"]
+- ["C27RAMAnimatedTabBarController16RAMItemAnimation", "deinit"]
+- ["C27RAMAnimatedTabBarController16RAMItemAnimation", "deselectAnimation"]
+- ["C27RAMAnimatedTabBarController16RAMItemAnimation", "duration"]
+- ["C27RAMAnimatedTabBarController16RAMItemAnimation", "iconSelectedColor"]
+- ["C27RAMAnimatedTabBarController16RAMItemAnimation", "init"]
+- ["C27RAMAnimatedTabBarController16RAMItemAnimation", "playAnimation"]
+- ["C27RAMAnimatedTabBarController16RAMItemAnimation", "selectedState"]
+- ["C27RAMAnimatedTabBarController16RAMItemAnimation", "textSelectedColor"]
+- ["P27RAMAnimatedTabBarController24RAMItemAnimationProtocol", "UIColor"]
+- ["P27RAMAnimatedTabBarController24RAMItemAnimationProtocol", "UIImageView"]
+- ["P27RAMAnimatedTabBarController24RAMItemAnimationProtocol", "UILabel"]
+- ["P27RAMAnimatedTabBarController24RAMItemAnimationProtocol", "deselectAnimation"]
+- ["P27RAMAnimatedTabBarController24RAMItemAnimationProtocol", "playAnimation"]
+- ["P27RAMAnimatedTabBarController24RAMItemAnimationProtocol", "selectedState"]
+- ["P27RAMAnimatedTabBarController24RAMItemAnimationProtocol", ""]
+- ["CSo7UIColor", "init"]
+- ["PSs24_ColorLiteralConvertible", "init"]
+depends-nominal:
+- "VVC27RAMAnimatedTabBarController16RAMItemAnimation9Constants13AnimationKeys"
+- "PSs9AnyObject"
+- "V12CoreGraphics7CGFloat"
+- "PSs11CVarArgType"
+- "VC27RAMAnimatedTabBarController16RAMItemAnimation9Constants"
+- "PSs23CustomStringConvertible"
+- "PSs9Equatable"
+- "PSs8Hashable"
+- "PSo8NSCoding"
+- "PSo9NSCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo14NSSecureCoding"
+- "C27RAMAnimatedTabBarController16RAMItemAnimation"
+- "P27RAMAnimatedTabBarController24RAMItemAnimationProtocol"
+- "CSo7UIColor"
+- "PSs24_ColorLiteralConvertible"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/Target Support Files/RAMAnimatedTabBarController/RAMAnimatedTabBarController-umbrella.h"
+- "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Build/Intermediates/Pods.build/Debug-iphonesimulator/RAMAnimatedTabBarController.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+interface-hash: "2ee21c2c15b242dbfbd3c7481d1d2079"
