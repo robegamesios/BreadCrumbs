@@ -7,22 +7,22 @@ provides-member:
 - ["C27RAMAnimatedTabBarController18RAMBounceAnimation", ""]
 provides-dynamic-lookup:
 - "selectedState"
-- "playAnimation"
 - "deselectAnimation"
 - "playBounceAnimation"
+- "playAnimation"
 depends-top-level:
-- !private "CAKeyframeAnimation"
-- "UILabel"
-- !private "=="
-- !private "UIImageRenderingMode"
 - "RAMItemAnimation"
-- !private "kCAAnimationCubic"
 - "RAMBounceAnimation"
-- "UIColor"
 - !private "CGColorGetAlpha"
-- !private "Array"
 - !private "NSTimeInterval"
 - "UIImageView"
+- !private "kCAAnimationCubic"
+- !private "UIImageRenderingMode"
+- !private "Array"
+- "UILabel"
+- !private "CAKeyframeAnimation"
+- "UIColor"
+- !private "=="
 depends-member:
 - !private ["PSs16AbsoluteValuable", "init"]
 - !private ["VVC27RAMAnimatedTabBarController16RAMItemAnimation9Constants13AnimationKeys", "Scale"]

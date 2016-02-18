@@ -18,27 +18,27 @@ provides-member:
 - ["C27RAMAnimatedTabBarController34RAMFlipTopTransitionItemAnimations", ""]
 - ["C27RAMAnimatedTabBarController37RAMFlipBottomTransitionItemAnimations", ""]
 provides-dynamic-lookup:
+- "deselectAnimation"
 - "selectedState"
 - "playAnimation"
 - "selectedColor"
-- "deselectAnimation"
 depends-top-level:
-- !private "NSTimeInterval"
-- !private "UIImageRenderingMode"
-- !private "=="
-- "RAMFlipLeftTransitionItemAnimations"
 - "RAMFlipRightTransitionItemAnimations"
-- "UIImageView"
-- "RAMFlipBottomTransitionItemAnimations"
-- "UIViewAnimationOptions"
-- "UIColor"
-- "RAMFlipTopTransitionItemAnimations"
-- !private "CGColorGetAlpha"
-- "RAMItemAnimation"
 - "UILabel"
-- "RAMTransitionItemAnimations"
+- "UIImageView"
+- !private "=="
+- "UIColor"
+- "UIViewAnimationOptions"
+- "RAMFlipLeftTransitionItemAnimations"
+- !private "UIImageRenderingMode"
+- "RAMFlipBottomTransitionItemAnimations"
 - !private "UIView"
 - !private "!="
+- "RAMFlipTopTransitionItemAnimations"
+- "RAMTransitionItemAnimations"
+- !private "CGColorGetAlpha"
+- !private "NSTimeInterval"
+- "RAMItemAnimation"
 depends-member:
 - !private ["PSs16AbsoluteValuable", "init"]
 - !private ["PSs9AnyObject", "CGColor"]
