@@ -14,6 +14,7 @@
 		5603AFD81C742FA5001DA97F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5603AFD61C742FA5001DA97F /* Main.storyboard */; };
 		5603AFDA1C742FA5001DA97F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5603AFD91C742FA5001DA97F /* Assets.xcassets */; };
 		5603AFDD1C742FA5001DA97F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5603AFDB1C742FA5001DA97F /* LaunchScreen.storyboard */; };
+		5698A2561C758F0300B2B3FF /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5698A2551C758F0300B2B3FF /* MapAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		5603AFD91C742FA5001DA97F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5603AFDC1C742FA5001DA97F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5603AFDE1C742FA5001DA97F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5698A2541C758F0300B2B3FF /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
+		5698A2551C758F0300B2B3FF /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
 		6E205C0A63F3494F313DC1F3 /* Pods-BreadCrumbs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreadCrumbs.release.xcconfig"; path = "Pods/Target Support Files/Pods-BreadCrumbs/Pods-BreadCrumbs.release.xcconfig"; sourceTree = "<group>"; };
 		7797B2216EC4B82A7BC7D36E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		79C35D91502A109FB0BFDDF6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +82,7 @@
 		5603AFCC1C742FA5001DA97F /* BreadCrumbs */ = {
 			isa = PBXGroup;
 			children = (
+				5698A2531C758EC400B2B3FF /* Views */,
 				5603AFD01C742FA5001DA97F /* AppDelegate.h */,
 				5603AFD11C742FA5001DA97F /* AppDelegate.m */,
 				5603AFD31C742FA5001DA97F /* ViewController.h */,
@@ -98,6 +102,15 @@
 				5603AFCE1C742FA5001DA97F /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5698A2531C758EC400B2B3FF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5698A2541C758F0300B2B3FF /* MapAnnotation.h */,
+				5698A2551C758F0300B2B3FF /* MapAnnotation.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		86351D491545CBF8D4B28BC7 /* Frameworks */ = {
@@ -234,6 +247,7 @@
 				5603AFD51C742FA5001DA97F /* ViewController.m in Sources */,
 				5603AFD21C742FA5001DA97F /* AppDelegate.m in Sources */,
 				5603AFCF1C742FA5001DA97F /* main.m in Sources */,
+				5698A2561C758F0300B2B3FF /* MapAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
