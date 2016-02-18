@@ -13,21 +13,21 @@ provides-member:
 - ["VC27RAMAnimatedTabBarController16RAMItemAnimation9Constants", ""]
 - ["VVC27RAMAnimatedTabBarController16RAMItemAnimation9Constants13AnimationKeys", ""]
 provides-dynamic-lookup:
-- "selectedState"
-- "textSelectedColor"
-- "iconSelectedColor"
 - "deselectAnimation"
+- "iconSelectedColor"
 - "duration"
+- "textSelectedColor"
+- "selectedState"
 - "playAnimation"
 depends-top-level:
-- "StringLiteralType"
-- "UIColor"
-- "NSObject"
-- "RAMItemAnimation"
-- "RAMItemAnimationProtocol"
 - "CGFloat"
-- "UIImageView"
+- "RAMItemAnimationProtocol"
 - "UILabel"
+- "UIImageView"
+- "NSObject"
+- "UIColor"
+- "StringLiteralType"
+- "RAMItemAnimation"
 depends-member:
 - ["VVC27RAMAnimatedTabBarController16RAMItemAnimation9Constants13AnimationKeys", "KeyFrame"]
 - ["VVC27RAMAnimatedTabBarController16RAMItemAnimation9Constants13AnimationKeys", "Opacity"]
