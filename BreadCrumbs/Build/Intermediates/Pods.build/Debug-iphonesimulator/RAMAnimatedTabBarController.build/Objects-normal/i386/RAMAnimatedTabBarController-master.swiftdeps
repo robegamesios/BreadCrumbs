@@ -1,0 +1,12 @@
+version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
+options: "d83f6fc4a465bacc6b8e3e755f051a1f"
+build_time: [509086770, 968477000]
+inputs:
+  "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/RAMAnimatedTabBarController/RAMAnimatedTabBarController/RAMItemAnimationProtocol.swift": [509063776, 0]
+  "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/RAMAnimatedTabBarController/RAMAnimatedTabBarController/RAMBadge/RAMBadge.swift": [509063776, 0]
+  "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/RAMAnimatedTabBarController/RAMAnimatedTabBarController/RAMAnimatedTabBarController.swift": [509063776, 0]
+  "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/RAMAnimatedTabBarController/RAMAnimatedTabBarController/Animations/FrameAnimation/RAMFrameItemAnimation.swift": [509063776, 0]
+  "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/RAMAnimatedTabBarController/RAMAnimatedTabBarController/Animations/FumeAnimation/RAMFumeAnimation.swift": [509063776, 0]
+  "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/RAMAnimatedTabBarController/RAMAnimatedTabBarController/Animations/BounceAnimation/RAMBounceAnimation.swift": [509063776, 0]
+  "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/RAMAnimatedTabBarController/RAMAnimatedTabBarController/Animations/TransitionAniamtions/RAMTransitionItemAnimations.swift": [509063776, 0]
+  "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/RAMAnimatedTabBarController/RAMAnimatedTabBarController/Animations/RotationAnimation/RAMRotationAnimation.swift": [509063776, 0]
