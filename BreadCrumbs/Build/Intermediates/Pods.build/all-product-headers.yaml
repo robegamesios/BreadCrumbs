@@ -121,6 +121,63 @@
     },
     {
       'type': 'directory',
+      'name': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Build/Products/Debug-iphonesimulator/OCMapView.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "OCAlgorithmDelegate.h",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/OCMapView/OCMapView/OCAlgorithmDelegate.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCAlgorithms.h",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/OCMapView/OCMapView/OCAlgorithms.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCAnnotation.h",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/OCMapView/OCMapView/OCAnnotation.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCDistance.h",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/OCMapView/OCMapView/OCDistance.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCGrouping.h",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/OCMapView/OCMapView/OCGrouping.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCMapView-Swift.h",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Build/Products/Debug-iphonesimulator/OCMapView.framework/Headers/OCMapView-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCMapView-umbrella.h",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/Target Support Files/OCMapView/OCMapView-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "OCMapView.h",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/OCMapView/OCMapView/OCMapView.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Build/Products/Debug-iphonesimulator/OCMapView.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Build/Intermediates/Pods.build/Debug-iphonesimulator/OCMapView.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
       'name': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Build/Products/Debug-iphonesimulator/Pods_BreadCrumbs.framework/Headers",
       'contents': [
         {

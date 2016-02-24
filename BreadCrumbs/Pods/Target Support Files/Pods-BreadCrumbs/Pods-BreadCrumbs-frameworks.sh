@@ -85,9 +85,11 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-BreadCrumbs/AFNetworking.framework"
+  install_framework "Pods-BreadCrumbs/OCMapView.framework"
   install_framework "Pods-BreadCrumbs/RAMAnimatedTabBarController.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-BreadCrumbs/AFNetworking.framework"
+  install_framework "Pods-BreadCrumbs/OCMapView.framework"
   install_framework "Pods-BreadCrumbs/RAMAnimatedTabBarController.framework"
 fi
