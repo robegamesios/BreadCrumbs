@@ -100,6 +100,7 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.2;
             annotationView = [[MKAnnotationView alloc] initWithAnnotation:singleAnnotation reuseIdentifier:@"singleAnnotationView"];
             annotationView.canShowCallout = YES;
             annotationView.centerOffset = CGPointMake(0, -20);
+            annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         }
         singleAnnotation.title = singleAnnotation.groupTag;
         
@@ -122,6 +123,14 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.2;
     
     return annotationView;
 }
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+    
+    //RE: TODO: use this to show the photos detail view
+    NSLog(@"annotation accessory= %@ control =%@",view, control);
+    
+}
+
 
 //- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay{
 //    MKCircle *circle = overlay;
