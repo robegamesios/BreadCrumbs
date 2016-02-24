@@ -8,6 +8,7 @@
 
 #import "MapViewController.h"
 #import "MapAnnotation.h"
+#import "PhotoViewerViewController.h"
 
 //RE: TODO: change this later
 static NSString *const kTYPE1 = @"Banana";
@@ -128,6 +129,9 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.2;
     
     //RE: TODO: use this to show the photos detail view
     NSLog(@"annotation accessory= %@ control =%@",view, control);
+    PhotoViewerViewController *vc = [PhotoViewerViewController new];
+    
+    [self.navigationController pushViewController:vc animated:NO];
     
 }
 
