@@ -31,6 +31,7 @@
 		56A1092E1C7EDD3400E3FC44 /* RLDSimpleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A109191C7EDD3400E3FC44 /* RLDSimpleTableViewCell.m */; };
 		56A1092F1C7EDD3400E3FC44 /* RLDTableViewHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A1091B1C7EDD3400E3FC44 /* RLDTableViewHeaderView.m */; };
 		56A109311C7EDDFE00E3FC44 /* RLDTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56A109301C7EDDFE00E3FC44 /* RLDTableViewHeaderView.xib */; };
+		56A109331C7EE82600E3FC44 /* viewModelData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56A109321C7EE82600E3FC44 /* viewModelData.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,7 +78,8 @@
 		56A109191C7EDD3400E3FC44 /* RLDSimpleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLDSimpleTableViewCell.m; sourceTree = "<group>"; };
 		56A1091A1C7EDD3400E3FC44 /* RLDTableViewHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLDTableViewHeaderView.h; sourceTree = "<group>"; };
 		56A1091B1C7EDD3400E3FC44 /* RLDTableViewHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLDTableViewHeaderView.m; sourceTree = "<group>"; };
-		56A109301C7EDDFE00E3FC44 /* RLDTableViewHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RLDTableViewHeaderView.xib; path = Storyboards/RLDTableViewHeaderView.xib; sourceTree = "<group>"; };
+		56A109301C7EDDFE00E3FC44 /* RLDTableViewHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLDTableViewHeaderView.xib; sourceTree = "<group>"; };
+		56A109321C7EE82600E3FC44 /* viewModelData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = viewModelData.plist; sourceTree = "<group>"; };
 		6E205C0A63F3494F313DC1F3 /* Pods-BreadCrumbs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreadCrumbs.release.xcconfig"; path = "Pods/Target Support Files/Pods-BreadCrumbs/Pods-BreadCrumbs.release.xcconfig"; sourceTree = "<group>"; };
 		7797B2216EC4B82A7BC7D36E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		79C35D91502A109FB0BFDDF6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,7 +133,6 @@
 			children = (
 				56359CBE1C75943300ED1001 /* AppViewControllers */,
 				56359CC21C75949A00ED1001 /* Storyboards */,
-				56A109301C7EDDFE00E3FC44 /* RLDTableViewHeaderView.xib */,
 				56A108F21C7EDD1400E3FC44 /* ThirdParty */,
 				56359CBA1C75942600ED1001 /* Views */,
 				5603AFCD1C742FA5001DA97F /* Supporting Files */,
@@ -147,6 +148,7 @@
 				5603AFD91C742FA5001DA97F /* Assets.xcassets */,
 				5603AFDE1C742FA5001DA97F /* Info.plist */,
 				5603AFCE1C742FA5001DA97F /* main.m */,
+				56A109321C7EE82600E3FC44 /* viewModelData.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -174,6 +176,7 @@
 			children = (
 				56359CC31C75949A00ED1001 /* LaunchScreen.storyboard */,
 				56359CC41C75949A00ED1001 /* Main.storyboard */,
+				56A109301C7EDDFE00E3FC44 /* RLDTableViewHeaderView.xib */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 			files = (
 				56359CC61C75949A00ED1001 /* Main.storyboard in Resources */,
 				56A109311C7EDDFE00E3FC44 /* RLDTableViewHeaderView.xib in Resources */,
+				56A109331C7EE82600E3FC44 /* viewModelData.plist in Resources */,
 				5603AFDA1C742FA5001DA97F /* Assets.xcassets in Resources */,
 				56359CC51C75949A00ED1001 /* LaunchScreen.storyboard in Resources */,
 			);
