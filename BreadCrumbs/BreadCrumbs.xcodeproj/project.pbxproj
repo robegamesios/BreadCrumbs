@@ -15,6 +15,22 @@
 		56359CC11C75943300ED1001 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56359CC01C75943300ED1001 /* MapViewController.m */; };
 		56359CC51C75949A00ED1001 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56359CC31C75949A00ED1001 /* LaunchScreen.storyboard */; };
 		56359CC61C75949A00ED1001 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56359CC41C75949A00ED1001 /* Main.storyboard */; };
+		56A1091C1C7EDD3400E3FC44 /* RLDGenericTableViewCellEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A108F61C7EDD3400E3FC44 /* RLDGenericTableViewCellEventHandler.m */; };
+		56A1091D1C7EDD3400E3FC44 /* RLDTableViewHeaderViewEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A108F81C7EDD3400E3FC44 /* RLDTableViewHeaderViewEventHandler.m */; };
+		56A1091E1C7EDD3400E3FC44 /* RLDBigPictureTableViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A108FB1C7EDD3400E3FC44 /* RLDBigPictureTableViewCellModel.m */; };
+		56A1091F1C7EDD3400E3FC44 /* RLDCommentTableViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A108FD1C7EDD3400E3FC44 /* RLDCommentTableViewCellModel.m */; };
+		56A109201C7EDD3400E3FC44 /* RLDGenericTableViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A108FF1C7EDD3400E3FC44 /* RLDGenericTableViewCellModel.m */; };
+		56A109211C7EDD3400E3FC44 /* RLDSimpleTableViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A109011C7EDD3400E3FC44 /* RLDSimpleTableViewCellModel.m */; };
+		56A109221C7EDD3400E3FC44 /* RLDTableViewHeaderViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A109031C7EDD3400E3FC44 /* RLDTableViewHeaderViewModel.m */; };
+		56A109231C7EDD3400E3FC44 /* RLDTableViewModelProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A109051C7EDD3400E3FC44 /* RLDTableViewModelProvider.m */; };
+		56A109291C7EDD3400E3FC44 /* RLDMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A1090E1C7EDD3400E3FC44 /* RLDMasterViewController.m */; };
+		56A1092A1C7EDD3400E3FC44 /* RLDWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A109101C7EDD3400E3FC44 /* RLDWebViewController.m */; };
+		56A1092B1C7EDD3400E3FC44 /* RLDBigPictureTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A109131C7EDD3400E3FC44 /* RLDBigPictureTableViewCell.m */; };
+		56A1092C1C7EDD3400E3FC44 /* RLDCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A109151C7EDD3400E3FC44 /* RLDCommentTableViewCell.m */; };
+		56A1092D1C7EDD3400E3FC44 /* RLDGenericTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A109171C7EDD3400E3FC44 /* RLDGenericTableViewCell.m */; };
+		56A1092E1C7EDD3400E3FC44 /* RLDSimpleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A109191C7EDD3400E3FC44 /* RLDSimpleTableViewCell.m */; };
+		56A1092F1C7EDD3400E3FC44 /* RLDTableViewHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A1091B1C7EDD3400E3FC44 /* RLDTableViewHeaderView.m */; };
+		56A109311C7EDDFE00E3FC44 /* RLDTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56A109301C7EDDFE00E3FC44 /* RLDTableViewHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +47,37 @@
 		56359CC01C75943300ED1001 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		56359CC31C75949A00ED1001 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56359CC41C75949A00ED1001 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		56A108F51C7EDD3400E3FC44 /* RLDGenericTableViewCellEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLDGenericTableViewCellEventHandler.h; sourceTree = "<group>"; };
+		56A108F61C7EDD3400E3FC44 /* RLDGenericTableViewCellEventHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLDGenericTableViewCellEventHandler.m; sourceTree = "<group>"; };
+		56A108F71C7EDD3400E3FC44 /* RLDTableViewHeaderViewEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLDTableViewHeaderViewEventHandler.h; sourceTree = "<group>"; };
+		56A108F81C7EDD3400E3FC44 /* RLDTableViewHeaderViewEventHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLDTableViewHeaderViewEventHandler.m; sourceTree = "<group>"; };
+		56A108FA1C7EDD3400E3FC44 /* RLDBigPictureTableViewCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLDBigPictureTableViewCellModel.h; sourceTree = "<group>"; };
+		56A108FB1C7EDD3400E3FC44 /* RLDBigPictureTableViewCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLDBigPictureTableViewCellModel.m; sourceTree = "<group>"; };
+		56A108FC1C7EDD3400E3FC44 /* RLDCommentTableViewCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLDCommentTableViewCellModel.h; sourceTree = "<group>"; };
+		56A108FD1C7EDD3400E3FC44 /* RLDCommentTableViewCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLDCommentTableViewCellModel.m; sourceTree = "<group>"; };
+		56A108FE1C7EDD3400E3FC44 /* RLDGenericTableViewCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLDGenericTableViewCellModel.h; sourceTree = "<group>"; };
+		56A108FF1C7EDD3400E3FC44 /* RLDGenericTableViewCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLDGenericTableViewCellModel.m; sourceTree = "<group>"; };
+		56A109001C7EDD3400E3FC44 /* RLDSimpleTableViewCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLDSimpleTableViewCellModel.h; sourceTree = "<group>"; };
+		56A109011C7EDD3400E3FC44 /* RLDSimpleTableViewCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLDSimpleTableViewCellModel.m; sourceTree = "<group>"; };
+		56A109021C7EDD3400E3FC44 /* RLDTableViewHeaderViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLDTableViewHeaderViewModel.h; sourceTree = "<group>"; };
+		56A109031C7EDD3400E3FC44 /* RLDTableViewHeaderViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLDTableViewHeaderViewModel.m; sourceTree = "<group>"; };
+		56A109041C7EDD3400E3FC44 /* RLDTableViewModelProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLDTableViewModelProvider.h; sourceTree = "<group>"; };
+		56A109051C7EDD3400E3FC44 /* RLDTableViewModelProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLDTableViewModelProvider.m; sourceTree = "<group>"; };
+		56A1090D1C7EDD3400E3FC44 /* RLDMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLDMasterViewController.h; sourceTree = "<group>"; };
+		56A1090E1C7EDD3400E3FC44 /* RLDMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLDMasterViewController.m; sourceTree = "<group>"; };
+		56A1090F1C7EDD3400E3FC44 /* RLDWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLDWebViewController.h; sourceTree = "<group>"; };
+		56A109101C7EDD3400E3FC44 /* RLDWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLDWebViewController.m; sourceTree = "<group>"; };
+		56A109121C7EDD3400E3FC44 /* RLDBigPictureTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLDBigPictureTableViewCell.h; sourceTree = "<group>"; };
+		56A109131C7EDD3400E3FC44 /* RLDBigPictureTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLDBigPictureTableViewCell.m; sourceTree = "<group>"; };
+		56A109141C7EDD3400E3FC44 /* RLDCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLDCommentTableViewCell.h; sourceTree = "<group>"; };
+		56A109151C7EDD3400E3FC44 /* RLDCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLDCommentTableViewCell.m; sourceTree = "<group>"; };
+		56A109161C7EDD3400E3FC44 /* RLDGenericTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLDGenericTableViewCell.h; sourceTree = "<group>"; };
+		56A109171C7EDD3400E3FC44 /* RLDGenericTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLDGenericTableViewCell.m; sourceTree = "<group>"; };
+		56A109181C7EDD3400E3FC44 /* RLDSimpleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLDSimpleTableViewCell.h; sourceTree = "<group>"; };
+		56A109191C7EDD3400E3FC44 /* RLDSimpleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLDSimpleTableViewCell.m; sourceTree = "<group>"; };
+		56A1091A1C7EDD3400E3FC44 /* RLDTableViewHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLDTableViewHeaderView.h; sourceTree = "<group>"; };
+		56A1091B1C7EDD3400E3FC44 /* RLDTableViewHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLDTableViewHeaderView.m; sourceTree = "<group>"; };
+		56A109301C7EDDFE00E3FC44 /* RLDTableViewHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RLDTableViewHeaderView.xib; path = Storyboards/RLDTableViewHeaderView.xib; sourceTree = "<group>"; };
 		6E205C0A63F3494F313DC1F3 /* Pods-BreadCrumbs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreadCrumbs.release.xcconfig"; path = "Pods/Target Support Files/Pods-BreadCrumbs/Pods-BreadCrumbs.release.xcconfig"; sourceTree = "<group>"; };
 		7797B2216EC4B82A7BC7D36E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		79C35D91502A109FB0BFDDF6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,12 +129,11 @@
 		5603AFCC1C742FA5001DA97F /* BreadCrumbs */ = {
 			isa = PBXGroup;
 			children = (
-				56359CC21C75949A00ED1001 /* Storyboards */,
 				56359CBE1C75943300ED1001 /* AppViewControllers */,
+				56359CC21C75949A00ED1001 /* Storyboards */,
+				56A109301C7EDDFE00E3FC44 /* RLDTableViewHeaderView.xib */,
+				56A108F21C7EDD1400E3FC44 /* ThirdParty */,
 				56359CBA1C75942600ED1001 /* Views */,
-				5603AFD01C742FA5001DA97F /* AppDelegate.h */,
-				5603AFD11C742FA5001DA97F /* AppDelegate.m */,
-				5603AFDE1C742FA5001DA97F /* Info.plist */,
 				5603AFCD1C742FA5001DA97F /* Supporting Files */,
 			);
 			path = BreadCrumbs;
@@ -96,7 +142,10 @@
 		5603AFCD1C742FA5001DA97F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5603AFD01C742FA5001DA97F /* AppDelegate.h */,
+				5603AFD11C742FA5001DA97F /* AppDelegate.m */,
 				5603AFD91C742FA5001DA97F /* Assets.xcassets */,
+				5603AFDE1C742FA5001DA97F /* Info.plist */,
 				5603AFCE1C742FA5001DA97F /* main.m */,
 			);
 			name = "Supporting Files";
@@ -127,6 +176,83 @@
 				56359CC41C75949A00ED1001 /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		56A108F21C7EDD1400E3FC44 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				56A108F31C7EDD3400E3FC44 /* RLDTableViewSuite */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		56A108F31C7EDD3400E3FC44 /* RLDTableViewSuite */ = {
+			isa = PBXGroup;
+			children = (
+				56A108F41C7EDD3400E3FC44 /* Event handlers */,
+				56A108F91C7EDD3400E3FC44 /* Models */,
+				56A1090C1C7EDD3400E3FC44 /* View controllers */,
+				56A109111C7EDD3400E3FC44 /* Views */,
+			);
+			path = RLDTableViewSuite;
+			sourceTree = "<group>";
+		};
+		56A108F41C7EDD3400E3FC44 /* Event handlers */ = {
+			isa = PBXGroup;
+			children = (
+				56A108F51C7EDD3400E3FC44 /* RLDGenericTableViewCellEventHandler.h */,
+				56A108F61C7EDD3400E3FC44 /* RLDGenericTableViewCellEventHandler.m */,
+				56A108F71C7EDD3400E3FC44 /* RLDTableViewHeaderViewEventHandler.h */,
+				56A108F81C7EDD3400E3FC44 /* RLDTableViewHeaderViewEventHandler.m */,
+			);
+			path = "Event handlers";
+			sourceTree = "<group>";
+		};
+		56A108F91C7EDD3400E3FC44 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				56A108FA1C7EDD3400E3FC44 /* RLDBigPictureTableViewCellModel.h */,
+				56A108FB1C7EDD3400E3FC44 /* RLDBigPictureTableViewCellModel.m */,
+				56A108FC1C7EDD3400E3FC44 /* RLDCommentTableViewCellModel.h */,
+				56A108FD1C7EDD3400E3FC44 /* RLDCommentTableViewCellModel.m */,
+				56A108FE1C7EDD3400E3FC44 /* RLDGenericTableViewCellModel.h */,
+				56A108FF1C7EDD3400E3FC44 /* RLDGenericTableViewCellModel.m */,
+				56A109001C7EDD3400E3FC44 /* RLDSimpleTableViewCellModel.h */,
+				56A109011C7EDD3400E3FC44 /* RLDSimpleTableViewCellModel.m */,
+				56A109021C7EDD3400E3FC44 /* RLDTableViewHeaderViewModel.h */,
+				56A109031C7EDD3400E3FC44 /* RLDTableViewHeaderViewModel.m */,
+				56A109041C7EDD3400E3FC44 /* RLDTableViewModelProvider.h */,
+				56A109051C7EDD3400E3FC44 /* RLDTableViewModelProvider.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		56A1090C1C7EDD3400E3FC44 /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				56A1090D1C7EDD3400E3FC44 /* RLDMasterViewController.h */,
+				56A1090E1C7EDD3400E3FC44 /* RLDMasterViewController.m */,
+				56A1090F1C7EDD3400E3FC44 /* RLDWebViewController.h */,
+				56A109101C7EDD3400E3FC44 /* RLDWebViewController.m */,
+			);
+			path = "View controllers";
+			sourceTree = "<group>";
+		};
+		56A109111C7EDD3400E3FC44 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				56A109121C7EDD3400E3FC44 /* RLDBigPictureTableViewCell.h */,
+				56A109131C7EDD3400E3FC44 /* RLDBigPictureTableViewCell.m */,
+				56A109141C7EDD3400E3FC44 /* RLDCommentTableViewCell.h */,
+				56A109151C7EDD3400E3FC44 /* RLDCommentTableViewCell.m */,
+				56A109161C7EDD3400E3FC44 /* RLDGenericTableViewCell.h */,
+				56A109171C7EDD3400E3FC44 /* RLDGenericTableViewCell.m */,
+				56A109181C7EDD3400E3FC44 /* RLDSimpleTableViewCell.h */,
+				56A109191C7EDD3400E3FC44 /* RLDSimpleTableViewCell.m */,
+				56A1091A1C7EDD3400E3FC44 /* RLDTableViewHeaderView.h */,
+				56A1091B1C7EDD3400E3FC44 /* RLDTableViewHeaderView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		86351D491545CBF8D4B28BC7 /* Frameworks */ = {
@@ -200,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56359CC61C75949A00ED1001 /* Main.storyboard in Resources */,
+				56A109311C7EDDFE00E3FC44 /* RLDTableViewHeaderView.xib in Resources */,
 				5603AFDA1C742FA5001DA97F /* Assets.xcassets in Resources */,
 				56359CC51C75949A00ED1001 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -260,7 +387,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56A109291C7EDD3400E3FC44 /* RLDMasterViewController.m in Sources */,
+				56A109211C7EDD3400E3FC44 /* RLDSimpleTableViewCellModel.m in Sources */,
+				56A1092B1C7EDD3400E3FC44 /* RLDBigPictureTableViewCell.m in Sources */,
+				56A1092A1C7EDD3400E3FC44 /* RLDWebViewController.m in Sources */,
+				56A109221C7EDD3400E3FC44 /* RLDTableViewHeaderViewModel.m in Sources */,
+				56A1092F1C7EDD3400E3FC44 /* RLDTableViewHeaderView.m in Sources */,
+				56A1091C1C7EDD3400E3FC44 /* RLDGenericTableViewCellEventHandler.m in Sources */,
+				56A109201C7EDD3400E3FC44 /* RLDGenericTableViewCellModel.m in Sources */,
 				5603AFD21C742FA5001DA97F /* AppDelegate.m in Sources */,
+				56A1091F1C7EDD3400E3FC44 /* RLDCommentTableViewCellModel.m in Sources */,
+				56A1091E1C7EDD3400E3FC44 /* RLDBigPictureTableViewCellModel.m in Sources */,
+				56A1092D1C7EDD3400E3FC44 /* RLDGenericTableViewCell.m in Sources */,
+				56A109231C7EDD3400E3FC44 /* RLDTableViewModelProvider.m in Sources */,
+				56A1091D1C7EDD3400E3FC44 /* RLDTableViewHeaderViewEventHandler.m in Sources */,
+				56A1092C1C7EDD3400E3FC44 /* RLDCommentTableViewCell.m in Sources */,
+				56A1092E1C7EDD3400E3FC44 /* RLDSimpleTableViewCell.m in Sources */,
 				56359CC11C75943300ED1001 /* MapViewController.m in Sources */,
 				5603AFCF1C742FA5001DA97F /* main.m in Sources */,
 				56359CBD1C75942600ED1001 /* MapAnnotation.m in Sources */,

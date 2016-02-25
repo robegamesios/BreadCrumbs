@@ -6,4 +6,6 @@ dependencies: \
   /Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Build/Products/Debug-iphonesimulator/OCMapView.framework/Headers/OCAnnotation.h \
   /Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Build/Products/Debug-iphonesimulator/OCMapView.framework/Headers/OCGrouping.h \
   /Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Build/Products/Debug-iphonesimulator/OCMapView.framework/Headers/OCAlgorithms.h \
-  /Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/BreadCrumbs/Views/MapAnnotation.h
+  /Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/BreadCrumbs/Views/MapAnnotation.h \
+  /Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/BreadCrumbs/RLDTableViewSuite/View\ controllers/RLDMasterViewController.h \
+  /Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Build/Products/Debug-iphonesimulator/RLDTableViewSuite.framework/Headers/RLDTableViewController.h

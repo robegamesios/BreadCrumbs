@@ -87,9 +87,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-BreadCrumbs/AFNetworking.framework"
   install_framework "Pods-BreadCrumbs/OCMapView.framework"
   install_framework "Pods-BreadCrumbs/RAMAnimatedTabBarController.framework"
+  install_framework "Pods-BreadCrumbs/RLDTableViewSuite.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-BreadCrumbs/AFNetworking.framework"
   install_framework "Pods-BreadCrumbs/OCMapView.framework"
   install_framework "Pods-BreadCrumbs/RAMAnimatedTabBarController.framework"
+  install_framework "Pods-BreadCrumbs/RLDTableViewSuite.framework"
 fi

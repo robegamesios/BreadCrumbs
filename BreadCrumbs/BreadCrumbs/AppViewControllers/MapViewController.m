@@ -8,6 +8,7 @@
 
 #import "MapViewController.h"
 #import "MapAnnotation.h"
+#import "RLDMasterViewController.h"
 
 //RE: TODO: change this later
 static NSString *const kTYPE1 = @"Banana";
@@ -128,7 +129,12 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.2;
     
     //RE: TODO: use this to show the photos detail view
     NSLog(@"annotation accessory= %@ control =%@",view, control);
+
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     
+    RLDMasterViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"RLDMasterViewController"];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

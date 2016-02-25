@@ -229,6 +229,83 @@
           'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Build/Intermediates/Pods.build/Debug-iphonesimulator/RAMAnimatedTabBarController.build/module.modulemap"
         }
       ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Build/Products/Debug-iphonesimulator/RLDTableViewSuite.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "NSObject+Accessors.h",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/RLDTableViewSuite/Classes/NSObject+Accessors.h"
+        },
+        {
+          'type': 'file',
+          'name': "RLDHandledViewProtocol.h",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/RLDTableViewSuite/Classes/RLDHandledViewProtocol.h"
+        },
+        {
+          'type': 'file',
+          'name': "RLDTableViewController.h",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/RLDTableViewSuite/Classes/RLDTableViewController.h"
+        },
+        {
+          'type': 'file',
+          'name': "RLDTableViewDataSource.h",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/RLDTableViewSuite/Classes/RLDTableViewDataSource.h"
+        },
+        {
+          'type': 'file',
+          'name': "RLDTableViewDelegate.h",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/RLDTableViewSuite/Classes/RLDTableViewDelegate.h"
+        },
+        {
+          'type': 'file',
+          'name': "RLDTableViewEventHandlerProtocol.h",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/RLDTableViewSuite/Classes/RLDTableViewEventHandlerProtocol.h"
+        },
+        {
+          'type': 'file',
+          'name': "RLDTableViewEventHandlerProvider.h",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/RLDTableViewSuite/Classes/RLDTableViewEventHandlerProvider.h"
+        },
+        {
+          'type': 'file',
+          'name': "RLDTableViewModel.h",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/RLDTableViewSuite/Classes/RLDTableViewModel.h"
+        },
+        {
+          'type': 'file',
+          'name': "RLDTableViewModelProtocol.h",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/RLDTableViewSuite/Classes/RLDTableViewModelProtocol.h"
+        },
+        {
+          'type': 'file',
+          'name': "RLDTableViewSuite-Swift.h",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Build/Products/Debug-iphonesimulator/RLDTableViewSuite.framework/Headers/RLDTableViewSuite-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "RLDTableViewSuite-umbrella.h",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/Target Support Files/RLDTableViewSuite/RLDTableViewSuite-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "RLDTableViewSuite.h",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/RLDTableViewSuite/Classes/RLDTableViewSuite.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Build/Products/Debug-iphonesimulator/RLDTableViewSuite.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Build/Intermediates/Pods.build/Debug-iphonesimulator/RLDTableViewSuite.build/module.modulemap"
+        }
+      ]
     }
   ]
 }

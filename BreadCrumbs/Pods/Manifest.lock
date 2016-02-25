@@ -16,15 +16,18 @@ PODS:
     - AFNetworking/NSURLSession
   - OCMapView (0.1.0)
   - RAMAnimatedTabBarController (1.1.1)
+  - RLDTableViewSuite (0.2.0)
 
 DEPENDENCIES:
   - AFNetworking (= 3.0.0)
   - OCMapView (= 0.1.0)
   - RAMAnimatedTabBarController (= 1.1.1)
+  - RLDTableViewSuite (= 0.2.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 932ff751f9d6fb1dad0b3af58b7e3ffba0a4e7fd
   OCMapView: baa3a385659fd786c9c8e683d48c5af514f427af
   RAMAnimatedTabBarController: 41ccdc3592ec154b869262d876eff60b03574943
+  RLDTableViewSuite: 451d08bf4385aa0d8e920e5af3abff05ccca1bb8
 
 COCOAPODS: 0.39.0

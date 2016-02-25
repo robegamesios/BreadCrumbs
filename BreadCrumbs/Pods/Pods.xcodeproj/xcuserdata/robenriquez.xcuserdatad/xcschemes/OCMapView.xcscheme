@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'F681B83CEBDAD7DE8B3F9148'
+               BlueprintIdentifier = 'E2C0DEE3D30E7050BF2C90EB'
                BlueprintName = 'OCMapView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'OCMapView.framework'>
