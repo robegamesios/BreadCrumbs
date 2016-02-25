@@ -1,0 +1,6 @@
+framework module RLDTableViewSuite {
+  umbrella header "RLDTableViewSuite-umbrella.h"
+
+  export *
+  module * { export * }
+}
