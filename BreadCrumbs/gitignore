@@ -8,6 +8,8 @@ build/
 *.xcscheme
 *iphonesimulator*
 *.xcuserstate
+*.sh
+*.yaml
 
 *.xcodeproj/*
 !*.xcodeproj/*.pbxproj
