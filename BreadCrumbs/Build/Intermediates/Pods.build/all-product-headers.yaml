@@ -229,6 +229,53 @@
           'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Build/Intermediates/Pods.build/Debug-iphonesimulator/RAMAnimatedTabBarController.build/module.modulemap"
         }
       ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Build/Products/Debug-iphonesimulator/UITableView_FDTemplateLayoutCell.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "UITableView+FDIndexPathHeightCache.h",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/UITableView+FDTemplateLayoutCell/Classes/UITableView+FDIndexPathHeightCache.h"
+        },
+        {
+          'type': 'file',
+          'name': "UITableView+FDKeyedHeightCache.h",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/UITableView+FDTemplateLayoutCell/Classes/UITableView+FDKeyedHeightCache.h"
+        },
+        {
+          'type': 'file',
+          'name': "UITableView+FDTemplateLayoutCell-umbrella.h",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/Target Support Files/UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "UITableView+FDTemplateLayoutCell.h",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/UITableView+FDTemplateLayoutCell/Classes/UITableView+FDTemplateLayoutCell.h"
+        },
+        {
+          'type': 'file',
+          'name': "UITableView+FDTemplateLayoutCellDebug.h",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Pods/UITableView+FDTemplateLayoutCell/Classes/UITableView+FDTemplateLayoutCellDebug.h"
+        },
+        {
+          'type': 'file',
+          'name': "UITableView_FDTemplateLayoutCell-Swift.h",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Build/Products/Debug-iphonesimulator/UITableView_FDTemplateLayoutCell.framework/Headers/UITableView_FDTemplateLayoutCell-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Build/Products/Debug-iphonesimulator/UITableView_FDTemplateLayoutCell.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/robenriquez/Desktop/BreadCrumbs/BreadCrumbs/Build/Intermediates/Pods.build/Debug-iphonesimulator/UITableView+FDTemplateLayoutCell.build/module.modulemap"
+        }
+      ]
     }
   ]
 }
