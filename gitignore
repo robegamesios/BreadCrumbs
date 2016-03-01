@@ -5,6 +5,8 @@ build/
 *.dgph
 *.hmap
 *.ipa
+*.xcscheme
+*iphonesimulator*
 *.xcuserstate
 
 *.xcodeproj/*
