@@ -8,6 +8,7 @@
 
 #import "MapViewController.h"
 #import "MapAnnotation.h"
+#import "StoreItemsTableViewController.h"
 
 //RE: TODO: change this later
 static NSString *const kTYPE1 = @"Banana";
@@ -129,6 +130,8 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.2;
     //RE: TODO: use this to show the photos detail view
     NSLog(@"annotation accessory= %@ control =%@",view, control);
     
+    [self showStoreItemsScreen];
+    
 }
 
 
@@ -191,6 +194,14 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.2;
 }
 
 
+#pragma mark - StoreItemsTableViewController
 
+- (void)showStoreItemsScreen {
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    StoreItemsTableViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"StoreItemsTableViewControllerStoryboardID"];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 @end
