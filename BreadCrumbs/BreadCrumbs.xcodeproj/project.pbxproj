@@ -15,6 +15,7 @@
 		56359CC11C75943300ED1001 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56359CC01C75943300ED1001 /* MapViewController.m */; };
 		56359CC51C75949A00ED1001 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56359CC31C75949A00ED1001 /* LaunchScreen.storyboard */; };
 		56359CC61C75949A00ED1001 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56359CC41C75949A00ED1001 /* Main.storyboard */; };
+		568967AF1C86CFD000A9F4DE /* StoreItemsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 568967AE1C86CFD000A9F4DE /* StoreItemsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		56359CC01C75943300ED1001 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		56359CC31C75949A00ED1001 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56359CC41C75949A00ED1001 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		568967AD1C86CFD000A9F4DE /* StoreItemsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreItemsTableViewController.h; sourceTree = "<group>"; };
+		568967AE1C86CFD000A9F4DE /* StoreItemsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreItemsTableViewController.m; sourceTree = "<group>"; };
 		6E205C0A63F3494F313DC1F3 /* Pods-BreadCrumbs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreadCrumbs.release.xcconfig"; path = "Pods/Target Support Files/Pods-BreadCrumbs/Pods-BreadCrumbs.release.xcconfig"; sourceTree = "<group>"; };
 		7797B2216EC4B82A7BC7D36E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		79C35D91502A109FB0BFDDF6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,9 +88,6 @@
 				56359CC21C75949A00ED1001 /* Storyboards */,
 				56359CBE1C75943300ED1001 /* AppViewControllers */,
 				56359CBA1C75942600ED1001 /* Views */,
-				5603AFD01C742FA5001DA97F /* AppDelegate.h */,
-				5603AFD11C742FA5001DA97F /* AppDelegate.m */,
-				5603AFDE1C742FA5001DA97F /* Info.plist */,
 				5603AFCD1C742FA5001DA97F /* Supporting Files */,
 			);
 			path = BreadCrumbs;
@@ -96,6 +96,9 @@
 		5603AFCD1C742FA5001DA97F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5603AFD01C742FA5001DA97F /* AppDelegate.h */,
+				5603AFD11C742FA5001DA97F /* AppDelegate.m */,
+				5603AFDE1C742FA5001DA97F /* Info.plist */,
 				5603AFD91C742FA5001DA97F /* Assets.xcassets */,
 				5603AFCE1C742FA5001DA97F /* main.m */,
 			);
@@ -116,6 +119,8 @@
 			children = (
 				56359CBF1C75943300ED1001 /* MapViewController.h */,
 				56359CC01C75943300ED1001 /* MapViewController.m */,
+				568967AD1C86CFD000A9F4DE /* StoreItemsTableViewController.h */,
+				568967AE1C86CFD000A9F4DE /* StoreItemsTableViewController.m */,
 			);
 			path = AppViewControllers;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 				56359CC11C75943300ED1001 /* MapViewController.m in Sources */,
 				5603AFCF1C742FA5001DA97F /* main.m in Sources */,
 				56359CBD1C75942600ED1001 /* MapAnnotation.m in Sources */,
+				568967AF1C86CFD000A9F4DE /* StoreItemsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

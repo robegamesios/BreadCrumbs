@@ -28,10 +28,10 @@
             </objects>
             <point key="canvasLocation" x="1137" y="401"/>
         </scene>
-        <!--Item 1-->
+        <!--MapViewController-->
         <scene sceneID="bzD-EV-EcR">
             <objects>
-                <viewController id="wHd-p2-uQr" customClass="MapViewController" sceneMemberID="viewController">
+                <viewController id="wHd-p2-uQr" userLabel="MapViewController" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="atH-aK-Wjo"/>
                         <viewControllerLayoutGuide type="bottom" id="bKt-Yh-pah"/>
@@ -67,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="1137" y="-260"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Store Items Table View Controller-->
         <scene sceneID="JmJ-uv-Afv">
             <objects>
-                <tableViewController id="a1T-n2-hF5" sceneMemberID="viewController">
+                <tableViewController id="a1T-n2-hF5" customClass="StoreItemsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="44N-0c-TsS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,7 +173,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="89l-ZX-xwN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1921" y="-260"/>
+            <point key="canvasLocation" x="1990" y="-192"/>
         </scene>
         <!--Animated Tab Bar Controller-->
         <scene sceneID="zsj-g5-gOv">
