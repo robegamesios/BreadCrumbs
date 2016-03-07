@@ -12,5 +12,7 @@ target 'BreadCrumbs' do
     pod 'RAMAnimatedTabBarController', '1.1.1'
     pod 'OCMapView', '0.1.0'
     pod 'JSONModel', '1.2.0'
+    pod 'TDOAuth', '1.1.2'
+    pod 'BDBOAuth1Manager', '2.0.0'
     
 end

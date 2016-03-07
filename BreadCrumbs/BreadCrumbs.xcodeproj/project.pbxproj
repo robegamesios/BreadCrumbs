@@ -12,9 +12,26 @@
 		5603AFD21C742FA5001DA97F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5603AFD11C742FA5001DA97F /* AppDelegate.m */; };
 		5603AFDA1C742FA5001DA97F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5603AFD91C742FA5001DA97F /* Assets.xcassets */; };
 		56359CBD1C75942600ED1001 /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 56359CBC1C75942600ED1001 /* MapAnnotation.m */; };
-		56359CC11C75943300ED1001 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56359CC01C75943300ED1001 /* MapViewController.m */; };
 		56359CC51C75949A00ED1001 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56359CC31C75949A00ED1001 /* LaunchScreen.storyboard */; };
 		56359CC61C75949A00ED1001 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56359CC41C75949A00ED1001 /* Main.storyboard */; };
+		56838EC51C8BCC1B0010F378 /* NetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838EC41C8BCC1B0010F378 /* NetworkService.m */; };
+		56838ECD1C8BCC660010F378 /* BusinessesMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838EC81C8BCC660010F378 /* BusinessesMapViewController.m */; };
+		56838ECE1C8BCC660010F378 /* BusinessDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838ECA1C8BCC660010F378 /* BusinessDetailsViewController.m */; };
+		56838ECF1C8BCC660010F378 /* BusinessesListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838ECC1C8BCC660010F378 /* BusinessesListTableViewController.m */; };
+		56838ED31C8BCCE40010F378 /* GlobalConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838ED21C8BCCE40010F378 /* GlobalConstants.m */; };
+		56838EDA1C8C03230010F378 /* NSURLRequest+OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838ED91C8C03230010F378 /* NSURLRequest+OAuth.m */; };
+		56838EFC1C8D09B90010F378 /* YelpBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838EE81C8D09B90010F378 /* YelpBusiness.m */; };
+		56838EFD1C8D09B90010F378 /* YelpCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838EEA1C8D09B90010F378 /* YelpCategory.m */; };
+		56838EFE1C8D09B90010F378 /* YelpDeal.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838EEC1C8D09B90010F378 /* YelpDeal.m */; };
+		56838EFF1C8D09B90010F378 /* YelpDealOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838EEE1C8D09B90010F378 /* YelpDealOptions.m */; };
+		56838F001C8D09B90010F378 /* YelpGiftCertificate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838EF01C8D09B90010F378 /* YelpGiftCertificate.m */; };
+		56838F011C8D09B90010F378 /* YelpGiftCertificateOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838EF21C8D09B90010F378 /* YelpGiftCertificateOptions.m */; };
+		56838F021C8D09B90010F378 /* YelpLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838EF41C8D09B90010F378 /* YelpLocation.m */; };
+		56838F031C8D09B90010F378 /* YelpReview.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838EF61C8D09B90010F378 /* YelpReview.m */; };
+		56838F041C8D09B90010F378 /* YelpReviewUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838EF81C8D09B90010F378 /* YelpReviewUser.m */; };
+		56838F241C8D263B0010F378 /* BusinessesListTableViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838F231C8D263B0010F378 /* BusinessesListTableViewControllerDataSource.m */; };
+		56838F271C8D30C20010F378 /* BusinessesMapViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838F261C8D30C20010F378 /* BusinessesMapViewControllerDataSource.m */; };
+		56838F2A1C8D38A20010F378 /* BusinessesListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838F291C8D38A20010F378 /* BusinessesListTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,10 +44,45 @@
 		5603AFDE1C742FA5001DA97F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56359CBB1C75942600ED1001 /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
 		56359CBC1C75942600ED1001 /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
-		56359CBF1C75943300ED1001 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		56359CC01C75943300ED1001 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		56359CC31C75949A00ED1001 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56359CC41C75949A00ED1001 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		56838EC31C8BCC1B0010F378 /* NetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkService.h; sourceTree = "<group>"; };
+		56838EC41C8BCC1B0010F378 /* NetworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkService.m; sourceTree = "<group>"; };
+		56838EC71C8BCC660010F378 /* BusinessesMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessesMapViewController.h; sourceTree = "<group>"; };
+		56838EC81C8BCC660010F378 /* BusinessesMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessesMapViewController.m; sourceTree = "<group>"; };
+		56838EC91C8BCC660010F378 /* BusinessDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessDetailsViewController.h; sourceTree = "<group>"; };
+		56838ECA1C8BCC660010F378 /* BusinessDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessDetailsViewController.m; sourceTree = "<group>"; };
+		56838ECB1C8BCC660010F378 /* BusinessesListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessesListTableViewController.h; sourceTree = "<group>"; };
+		56838ECC1C8BCC660010F378 /* BusinessesListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessesListTableViewController.m; sourceTree = "<group>"; };
+		56838ED11C8BCCE40010F378 /* GlobalConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalConstants.h; sourceTree = "<group>"; };
+		56838ED21C8BCCE40010F378 /* GlobalConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalConstants.m; sourceTree = "<group>"; };
+		56838ED81C8C03230010F378 /* NSURLRequest+OAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+OAuth.h"; sourceTree = "<group>"; };
+		56838ED91C8C03230010F378 /* NSURLRequest+OAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+OAuth.m"; sourceTree = "<group>"; };
+		56838EE71C8D09B90010F378 /* YelpBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpBusiness.h; sourceTree = "<group>"; };
+		56838EE81C8D09B90010F378 /* YelpBusiness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpBusiness.m; sourceTree = "<group>"; };
+		56838EE91C8D09B90010F378 /* YelpCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpCategory.h; sourceTree = "<group>"; };
+		56838EEA1C8D09B90010F378 /* YelpCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpCategory.m; sourceTree = "<group>"; };
+		56838EEB1C8D09B90010F378 /* YelpDeal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpDeal.h; sourceTree = "<group>"; };
+		56838EEC1C8D09B90010F378 /* YelpDeal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpDeal.m; sourceTree = "<group>"; };
+		56838EED1C8D09B90010F378 /* YelpDealOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpDealOptions.h; sourceTree = "<group>"; };
+		56838EEE1C8D09B90010F378 /* YelpDealOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpDealOptions.m; sourceTree = "<group>"; };
+		56838EEF1C8D09B90010F378 /* YelpGiftCertificate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpGiftCertificate.h; sourceTree = "<group>"; };
+		56838EF01C8D09B90010F378 /* YelpGiftCertificate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpGiftCertificate.m; sourceTree = "<group>"; };
+		56838EF11C8D09B90010F378 /* YelpGiftCertificateOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpGiftCertificateOptions.h; sourceTree = "<group>"; };
+		56838EF21C8D09B90010F378 /* YelpGiftCertificateOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpGiftCertificateOptions.m; sourceTree = "<group>"; };
+		56838EF31C8D09B90010F378 /* YelpLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpLocation.h; sourceTree = "<group>"; };
+		56838EF41C8D09B90010F378 /* YelpLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpLocation.m; sourceTree = "<group>"; };
+		56838EF51C8D09B90010F378 /* YelpReview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpReview.h; sourceTree = "<group>"; };
+		56838EF61C8D09B90010F378 /* YelpReview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpReview.m; sourceTree = "<group>"; };
+		56838EF71C8D09B90010F378 /* YelpReviewUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpReviewUser.h; sourceTree = "<group>"; };
+		56838EF81C8D09B90010F378 /* YelpReviewUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpReviewUser.m; sourceTree = "<group>"; };
+		56838F221C8D263B0010F378 /* BusinessesListTableViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessesListTableViewControllerDataSource.h; sourceTree = "<group>"; };
+		56838F231C8D263B0010F378 /* BusinessesListTableViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessesListTableViewControllerDataSource.m; sourceTree = "<group>"; };
+		56838F251C8D30C20010F378 /* BusinessesMapViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessesMapViewControllerDataSource.h; sourceTree = "<group>"; };
+		56838F261C8D30C20010F378 /* BusinessesMapViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessesMapViewControllerDataSource.m; sourceTree = "<group>"; };
+		56838F281C8D38A20010F378 /* BusinessesListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessesListTableViewCell.h; sourceTree = "<group>"; };
+		56838F291C8D38A20010F378 /* BusinessesListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessesListTableViewCell.m; sourceTree = "<group>"; };
+		568967BD1C86E5E400A9F4DE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		6E205C0A63F3494F313DC1F3 /* Pods-BreadCrumbs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreadCrumbs.release.xcconfig"; path = "Pods/Target Support Files/Pods-BreadCrumbs/Pods-BreadCrumbs.release.xcconfig"; sourceTree = "<group>"; };
 		7797B2216EC4B82A7BC7D36E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		79C35D91502A109FB0BFDDF6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,12 +134,14 @@
 		5603AFCC1C742FA5001DA97F /* BreadCrumbs */ = {
 			isa = PBXGroup;
 			children = (
+				56838ED71C8C03230010F378 /* Categories */,
+				56838F211C8D263B0010F378 /* DataSources */,
+				56838EE11C8CDF4A0010F378 /* Models */,
+				56838EC21C8BCC1B0010F378 /* NetworkServices */,
 				56359CC21C75949A00ED1001 /* Storyboards */,
-				56359CBE1C75943300ED1001 /* AppViewControllers */,
+				56838ED01C8BCCE40010F378 /* Utility */,
 				56359CBA1C75942600ED1001 /* Views */,
-				5603AFD01C742FA5001DA97F /* AppDelegate.h */,
-				5603AFD11C742FA5001DA97F /* AppDelegate.m */,
-				5603AFDE1C742FA5001DA97F /* Info.plist */,
+				56838EC61C8BCC660010F378 /* ViewControllers */,
 				5603AFCD1C742FA5001DA97F /* Supporting Files */,
 			);
 			path = BreadCrumbs;
@@ -96,8 +150,12 @@
 		5603AFCD1C742FA5001DA97F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5603AFD01C742FA5001DA97F /* AppDelegate.h */,
+				5603AFD11C742FA5001DA97F /* AppDelegate.m */,
+				5603AFDE1C742FA5001DA97F /* Info.plist */,
 				5603AFD91C742FA5001DA97F /* Assets.xcassets */,
 				5603AFCE1C742FA5001DA97F /* main.m */,
+				568967BD1C86E5E400A9F4DE /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -107,17 +165,10 @@
 			children = (
 				56359CBB1C75942600ED1001 /* MapAnnotation.h */,
 				56359CBC1C75942600ED1001 /* MapAnnotation.m */,
+				56838F281C8D38A20010F378 /* BusinessesListTableViewCell.h */,
+				56838F291C8D38A20010F378 /* BusinessesListTableViewCell.m */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		56359CBE1C75943300ED1001 /* AppViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				56359CBF1C75943300ED1001 /* MapViewController.h */,
-				56359CC01C75943300ED1001 /* MapViewController.m */,
-			);
-			path = AppViewControllers;
 			sourceTree = "<group>";
 		};
 		56359CC21C75949A00ED1001 /* Storyboards */ = {
@@ -127,6 +178,98 @@
 				56359CC41C75949A00ED1001 /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		56838EC21C8BCC1B0010F378 /* NetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				56838EC31C8BCC1B0010F378 /* NetworkService.h */,
+				56838EC41C8BCC1B0010F378 /* NetworkService.m */,
+			);
+			path = NetworkServices;
+			sourceTree = "<group>";
+		};
+		56838EC61C8BCC660010F378 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				56838EC71C8BCC660010F378 /* BusinessesMapViewController.h */,
+				56838EC81C8BCC660010F378 /* BusinessesMapViewController.m */,
+				56838EC91C8BCC660010F378 /* BusinessDetailsViewController.h */,
+				56838ECA1C8BCC660010F378 /* BusinessDetailsViewController.m */,
+				56838ECB1C8BCC660010F378 /* BusinessesListTableViewController.h */,
+				56838ECC1C8BCC660010F378 /* BusinessesListTableViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		56838ED01C8BCCE40010F378 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				56838ED11C8BCCE40010F378 /* GlobalConstants.h */,
+				56838ED21C8BCCE40010F378 /* GlobalConstants.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		56838ED71C8C03230010F378 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				56838ED81C8C03230010F378 /* NSURLRequest+OAuth.h */,
+				56838ED91C8C03230010F378 /* NSURLRequest+OAuth.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		56838EE11C8CDF4A0010F378 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				56838EE51C8D09B90010F378 /* YelpModel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		56838EE51C8D09B90010F378 /* YelpModel */ = {
+			isa = PBXGroup;
+			children = (
+				56838EE61C8D09B90010F378 /* DataTypes */,
+			);
+			path = YelpModel;
+			sourceTree = "<group>";
+		};
+		56838EE61C8D09B90010F378 /* DataTypes */ = {
+			isa = PBXGroup;
+			children = (
+				56838EE71C8D09B90010F378 /* YelpBusiness.h */,
+				56838EE81C8D09B90010F378 /* YelpBusiness.m */,
+				56838EE91C8D09B90010F378 /* YelpCategory.h */,
+				56838EEA1C8D09B90010F378 /* YelpCategory.m */,
+				56838EEB1C8D09B90010F378 /* YelpDeal.h */,
+				56838EEC1C8D09B90010F378 /* YelpDeal.m */,
+				56838EED1C8D09B90010F378 /* YelpDealOptions.h */,
+				56838EEE1C8D09B90010F378 /* YelpDealOptions.m */,
+				56838EEF1C8D09B90010F378 /* YelpGiftCertificate.h */,
+				56838EF01C8D09B90010F378 /* YelpGiftCertificate.m */,
+				56838EF11C8D09B90010F378 /* YelpGiftCertificateOptions.h */,
+				56838EF21C8D09B90010F378 /* YelpGiftCertificateOptions.m */,
+				56838EF31C8D09B90010F378 /* YelpLocation.h */,
+				56838EF41C8D09B90010F378 /* YelpLocation.m */,
+				56838EF51C8D09B90010F378 /* YelpReview.h */,
+				56838EF61C8D09B90010F378 /* YelpReview.m */,
+				56838EF71C8D09B90010F378 /* YelpReviewUser.h */,
+				56838EF81C8D09B90010F378 /* YelpReviewUser.m */,
+			);
+			path = DataTypes;
+			sourceTree = "<group>";
+		};
+		56838F211C8D263B0010F378 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				56838F221C8D263B0010F378 /* BusinessesListTableViewControllerDataSource.h */,
+				56838F231C8D263B0010F378 /* BusinessesListTableViewControllerDataSource.m */,
+				56838F251C8D30C20010F378 /* BusinessesMapViewControllerDataSource.h */,
+				56838F261C8D30C20010F378 /* BusinessesMapViewControllerDataSource.m */,
+			);
+			path = DataSources;
 			sourceTree = "<group>";
 		};
 		86351D491545CBF8D4B28BC7 /* Frameworks */ = {
@@ -260,10 +403,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56838ECF1C8BCC660010F378 /* BusinessesListTableViewController.m in Sources */,
 				5603AFD21C742FA5001DA97F /* AppDelegate.m in Sources */,
-				56359CC11C75943300ED1001 /* MapViewController.m in Sources */,
+				56838EFF1C8D09B90010F378 /* YelpDealOptions.m in Sources */,
+				56838ED31C8BCCE40010F378 /* GlobalConstants.m in Sources */,
 				5603AFCF1C742FA5001DA97F /* main.m in Sources */,
+				56838EFD1C8D09B90010F378 /* YelpCategory.m in Sources */,
+				56838EFC1C8D09B90010F378 /* YelpBusiness.m in Sources */,
+				56838ECE1C8BCC660010F378 /* BusinessDetailsViewController.m in Sources */,
+				56838F021C8D09B90010F378 /* YelpLocation.m in Sources */,
+				56838EFE1C8D09B90010F378 /* YelpDeal.m in Sources */,
+				56838F031C8D09B90010F378 /* YelpReview.m in Sources */,
+				56838F011C8D09B90010F378 /* YelpGiftCertificateOptions.m in Sources */,
 				56359CBD1C75942600ED1001 /* MapAnnotation.m in Sources */,
+				56838ECD1C8BCC660010F378 /* BusinessesMapViewController.m in Sources */,
+				56838F271C8D30C20010F378 /* BusinessesMapViewControllerDataSource.m in Sources */,
+				56838F001C8D09B90010F378 /* YelpGiftCertificate.m in Sources */,
+				56838F2A1C8D38A20010F378 /* BusinessesListTableViewCell.m in Sources */,
+				56838F041C8D09B90010F378 /* YelpReviewUser.m in Sources */,
+				56838EDA1C8C03230010F378 /* NSURLRequest+OAuth.m in Sources */,
+				56838F241C8D263B0010F378 /* BusinessesListTableViewControllerDataSource.m in Sources */,
+				56838EC51C8BCC1B0010F378 /* NetworkService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +518,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BreadCrumbs/PrefixHeader.pch";
 				INFOPLIST_FILE = BreadCrumbs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -374,6 +536,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BreadCrumbs/PrefixHeader.pch";
 				INFOPLIST_FILE = BreadCrumbs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
