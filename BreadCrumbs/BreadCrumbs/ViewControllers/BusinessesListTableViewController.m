@@ -109,7 +109,7 @@ static NSInteger const DefaultRowHeight = 250;
 - (void)showStoreItemDetailsScreen {
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:StoryboardName.main bundle:nil];
     
-    BusinessDetailsViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:ScreenStoryboardId.storeItemDetailsViewController];
+    BusinessDetailsViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:ScreenStoryboardId.businessDetailsViewController];
     
     [self.navigationController pushViewController:vc animated:YES];
 }

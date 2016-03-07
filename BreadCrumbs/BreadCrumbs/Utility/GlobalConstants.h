@@ -18,9 +18,9 @@ extern const struct StoryboardName {
 
 extern const struct ScreenStoryboardId {
     
-    __unsafe_unretained NSString *mapViewController;
-    __unsafe_unretained NSString *storeItemsTableViewController;
-    __unsafe_unretained NSString *storeItemDetailsViewController;
+    __unsafe_unretained NSString *businessesMapViewController;
+    __unsafe_unretained NSString *businessesListTableViewController;
+    __unsafe_unretained NSString *businessDetailsViewController;
     
 } ScreenStoryboardId;
 

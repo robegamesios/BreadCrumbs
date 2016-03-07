@@ -23,9 +23,9 @@ const struct StoryboardName StoryboardName = {
 
 const struct ScreenStoryboardId ScreenStoryboardId = {
     
-     .mapViewController = @"MapViewTableViewControllerStoryboardId",
-    .storeItemsTableViewController = @"StoreItemsTableViewControllerStoryboardId",
-    .storeItemDetailsViewController = @"StoreItemDetailsViewControlleStoryboardId",
+     .businessesMapViewController = @"BusinessesMapViewControllerboardId",
+    .businessesListTableViewController = @"BusinessesListTableViewControllerStoryboardId",
+    .businessDetailsViewController = @"BusinessDetailsViewControlleStoryboardId",
     
 };
 

@@ -31,7 +31,7 @@
         <!--MapViewController-->
         <scene sceneID="bzD-EV-EcR">
             <objects>
-                <viewController id="wHd-p2-uQr" userLabel="MapViewController" customClass="BusinessesMapViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BusinessesMapViewControllerboardId" id="wHd-p2-uQr" userLabel="MapViewController" customClass="BusinessesMapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="atH-aK-Wjo"/>
                         <viewControllerLayoutGuide type="bottom" id="bKt-Yh-pah"/>
@@ -66,7 +66,7 @@
         <!--Businesses List Table View Controller-->
         <scene sceneID="JmJ-uv-Afv">
             <objects>
-                <tableViewController storyboardIdentifier="StoreItemsTableViewControllerStoryboardId" id="a1T-n2-hF5" customClass="BusinessesListTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="BusinessesListTableViewControllerStoryboardId" id="a1T-n2-hF5" customClass="BusinessesListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="44N-0c-TsS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,7 +174,7 @@
         <!--Business Details View Controller-->
         <scene sceneID="cfY-XJ-Bgt">
             <objects>
-                <viewController storyboardIdentifier="StoreItemDetailsViewControlleStoryboardId" id="HVF-3q-9Zh" customClass="BusinessDetailsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BusinessDetailsViewControlleStoryboardId" id="HVF-3q-9Zh" customClass="BusinessDetailsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pku-EZ-Pnb"/>
                         <viewControllerLayoutGuide type="bottom" id="oJu-3b-o3B"/>

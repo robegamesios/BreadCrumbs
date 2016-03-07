@@ -199,7 +199,7 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.2;
 - (void)showStoreItemsScreen {
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:StoryboardName.main bundle:nil];
     
-    BusinessesListTableViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:ScreenStoryboardId.storeItemsTableViewController];
+    BusinessesListTableViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:ScreenStoryboardId.businessesListTableViewController];
     
     [self.navigationController pushViewController:vc animated:YES];
 }
