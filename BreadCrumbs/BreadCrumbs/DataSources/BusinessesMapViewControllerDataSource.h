@@ -16,6 +16,7 @@
 
 @property (strong, nonatomic) OCMapView *mapView;
 @property (strong, nonatomic) UINavigationController *navigationController;
+@property (strong, nonatomic) NSArray *businessesArray;
 
 - (id)initWithMapView:(OCMapView *)mapView;
 
