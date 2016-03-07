@@ -1,27 +1,27 @@
 //
-//  MapViewController.m
+//  BusinessesMapViewController.m
 //  BreadCrumbs
 //
 //  Created by Rob Enriquez on 2/17/16.
 //  Copyright © 2016 Rob Enriquez. All rights reserved.
 //
 
-#import "MapViewController.h"
+#import "BusinessesMapViewController.h"
 #import "MapAnnotation.h"
-#import "StoreItemsTableViewController.h"
+#import "BusinessesListTableViewController.h"
 
 //RE: TODO: change this later
 static NSString *const kTYPE1 = @"Banana";
 static NSString *const kTYPE2 = @"Orange";
 static CGFloat kDEFAULTCLUSTERSIZE = 0.2;
 
-@interface MapViewController () <MKMapViewDelegate>
+@interface BusinessesMapViewController () <MKMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet OCMapView *mapView;
 
 @end
 
-@implementation MapViewController
+@implementation BusinessesMapViewController
 
 
 #pragma mark - Lifecycle
@@ -197,9 +197,9 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.2;
 #pragma mark - StoreItemsTableViewController
 
 - (void)showStoreItemsScreen {
-    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:StoryboardName.main bundle:nil];
     
-    StoreItemsTableViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"StoreItemsTableViewControllerStoryboardID"];
+    BusinessesListTableViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:ScreenStoryboardId.storeItemsTableViewController];
     
     [self.navigationController pushViewController:vc animated:YES];
 }

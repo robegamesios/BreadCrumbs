@@ -1,18 +1,22 @@
 //
-//  StoreItemsTableViewController.m
+//  BusinessesListTableViewController.m
 //  BreadCrumbs
 //
 //  Created by Rob Enriquez on 3/1/16.
 //  Copyright © 2016 Rob Enriquez. All rights reserved.
 //
 
-#import "StoreItemsTableViewController.h"
+#import "BusinessesListTableViewController.h"
+#import "BusinessDetailsViewController.h"
 
-@interface StoreItemsTableViewController ()
+static NSString *const StoreItemsCellIdentifier = @"StoreItemsCellIdentifier";
+static NSInteger const DefaultRowHeight = 250;
+
+@interface BusinessesListTableViewController ()
 
 @end
 
-@implementation StoreItemsTableViewController
+@implementation BusinessesListTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,23 +32,33 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return 1;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:StoreItemsCellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    //RE: TODO: add cell info here
     
     return cell;
 }
-*/
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return DefaultRowHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    //RE: TODO: 
+    NSLog(@"cell tapped");
+    [self showStoreItemDetailsScreen];
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -89,5 +103,15 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - StoreItemDetailsTableViewController
+
+- (void)showStoreItemDetailsScreen {
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:StoryboardName.main bundle:nil];
+    
+    BusinessDetailsViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:ScreenStoryboardId.storeItemDetailsViewController];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 @end

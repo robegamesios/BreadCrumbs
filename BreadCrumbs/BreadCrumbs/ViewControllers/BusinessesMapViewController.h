@@ -1,5 +1,5 @@
 //
-//  MapViewController.h
+//  BusinessesMapViewController.h
 //  BreadCrumbs
 //
 //  Created by Rob Enriquez on 2/17/16.
@@ -10,6 +10,6 @@
 #import <MapKit/MapKit.h>
 #import "OCMapView.h"
 
-@interface MapViewController : UIViewController
+@interface BusinessesMapViewController : UIViewController
 
 @end

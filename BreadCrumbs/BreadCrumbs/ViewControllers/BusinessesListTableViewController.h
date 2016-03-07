@@ -1,5 +1,5 @@
 //
-//  StoreItemsTableViewController.h
+//  BusinessesListTableViewController.h
 //  BreadCrumbs
 //
 //  Created by Rob Enriquez on 3/1/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StoreItemsTableViewController : UITableViewController
+@interface BusinessesListTableViewController : UITableViewController
 
 @end
