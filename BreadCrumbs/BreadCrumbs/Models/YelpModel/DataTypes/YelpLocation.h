@@ -41,6 +41,15 @@
 
 #import "JSONModel.h"
 
+@protocol YelpLocationCoordinate
+@end
+
+@interface YelpLocationCoordinate : JSONModel
+@property (assign, nonatomic) double coordLatitude;
+@property (assign, nonatomic) double coordLongitude;
+
+@end
+
 @protocol YelpLocation
 
 @end
@@ -71,5 +80,6 @@
 //List that provides neighborhood(s) information for business
 @property (strong, nonatomic) NSArray<Optional> *nieghborhoods;
 
+@property (strong, nonatomic) YelpLocationCoordinate *coordinate;
 
 @end

@@ -16,3 +16,15 @@
 }
 
 @end
+
+@implementation YelpLocationCoordinate
+
++ (JSONKeyMapper *)keyMapper {
+    
+    NSDictionary *map = @{@"latitude" : @"coordLatitude",
+                          @"longitude" : @"coordLongitude"};
+    
+    return [[JSONKeyMapper alloc] initWithDictionary:map];
+}
+
+@end

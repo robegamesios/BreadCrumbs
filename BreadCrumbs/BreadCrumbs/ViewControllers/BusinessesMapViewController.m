@@ -7,9 +7,13 @@
 //
 
 #import "BusinessesMapViewController.h"
-#import "MapAnnotation.h"
 @import OCMapView;
+#import "MapAnnotation.h"
 #import "BusinessesMapViewControllerDataSource.h"
+#import "NetworkService.h"
+#import "YelpBusiness.h"
+#import "YelpLocation.h"
+#import "LMGeocoder.h"
 
 //RE: TODO: change this later
 static NSString *const kTYPE1 = @"Banana";
@@ -32,7 +36,7 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.2;
     [super viewDidLoad];
     
     [self setupDataSource];
-    [self setupView];
+    [self testJSON];
 }
 
 #pragma mark - Accessors
@@ -48,6 +52,22 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.2;
 
 #pragma mark - Setup
 
+- (void)testJSON {
+    
+    __weak typeof(self) weakSelf = self;
+    
+    [[NetworkService sharedNetworkService] queryStoreWithType:@"food" location:@"daly city" successHandler:^(id responseObject) {
+        
+        NSArray *array = [NSArray arrayWithArray:responseObject];
+        weakSelf.dataSource.businessesArray = array;
+        
+        [weakSelf setupView];
+
+    } errorHandler:^(NSString *errorString) {
+        NSLog(@"JSON Network error = %@", errorString);
+    }];
+}
+
 - (void)setupDataSource {
     self.dataSource.navigationController = self.navigationController;
 }
@@ -56,54 +76,26 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.2;
 
     self.mapView.clusterSize = kDEFAULTCLUSTERSIZE;
 
-    NSArray *randomLocations = [[NSArray alloc] initWithArray:[self randomCoordinatesGenerator:100]];
     NSMutableSet *annotationsToAdd = [[NSMutableSet alloc] init];
     
-    for (CLLocation *loc in randomLocations) {
+    for (YelpBusiness *business in self.dataSource.businessesArray) {
+
+        CLLocation *loc = [[CLLocation alloc]initWithLatitude:business.location.coordinate.coordLatitude longitude:business.location.coordinate.coordLongitude];
+
         MapAnnotation *annotation = [[MapAnnotation alloc] initWithCoordinate:loc.coordinate];
-        [annotationsToAdd addObject:annotation];
         
         // add to group if specified
-        if (annotationsToAdd.count < (randomLocations.count)/2.0) {
+        if (annotationsToAdd.count < (self.dataSource.businessesArray.count)/2.0) {
             annotation.groupTag = kTYPE1;
         } else {
             annotation.groupTag = kTYPE2;
         }
-        
+        [annotationsToAdd addObject:annotation];
+
     }
     
     [self.mapView addAnnotations:[annotationsToAdd allObjects]];
 
 }
-
-#pragma mark - Test Data Logic
-
-// Help method which returns an array of random CLLocations
-// You can specify the number of coordinates by setting numberOfCoordinates
-- (NSArray *)randomCoordinatesGenerator:(int)numberOfCoordinates
-{
-    MKCoordinateRegion visibleRegion = self.mapView.region;
-    visibleRegion.span.latitudeDelta *= 0.8;
-    visibleRegion.span.longitudeDelta *= 0.8;
-    
-    int max = 9999;
-    numberOfCoordinates = MAX(0,numberOfCoordinates);
-    NSMutableArray *coordinates = [[NSMutableArray alloc] initWithCapacity:numberOfCoordinates];
-    for (int i = 0; i < numberOfCoordinates; i++) {
-        
-        // start with top left corner
-        CLLocationDistance longitude = visibleRegion.center.longitude - visibleRegion.span.longitudeDelta/2.0;
-        CLLocationDistance latitude  = visibleRegion.center.latitude + visibleRegion.span.latitudeDelta/2.0;
-        
-        // Get random coordinates within current map rect
-        longitude += ((arc4random()%max)/(CGFloat)max) * visibleRegion.span.longitudeDelta;
-        latitude  -= ((arc4random()%max)/(CGFloat)max) * visibleRegion.span.latitudeDelta;
-        
-        CLLocation *loc = [[CLLocation alloc]initWithLatitude:latitude longitude:longitude];
-        [coordinates addObject:loc];
-    }
-    return  coordinates;
-}
-
 
 @end
