@@ -29,6 +29,9 @@
 		56838F021C8D09B90010F378 /* YelpLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838EF41C8D09B90010F378 /* YelpLocation.m */; };
 		56838F031C8D09B90010F378 /* YelpReview.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838EF61C8D09B90010F378 /* YelpReview.m */; };
 		56838F041C8D09B90010F378 /* YelpReviewUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838EF81C8D09B90010F378 /* YelpReviewUser.m */; };
+		56838F241C8D263B0010F378 /* BusinessesListTableViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838F231C8D263B0010F378 /* BusinessesListTableViewControllerDataSource.m */; };
+		56838F271C8D30C20010F378 /* BusinessesMapViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838F261C8D30C20010F378 /* BusinessesMapViewControllerDataSource.m */; };
+		56838F2A1C8D38A20010F378 /* BusinessesListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838F291C8D38A20010F378 /* BusinessesListTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +76,12 @@
 		56838EF61C8D09B90010F378 /* YelpReview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpReview.m; sourceTree = "<group>"; };
 		56838EF71C8D09B90010F378 /* YelpReviewUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpReviewUser.h; sourceTree = "<group>"; };
 		56838EF81C8D09B90010F378 /* YelpReviewUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpReviewUser.m; sourceTree = "<group>"; };
+		56838F221C8D263B0010F378 /* BusinessesListTableViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessesListTableViewControllerDataSource.h; sourceTree = "<group>"; };
+		56838F231C8D263B0010F378 /* BusinessesListTableViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessesListTableViewControllerDataSource.m; sourceTree = "<group>"; };
+		56838F251C8D30C20010F378 /* BusinessesMapViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessesMapViewControllerDataSource.h; sourceTree = "<group>"; };
+		56838F261C8D30C20010F378 /* BusinessesMapViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessesMapViewControllerDataSource.m; sourceTree = "<group>"; };
+		56838F281C8D38A20010F378 /* BusinessesListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessesListTableViewCell.h; sourceTree = "<group>"; };
+		56838F291C8D38A20010F378 /* BusinessesListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessesListTableViewCell.m; sourceTree = "<group>"; };
 		568967BD1C86E5E400A9F4DE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		6E205C0A63F3494F313DC1F3 /* Pods-BreadCrumbs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreadCrumbs.release.xcconfig"; path = "Pods/Target Support Files/Pods-BreadCrumbs/Pods-BreadCrumbs.release.xcconfig"; sourceTree = "<group>"; };
 		7797B2216EC4B82A7BC7D36E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,8 +134,9 @@
 		5603AFCC1C742FA5001DA97F /* BreadCrumbs */ = {
 			isa = PBXGroup;
 			children = (
-				56838EE11C8CDF4A0010F378 /* Models */,
 				56838ED71C8C03230010F378 /* Categories */,
+				56838F211C8D263B0010F378 /* DataSources */,
+				56838EE11C8CDF4A0010F378 /* Models */,
 				56838EC21C8BCC1B0010F378 /* NetworkServices */,
 				56359CC21C75949A00ED1001 /* Storyboards */,
 				56838ED01C8BCCE40010F378 /* Utility */,
@@ -155,6 +165,8 @@
 			children = (
 				56359CBB1C75942600ED1001 /* MapAnnotation.h */,
 				56359CBC1C75942600ED1001 /* MapAnnotation.m */,
+				56838F281C8D38A20010F378 /* BusinessesListTableViewCell.h */,
+				56838F291C8D38A20010F378 /* BusinessesListTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -247,6 +259,17 @@
 				56838EF81C8D09B90010F378 /* YelpReviewUser.m */,
 			);
 			path = DataTypes;
+			sourceTree = "<group>";
+		};
+		56838F211C8D263B0010F378 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				56838F221C8D263B0010F378 /* BusinessesListTableViewControllerDataSource.h */,
+				56838F231C8D263B0010F378 /* BusinessesListTableViewControllerDataSource.m */,
+				56838F251C8D30C20010F378 /* BusinessesMapViewControllerDataSource.h */,
+				56838F261C8D30C20010F378 /* BusinessesMapViewControllerDataSource.m */,
+			);
+			path = DataSources;
 			sourceTree = "<group>";
 		};
 		86351D491545CBF8D4B28BC7 /* Frameworks */ = {
@@ -394,9 +417,12 @@
 				56838F011C8D09B90010F378 /* YelpGiftCertificateOptions.m in Sources */,
 				56359CBD1C75942600ED1001 /* MapAnnotation.m in Sources */,
 				56838ECD1C8BCC660010F378 /* BusinessesMapViewController.m in Sources */,
+				56838F271C8D30C20010F378 /* BusinessesMapViewControllerDataSource.m in Sources */,
 				56838F001C8D09B90010F378 /* YelpGiftCertificate.m in Sources */,
+				56838F2A1C8D38A20010F378 /* BusinessesListTableViewCell.m in Sources */,
 				56838F041C8D09B90010F378 /* YelpReviewUser.m in Sources */,
 				56838EDA1C8C03230010F378 /* NSURLRequest+OAuth.m in Sources */,
+				56838F241C8D263B0010F378 /* BusinessesListTableViewControllerDataSource.m in Sources */,
 				56838EC51C8BCC1B0010F378 /* NetworkService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,9 +6,8 @@
 //  Copyright © 2016 Rob Enriquez. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <MapKit/MapKit.h>
-#import "OCMapView.h"
+@import UIKit;
+@import MapKit;
 
 @interface BusinessesMapViewController : UIViewController
 

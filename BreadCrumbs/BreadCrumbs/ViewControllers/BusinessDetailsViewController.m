@@ -7,8 +7,6 @@
 //
 
 #import "BusinessDetailsViewController.h"
-#import "NetworkService.h"
-#import "GlobalConstants.h"
 
 @interface BusinessDetailsViewController ()
 
@@ -18,22 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self testJSON];
-}
-
-- (void)testJSON {
-    
-    [[NetworkService sharedNetworkService] queryStoreWithType:@"food" location:@"daly city" successHandler:^(id responseObject) {
-
-        NSArray *array = [NSArray arrayWithArray:responseObject];
-        
-        NSLog(@"ARRAY = %i",array.count);
-        NSLog(@"ARRAY = %@",array);
-        
-    } errorHandler:^(NSString *errorString) {
-        NSLog(@"JSON Network error = %@", errorString);
-    }];
 }
 
 @end
