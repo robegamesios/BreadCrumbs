@@ -13,7 +13,9 @@
 #import "NetworkService.h"
 #import "YelpBusiness.h"
 #import "YelpLocation.h"
-#import "LMGeocoder.h"
+#import "MapUtility.h"
+#import <INTULocationManager/INTULocationManager.h>
+
 
 //RE: TODO: change this later
 static NSString *const kTYPE1 = @"Banana";
@@ -35,6 +37,7 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.2;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setupUserLocation];
     [self setupDataSource];
     [self testJSON];
 }
@@ -52,11 +55,28 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.2;
 
 #pragma mark - Setup
 
+- (void)setupUserLocation {
+    INTULocationManager *locMgr = [INTULocationManager sharedInstance];
+    
+    [locMgr requestLocationWithDesiredAccuracy:INTULocationAccuracyCity timeout:10.f block:^(CLLocation *currentLocation, INTULocationAccuracy achievedAccuracy, INTULocationStatus status) {
+        
+        if (status == INTULocationStatusSuccess) {
+            
+            [MapUtility centerMap:self.mapView atLocation:currentLocation.coordinate zoomLevel:1.0f];
+
+        } else if (status == INTULocationStatusTimedOut) {
+            
+        } else {
+            
+        }
+    }];
+}
+
 - (void)testJSON {
     
     __weak typeof(self) weakSelf = self;
     
-    [[NetworkService sharedNetworkService] queryStoreWithType:@"food" location:@"daly city" successHandler:^(id responseObject) {
+    [[NetworkService sharedNetworkService] queryStoreWithType:@"food" location:@"san francisco" successHandler:^(id responseObject) {
         
         NSArray *array = [NSArray arrayWithArray:responseObject];
         weakSelf.dataSource.businessesArray = array;
@@ -73,7 +93,6 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.2;
 }
 
 - (void)setupView {
-
     self.mapView.clusterSize = kDEFAULTCLUSTERSIZE;
 
     NSMutableSet *annotationsToAdd = [[NSMutableSet alloc] init];

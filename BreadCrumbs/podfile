@@ -15,5 +15,6 @@ target 'BreadCrumbs' do
     pod 'TDOAuth', '1.1.2'
     pod 'BDBOAuth1Manager', '2.0.0'
     pod 'LMGeocoder', '1.0.4'
+    pod 'INTULocationManager', '4.1.1'
     
 end

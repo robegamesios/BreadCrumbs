@@ -33,6 +33,11 @@ static NSString *const kTYPE2 = @"Orange";
 - (MKAnnotationView *)mapView:(MKMapView *)aMapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
     MKAnnotationView *annotationView;
+
+    //RE: use the default blue dot for user location
+    if ([annotation isKindOfClass:[MKUserLocation class]]) {
+        return nil;
+    }
     
     // if it's a cluster
     if ([annotation isKindOfClass:[OCAnnotation class]]) {

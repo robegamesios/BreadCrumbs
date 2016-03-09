@@ -32,6 +32,7 @@
 		56838F241C8D263B0010F378 /* BusinessesListTableViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838F231C8D263B0010F378 /* BusinessesListTableViewControllerDataSource.m */; };
 		56838F271C8D30C20010F378 /* BusinessesMapViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838F261C8D30C20010F378 /* BusinessesMapViewControllerDataSource.m */; };
 		56838F2A1C8D38A20010F378 /* BusinessesListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838F291C8D38A20010F378 /* BusinessesListTableViewCell.m */; };
+		56F7A3891C900ED500F06739 /* MapUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F7A3881C900ED500F06739 /* MapUtility.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,8 @@
 		56838F281C8D38A20010F378 /* BusinessesListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessesListTableViewCell.h; sourceTree = "<group>"; };
 		56838F291C8D38A20010F378 /* BusinessesListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessesListTableViewCell.m; sourceTree = "<group>"; };
 		568967BD1C86E5E400A9F4DE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		56F7A3871C900ED500F06739 /* MapUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapUtility.h; sourceTree = "<group>"; };
+		56F7A3881C900ED500F06739 /* MapUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapUtility.m; sourceTree = "<group>"; };
 		6E205C0A63F3494F313DC1F3 /* Pods-BreadCrumbs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreadCrumbs.release.xcconfig"; path = "Pods/Target Support Files/Pods-BreadCrumbs/Pods-BreadCrumbs.release.xcconfig"; sourceTree = "<group>"; };
 		7797B2216EC4B82A7BC7D36E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		79C35D91502A109FB0BFDDF6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -207,6 +210,8 @@
 			children = (
 				56838ED11C8BCCE40010F378 /* GlobalConstants.h */,
 				56838ED21C8BCCE40010F378 /* GlobalConstants.m */,
+				56F7A3871C900ED500F06739 /* MapUtility.h */,
+				56F7A3881C900ED500F06739 /* MapUtility.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -414,6 +419,7 @@
 				56838F021C8D09B90010F378 /* YelpLocation.m in Sources */,
 				56838EFE1C8D09B90010F378 /* YelpDeal.m in Sources */,
 				56838F031C8D09B90010F378 /* YelpReview.m in Sources */,
+				56F7A3891C900ED500F06739 /* MapUtility.m in Sources */,
 				56838F011C8D09B90010F378 /* YelpGiftCertificateOptions.m in Sources */,
 				56359CBD1C75942600ED1001 /* MapAnnotation.m in Sources */,
 				56838ECD1C8BCC660010F378 /* BusinessesMapViewController.m in Sources */,
