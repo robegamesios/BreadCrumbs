@@ -7,14 +7,14 @@
 //
 
 #import "BusinessesMapViewController.h"
-@import OCMapView;
-#import "MapAnnotation.h"
 #import "BusinessesMapViewControllerDataSource.h"
+#import <INTULocationManager/INTULocationManager.h>
+#import "MapAnnotation.h"
+#import "MapUtility.h"
 #import "NetworkService.h"
+@import OCMapView;
 #import "YelpBusiness.h"
 #import "YelpLocation.h"
-#import "MapUtility.h"
-#import <INTULocationManager/INTULocationManager.h>
 
 
 //RE: TODO: change this later
@@ -81,7 +81,7 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.2;
         NSArray *array = [NSArray arrayWithArray:responseObject];
         weakSelf.dataSource.businessesArray = array;
         
-        [weakSelf setupView];
+        [weakSelf.dataSource setupView];
 
     } errorHandler:^(NSString *errorString) {
         NSLog(@"JSON Network error = %@", errorString);
@@ -102,7 +102,7 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.2;
         CLLocation *loc = [[CLLocation alloc]initWithLatitude:business.location.coordinate.coordLatitude longitude:business.location.coordinate.coordLongitude];
 
         MapAnnotation *annotation = [[MapAnnotation alloc] initWithCoordinate:loc.coordinate];
-        
+
         // add to group if specified
         if (annotationsToAdd.count < (self.dataSource.businessesArray.count)/2.0) {
             annotation.groupTag = kTYPE1;

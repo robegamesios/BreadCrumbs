@@ -8,12 +8,8 @@
 
 #import "GlobalConstants.h"
 
-#pragma mark - Yelp Credentials
 
-NSString * const kAPIHost           = @"api.yelp.com";
-NSString * const kSearchPath        = @"/v2/search/";
-NSString * const kBusinessPath      = @"/v2/business/";
-NSString * const kSearchLimit       = @"10";
+#pragma mark - Storyboard
 
 const struct StoryboardName StoryboardName = {
     
@@ -29,17 +25,16 @@ const struct ScreenStoryboardId ScreenStoryboardId = {
     
 };
 
-@implementation GlobalConstants
 
-+ (NSURL *)globalBaseUrl {
-//    return [NSURL URLWithString:@"http://api.kivaws.org"];
-    return [NSURL URLWithString:kAPIHost];
+#pragma mark - Yelp Credentials
 
-}
+NSString * const kAPIHost           = @"api.yelp.com";
+NSString * const kSearchPath        = @"/v2/search/";
+NSString * const kBusinessPath      = @"/v2/business/";
+NSString * const kSearchLimit       = @"10";
 
-+ (NSString *)globalTestPath {
-//    return @"v1/loans/search.json?status=fundraising";
-    return @"https://api.yelp.com/v2/search";
-}
 
-@end
+#pragma mark - GlobalStrings
+
+NSString * const kMapMarkerRed = @"marker-red";
+

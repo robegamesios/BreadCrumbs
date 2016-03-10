@@ -7,14 +7,19 @@
 //
 
 #import "BusinessesMapViewControllerDataSource.h"
+#import "BusinessesListTableViewController.h"
 #import "MapAnnotation.h"
 @import OCMapView;
-#import "BusinessesListTableViewController.h"
+#import "YelpBusiness.h"
+#import "YelpLocation.h"
 
 
 //RE: TODO: change this later
 static NSString *const kTYPE1 = @"Banana";
 static NSString *const kTYPE2 = @"Orange";
+static CGFloat kDEFAULTCLUSTERSIZE = 0.2;
+
+static NSString *const ReuseIdentifierKey = @"singleAnnotationView";
 
 @implementation BusinessesMapViewControllerDataSource
 
@@ -28,9 +33,37 @@ static NSString *const kTYPE2 = @"Orange";
     return self;
 }
 
+- (void)setupView {
+    self.mapView.clusterSize = kDEFAULTCLUSTERSIZE;
+    
+    NSMutableSet *annotationsToAdd = [[NSMutableSet alloc] init];
+    
+    for (YelpBusiness *business in self.businessesArray) {
+        
+        CLLocation *loc = [[CLLocation alloc]initWithLatitude:business.location.coordinate.coordLatitude longitude:business.location.coordinate.coordLongitude];
+        
+        MapAnnotation *annotation = [[MapAnnotation alloc] initWithCoordinate:loc.coordinate];
+        annotation.title = business.name;
+        annotation.subtitle = business.phone;
+        annotation.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:business.imageUrl]]];
+        
+        // add to group if specified
+        if (annotationsToAdd.count < (self.businessesArray.count)/2.0) {
+            annotation.groupTag = kTYPE1;
+        } else {
+            annotation.groupTag = kTYPE2;
+        }
+        [annotationsToAdd addObject:annotation];
+        
+    }
+    
+    [self.mapView addAnnotations:[annotationsToAdd allObjects]];
+    
+}
+
 #pragma mark - map delegate
 
-- (MKAnnotationView *)mapView:(MKMapView *)aMapView viewForAnnotation:(id <MKAnnotation>)annotation
+- (MKAnnotationView *)mapView:(MKMapView *)aMapView viewForAnnotation:(MapAnnotation *)annotation
 {
     MKAnnotationView *annotationView;
 
@@ -68,33 +101,44 @@ static NSString *const kTYPE2 = @"Orange";
             }
             clusterAnnotation.title = clusterAnnotation.groupTag;
         }
+        
+        //show radius of cluster
+        //TODO: set the radius size based on the cluster size perimeter
+        MKCircle *circleoverlay = [MKCircle circleWithCenterCoordinate:annotation.coordinate radius:100];
+        [aMapView addOverlay:circleoverlay];
+
     }
+    
     // If it's a single annotation
     else if([annotation isKindOfClass:[MapAnnotation class]]){
+        
         MapAnnotation *singleAnnotation = (MapAnnotation *)annotation;
-        annotationView = (MKAnnotationView *)[aMapView dequeueReusableAnnotationViewWithIdentifier:@"singleAnnotationView"];
+        
+        annotationView = (MKAnnotationView *)[aMapView dequeueReusableAnnotationViewWithIdentifier:ReuseIdentifierKey];
+        
         if (!annotationView) {
-            annotationView = [[MKAnnotationView alloc] initWithAnnotation:singleAnnotation reuseIdentifier:@"singleAnnotationView"];
+            annotationView = [[MKAnnotationView alloc] initWithAnnotation:singleAnnotation reuseIdentifier:ReuseIdentifierKey];
             annotationView.canShowCallout = YES;
             annotationView.centerOffset = CGPointMake(0, -20);
+            
+            //show default annotationView image
+            annotationView.image = [UIImage imageNamed:kMapMarkerRed];
+            
+            //shows a right accessory button
             annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-        }
-        singleAnnotation.title = singleAnnotation.groupTag;
-        
-        if ([singleAnnotation.groupTag isEqualToString:kTYPE1]) {
-            annotationView.image = [UIImage imageNamed:@"icon_banana.png"];
-        }
-        else if([singleAnnotation.groupTag isEqualToString:kTYPE2]){
-            annotationView.image = [UIImage imageNamed:@"icon_orange.png"];
+            
+            //shows an image on the left side of annotationView
+            annotationView.leftCalloutAccessoryView =  [[UIImageView alloc] initWithImage:annotation.image];
         }
     }
+    
     // Error
-    else{
+    else {
+        //TODO: might not be need, maybe show alert controller instead
         annotationView = (MKPinAnnotationView *)[aMapView dequeueReusableAnnotationViewWithIdentifier:@"errorAnnotationView"];
         if (!annotationView) {
             annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"errorAnnotationView"];
             annotationView.canShowCallout = NO;
-            //            ((MKPinAnnotationView *)annotationView).pinColor = MKPinAnnotationColorRed;
         }
     }
     
@@ -110,30 +154,20 @@ static NSString *const kTYPE2 = @"Orange";
     
 }
 
-
-//- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay{
-//    MKCircle *circle = overlay;
-//    MKCircleView *circleView = [[MKCircleView alloc] initWithCircle:overlay];
-//
-//    if ([circle.title isEqualToString:@"background"])
-//    {
-//        circleView.fillColor = [UIColor yellowColor];
-//
-//        circleView.alpha = 0.25;
-//    }
-//    else if ([circle.title isEqualToString:@"helper"])
-//    {
-//        circleView.fillColor = [UIColor redColor];
-//        circleView.alpha = 0.25;
-//    }
-//    else
-//    {
-//        circleView.strokeColor = [UIColor blackColor];
-//        circleView.lineWidth = 0.5;
-//    }
-//
-//    return circleView;
-//}
+- (MKOverlayRenderer *) mapView:(MKMapView *)mapView rendererForOverlay:(id)overlay {
+    if([overlay isKindOfClass:[MKCircle class]]) {
+        MKCircleRenderer* aRenderer = [[MKCircleRenderer
+                                        alloc]initWithCircle:(MKCircle *)overlay];
+        
+        aRenderer.fillColor = [[UIColor blueColor] colorWithAlphaComponent:0.25];
+        aRenderer.alpha = 0.5;
+        
+        return aRenderer;
+        
+    } else {
+        return nil;
+    }
+}
 
 - (void)mapView:(MKMapView *)aMapView regionDidChangeAnimated:(BOOL)animated{
     [self.mapView removeOverlays:self.mapView.overlays];

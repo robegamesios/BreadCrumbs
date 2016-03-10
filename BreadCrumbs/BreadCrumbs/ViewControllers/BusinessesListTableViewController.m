@@ -48,8 +48,6 @@
     [[NetworkService sharedNetworkService] queryStoreWithType:@"food" location:@"daly city" successHandler:^(id responseObject) {
         
         NSArray *array = [NSArray arrayWithArray:responseObject];
-//        NSLog(@"ARRAY = %i",array.count);
-//        NSLog(@"ARRAY = %@",array);
         
         self.dataSource.businessesArray = array;
         [self.tableView reloadData];

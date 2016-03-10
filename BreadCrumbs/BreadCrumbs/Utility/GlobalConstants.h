@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+
 #pragma mark - Storyboard
 
 extern const struct StoryboardName {
     
     __unsafe_unretained NSString *main;
-    
+    ;
 } StoryboardName;
 
 extern const struct ScreenStoryboardId {
@@ -42,11 +43,5 @@ extern NSString * const kSearchLimit;
 
 #pragma mark - GlobalStrings
 
-@interface GlobalConstants : NSObject
-
-+ (NSURL *) globalBaseUrl;
-+ (NSString *)globalTestPath;
-
-@end
-
+extern NSString * const kMapMarkerRed;
 

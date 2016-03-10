@@ -19,5 +19,6 @@
 @property (strong, nonatomic) NSArray *businessesArray;
 
 - (id)initWithMapView:(OCMapView *)mapView;
+- (void)setupView;
 
 @end

@@ -13,9 +13,10 @@
 @interface MapAnnotation : NSObject <MKAnnotation, OCGrouping>
 
 @property (assign, nonatomic) CLLocationCoordinate2D coordinate;
-@property (nonatomic, copy) NSString *title;
-@property (nonatomic, copy) NSString *subtitle;
-@property (nonatomic, copy) NSString *groupTag;
+@property (copy, nonatomic) NSString *title;
+@property (copy, nonatomic) NSString *subtitle;
+@property (copy, nonatomic) NSString *groupTag;
+@property (copy, nonatomic) UIImage *image;
 
 - (id)initWithCoordinate:(CLLocationCoordinate2D)aCoordinate;
 
