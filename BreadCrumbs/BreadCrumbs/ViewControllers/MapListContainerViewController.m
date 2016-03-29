@@ -78,15 +78,25 @@ static NSString *const LocationIconKey = @"location-icon";
     [self.toggleButton setBackgroundImage:image forState:UIControlStateNormal];
 }
 
+
 #pragma mark - IBActions
 
 - (IBAction)toggleButtonTapped:(UIButton *)sender {
-    if (self.listTableViewController.view.hidden) {
-        [self showListViewScreen];
-        
-    } else if (self.mapViewController.view.hidden) {
-        [self showMapViewScreen];
-    }
+    void (^Animations)(void) = ^{
+        if(self.listTableViewController.view.hidden) {
+            [self showListViewScreen];
+        } else {
+            [self showMapViewScreen];
+        }
+    };
+    
+    [UIView transitionWithView:self.view
+                      duration:1.f
+                       options:(self.listTableViewController.view.hidden ? UIViewAnimationOptionTransitionFlipFromRight :
+                                UIViewAnimationOptionTransitionFlipFromLeft)
+                    animations:Animations
+     
+                    completion:nil];
 }
 
 @end
