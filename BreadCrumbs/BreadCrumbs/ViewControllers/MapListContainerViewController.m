@@ -9,6 +9,7 @@
 #import "MapListContainerViewController.h"
 #import "BusinessesListTableViewController.h"
 #import "BusinessesMapViewController.h"
+#import "SearchViewController.h"
 
 static NSString *const ListIconKey = @"list-icon";
 static NSString *const LocationIconKey = @"location-icon";
@@ -78,6 +79,15 @@ static NSString *const LocationIconKey = @"location-icon";
     [self.toggleButton setBackgroundImage:image forState:UIControlStateNormal];
 }
 
+- (void)showSearchViewScreen {
+    SearchViewController *searchViewController = (SearchViewController *)[UIStoryboard instantiateViewControllerWithStoryboardName:StoryboardName.main screenStoryboardId:ScreenStoryboardId.searchViewController];
+    
+    UINavigationController *navigationController =
+    [[UINavigationController alloc] initWithRootViewController:searchViewController];
+
+    [self presentViewController:navigationController animated:YES completion:nil];
+}
+
 
 #pragma mark - IBActions
 
@@ -90,6 +100,7 @@ static NSString *const LocationIconKey = @"location-icon";
         }
     };
     
+    //RE: Add Flip Animation L to R / R to L
     [UIView transitionWithView:self.view
                       duration:1.f
                        options:(self.listTableViewController.view.hidden ? UIViewAnimationOptionTransitionFlipFromRight :
@@ -98,5 +109,10 @@ static NSString *const LocationIconKey = @"location-icon";
      
                     completion:nil];
 }
+
+- (IBAction)searchButtonTapped:(UIButton *)sender {
+    [self showSearchViewScreen];
+}
+
 
 @end

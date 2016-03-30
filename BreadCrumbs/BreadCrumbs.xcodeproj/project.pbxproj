@@ -11,6 +11,7 @@
 		5603AFCF1C742FA5001DA97F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5603AFCE1C742FA5001DA97F /* main.m */; };
 		5603AFD21C742FA5001DA97F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5603AFD11C742FA5001DA97F /* AppDelegate.m */; };
 		5603AFDA1C742FA5001DA97F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5603AFD91C742FA5001DA97F /* Assets.xcassets */; };
+		5614BC471CABB8C300388C24 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5614BC461CABB8C300388C24 /* SearchViewController.m */; };
 		56359CBD1C75942600ED1001 /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 56359CBC1C75942600ED1001 /* MapAnnotation.m */; };
 		56359CC51C75949A00ED1001 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56359CC31C75949A00ED1001 /* LaunchScreen.storyboard */; };
 		56359CC61C75949A00ED1001 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56359CC41C75949A00ED1001 /* Main.storyboard */; };
@@ -45,6 +46,8 @@
 		5603AFD11C742FA5001DA97F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5603AFD91C742FA5001DA97F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5603AFDE1C742FA5001DA97F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5614BC451CABB8C300388C24 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		5614BC461CABB8C300388C24 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		56359CBB1C75942600ED1001 /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
 		56359CBC1C75942600ED1001 /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
 		56359CC31C75949A00ED1001 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -209,6 +212,8 @@
 				56838EC81C8BCC660010F378 /* BusinessesMapViewController.m */,
 				56E0B7A81C92C16700C806BF /* MapListContainerViewController.h */,
 				56E0B7A91C92C16700C806BF /* MapListContainerViewController.m */,
+				5614BC451CABB8C300388C24 /* SearchViewController.h */,
+				5614BC461CABB8C300388C24 /* SearchViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -430,6 +435,7 @@
 				56838F021C8D09B90010F378 /* YelpLocation.m in Sources */,
 				56838EFE1C8D09B90010F378 /* YelpDeal.m in Sources */,
 				56838F031C8D09B90010F378 /* YelpReview.m in Sources */,
+				5614BC471CABB8C300388C24 /* SearchViewController.m in Sources */,
 				56F7A3891C900ED500F06739 /* MapUtility.m in Sources */,
 				56838F011C8D09B90010F378 /* YelpGiftCertificateOptions.m in Sources */,
 				56359CBD1C75942600ED1001 /* MapAnnotation.m in Sources */,

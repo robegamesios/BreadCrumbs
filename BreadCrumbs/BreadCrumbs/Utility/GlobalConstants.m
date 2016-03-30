@@ -22,6 +22,7 @@ const struct ScreenStoryboardId ScreenStoryboardId = {
      .businessesMapViewController = @"BusinessesMapViewControllerboardId",
     .businessesListTableViewController = @"BusinessesListTableViewControllerStoryboardId",
     .businessDetailsViewController = @"BusinessDetailsViewControlleStoryboardId",
+    .searchViewController = @"SearchViewControllerStoryboardId",
     
 };
 

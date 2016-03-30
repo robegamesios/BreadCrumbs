@@ -22,6 +22,7 @@ extern const struct ScreenStoryboardId {
     __unsafe_unretained NSString *businessesMapViewController;
     __unsafe_unretained NSString *businessesListTableViewController;
     __unsafe_unretained NSString *businessDetailsViewController;
+    __unsafe_unretained NSString *searchViewController;
     
 } ScreenStoryboardId;
 
