@@ -14,7 +14,7 @@
 extern const struct StoryboardName {
     
     __unsafe_unretained NSString *main;
-    ;
+    
 } StoryboardName;
 
 extern const struct ScreenStoryboardId {

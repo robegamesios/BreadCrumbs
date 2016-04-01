@@ -82,11 +82,48 @@ static NSString *const LocationIconKey = @"location-icon";
 - (void)showSearchViewScreen {
     SearchViewController *searchViewController = (SearchViewController *)[UIStoryboard instantiateViewControllerWithStoryboardName:StoryboardName.main screenStoryboardId:ScreenStoryboardId.searchViewController];
     
+    
+//    GMSAutocompleteViewController *searchViewController = [[GMSAutocompleteViewController alloc] init];
+//    searchViewController.delegate = self;
+    
     UINavigationController *navigationController =
     [[UINavigationController alloc] initWithRootViewController:searchViewController];
 
     [self presentViewController:navigationController animated:YES completion:nil];
 }
+
+
+#pragma mark - GoogleMaps Delegate Methods
+
+//- (void)viewController:(GMSAutocompleteViewController *)viewController
+//didAutocompleteWithPlace:(GMSPlace *)place {
+//    // Do something with the selected place.
+//    NSLog(@"Place name %@", place.name);
+//    NSLog(@"Place address %@", place.formattedAddress);
+//    NSLog(@"Place attributions %@", place.attributions.string);
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//}
+//
+//- (void)viewController:(GMSAutocompleteViewController *)viewController
+//didFailAutocompleteWithError:(NSError *)error {
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//    // TODO: handle the error.
+//    NSLog(@"Error: %@", [error description]);
+//}
+//
+//// User canceled the operation.
+//- (void)wasCancelled:(GMSAutocompleteViewController *)viewController {
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//}
+//
+//// Turn the network activity indicator on and off again.
+//- (void)didRequestAutocompletePredictions:(GMSAutocompleteViewController *)viewController {
+//    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+//}
+//
+//- (void)didUpdateAutocompletePredictions:(GMSAutocompleteViewController *)viewController {
+//    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+//}
 
 
 #pragma mark - IBActions
