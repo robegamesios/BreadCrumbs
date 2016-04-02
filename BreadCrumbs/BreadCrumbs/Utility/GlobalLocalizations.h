@@ -12,4 +12,8 @@
 
 + (NSString *)localizedMessageNoResultsFound;
 
+
+//Error Messages
++ (NSString *)localizedFaildToGetUserLocation;
+
 @end

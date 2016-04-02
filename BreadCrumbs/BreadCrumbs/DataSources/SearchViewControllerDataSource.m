@@ -39,21 +39,32 @@ static NSInteger const DefaultRowHeight = 55;
 
 - (void)setupGoogleMaps {
     
-    // Set bounds to inner-west Sydney Australia.
-    CLLocationCoordinate2D neBoundsCorner = CLLocationCoordinate2DMake(-33.843366, 151.134002);
-    CLLocationCoordinate2D swBoundsCorner = CLLocationCoordinate2DMake(-33.875725, 151.200349);
-    GMSCoordinateBounds *bounds = [[GMSCoordinateBounds alloc] initWithCoordinate:neBoundsCorner
-                                                                       coordinate:swBoundsCorner];
+    __weak typeof(self) weakSelf = self;
     
     // Set up the autocomplete filter.
     GMSAutocompleteFilter *filter = [[GMSAutocompleteFilter alloc] init];
     filter.type = kGMSPlacesAutocompleteTypeFilterEstablishment;
     
-    // Create the fetcher.
-    self.fetcher = [[GMSAutocompleteFetcher alloc] initWithBounds:bounds
-                                                           filter:filter];
-    self.fetcher.delegate = self;
-    
+    if ([[SingletonLocalService sharedManager] isLocationServicesAvailable]) {
+        
+        [[SingletonLocalService sharedManager] getUserLocationWithSuccessHandler:^(id responseObject) {
+            
+            CLLocation *result = responseObject;
+            
+            GMSCoordinateBounds *bounds = [[GMSCoordinateBounds alloc] initWithCoordinate:result.coordinate coordinate:result.coordinate];
+            
+            weakSelf.fetcher = [[GMSAutocompleteFetcher alloc] initWithBounds:bounds
+                                                                   filter:filter];
+            weakSelf.fetcher.delegate = weakSelf;
+
+        }];
+        
+    } else {
+        // Create the fetcher.
+        self.fetcher = [[GMSAutocompleteFetcher alloc] initWithBounds:nil
+                                                               filter:filter];
+        self.fetcher.delegate = self;
+    }
 }
 
 

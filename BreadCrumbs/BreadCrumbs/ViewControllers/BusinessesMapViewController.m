@@ -8,7 +8,6 @@
 
 #import "BusinessesMapViewController.h"
 #import "BusinessesMapViewControllerDataSource.h"
-#import <INTULocationManager/INTULocationManager.h>
 #import "MapAnnotation.h"
 #import "MapUtility.h"
 #import "NetworkService.h"
@@ -56,20 +55,17 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.2;
 #pragma mark - Setup
 
 - (void)setupUserLocation {
-    INTULocationManager *locMgr = [INTULocationManager sharedInstance];
     
-    [locMgr requestLocationWithDesiredAccuracy:INTULocationAccuracyCity timeout:10.f block:^(CLLocation *currentLocation, INTULocationAccuracy achievedAccuracy, INTULocationStatus status) {
+    if ([[SingletonLocalService sharedManager] isLocationServicesAvailable]) {
+        [[SingletonLocalService sharedManager] getUserLocationWithSuccessHandler:^(id responseObject) {
+            CLLocation *result = responseObject;
+            [MapUtility centerMap:self.mapView atLocation:result.coordinate zoomLevel:1.0f];
+        }];
         
-        if (status == INTULocationStatusSuccess) {
-            
-            [MapUtility centerMap:self.mapView atLocation:currentLocation.coordinate zoomLevel:1.0f];
-
-        } else if (status == INTULocationStatusTimedOut) {
-            
-        } else {
-            
-        }
-    }];
+    } else {
+        NSLog(@"%@",[GlobalLocalizations localizedFaildToGetUserLocation]);
+    }
+    
 }
 
 - (void)testJSON {
@@ -93,6 +89,7 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.2;
 }
 
 - (void)setupView {
+    
     self.mapView.clusterSize = kDEFAULTCLUSTERSIZE;
 
     NSMutableSet *annotationsToAdd = [[NSMutableSet alloc] init];

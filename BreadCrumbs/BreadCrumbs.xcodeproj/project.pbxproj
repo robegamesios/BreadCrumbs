@@ -37,6 +37,8 @@
 		5690BFC51CAE57A300F8AA06 /* GlobalLocalizations.m in Sources */ = {isa = PBXBuildFile; fileRef = 5690BFC41CAE57A300F8AA06 /* GlobalLocalizations.m */; };
 		56E0B7AA1C92C16700C806BF /* MapListContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E0B7A91C92C16700C806BF /* MapListContainerViewController.m */; };
 		56E0B7AD1C92C3E600C806BF /* UIStoryboard+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E0B7AC1C92C3E600C806BF /* UIStoryboard+Utility.m */; };
+		56F73B7A1CAFA5A400D5FF16 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F73B791CAFA5A400D5FF16 /* CoreLocation.framework */; };
+		56F73B811CAFA70B00D5FF16 /* SingletonLocalService.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F73B801CAFA70B00D5FF16 /* SingletonLocalService.m */; };
 		56F7A3891C900ED500F06739 /* MapUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F7A3881C900ED500F06739 /* MapUtility.m */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +101,9 @@
 		56E0B7A91C92C16700C806BF /* MapListContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapListContainerViewController.m; sourceTree = "<group>"; };
 		56E0B7AB1C92C3E600C806BF /* UIStoryboard+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Utility.h"; sourceTree = "<group>"; };
 		56E0B7AC1C92C3E600C806BF /* UIStoryboard+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Utility.m"; sourceTree = "<group>"; };
+		56F73B791CAFA5A400D5FF16 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		56F73B7F1CAFA70B00D5FF16 /* SingletonLocalService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingletonLocalService.h; sourceTree = "<group>"; };
+		56F73B801CAFA70B00D5FF16 /* SingletonLocalService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingletonLocalService.m; sourceTree = "<group>"; };
 		56F7A3871C900ED500F06739 /* MapUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapUtility.h; sourceTree = "<group>"; };
 		56F7A3881C900ED500F06739 /* MapUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapUtility.m; sourceTree = "<group>"; };
 		6E205C0A63F3494F313DC1F3 /* Pods-BreadCrumbs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreadCrumbs.release.xcconfig"; path = "Pods/Target Support Files/Pods-BreadCrumbs/Pods-BreadCrumbs.release.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56F73B7A1CAFA5A400D5FF16 /* CoreLocation.framework in Frameworks */,
 				1AF973C72F20689414B07D0F /* Pods_BreadCrumbs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,6 +160,7 @@
 			children = (
 				56838ED71C8C03230010F378 /* Categories */,
 				56838F211C8D263B0010F378 /* DataSources */,
+				56F73B7E1CAFA70B00D5FF16 /* LocalServices */,
 				56838EE11C8CDF4A0010F378 /* Models */,
 				56838EC21C8BCC1B0010F378 /* NetworkServices */,
 				56359CC21C75949A00ED1001 /* Storyboards */,
@@ -302,9 +309,19 @@
 			path = DataSources;
 			sourceTree = "<group>";
 		};
+		56F73B7E1CAFA70B00D5FF16 /* LocalServices */ = {
+			isa = PBXGroup;
+			children = (
+				56F73B7F1CAFA70B00D5FF16 /* SingletonLocalService.h */,
+				56F73B801CAFA70B00D5FF16 /* SingletonLocalService.m */,
+			);
+			path = LocalServices;
+			sourceTree = "<group>";
+		};
 		86351D491545CBF8D4B28BC7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				56F73B791CAFA5A400D5FF16 /* CoreLocation.framework */,
 				E3FED0B1D1011768696C815A /* libPods.a */,
 				A5CA6AEAE24E5B73FCF0F78B /* Pods_BreadCrumbs.framework */,
 			);
@@ -442,6 +459,7 @@
 				56838EFC1C8D09B90010F378 /* YelpBusiness.m in Sources */,
 				56E0B7AD1C92C3E600C806BF /* UIStoryboard+Utility.m in Sources */,
 				56838ECE1C8BCC660010F378 /* BusinessDetailsViewController.m in Sources */,
+				56F73B811CAFA70B00D5FF16 /* SingletonLocalService.m in Sources */,
 				56838F021C8D09B90010F378 /* YelpLocation.m in Sources */,
 				56838EFE1C8D09B90010F378 /* YelpDeal.m in Sources */,
 				56838F031C8D09B90010F378 /* YelpReview.m in Sources */,

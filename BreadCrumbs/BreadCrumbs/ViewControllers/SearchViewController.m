@@ -53,6 +53,10 @@
     
     [self.locationSearchTextField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
 
+    if ([[SingletonLocalService sharedManager] isLocationServicesAvailable]) {
+        self.locationSearchTextField.placeholder = @"Current Location";
+    }
+
 }
 
 - (void)setupDataSource {
@@ -67,10 +71,16 @@
 
 - (void)textFieldDidChange:(UITextField *)textfield {
     
-    NSString *searchLocation = [NSString stringWithFormat:@"%@, %@", self.nameSearchTextField.text, self.locationSearchTextField.text];
+    NSString *searchLocation;
+    
+    if (self.locationSearchTextField.text != nil) {
+        searchLocation = [NSString stringWithFormat:@"%@, %@", self.nameSearchTextField.text, self.locationSearchTextField.text];
+
+    } else {
+        searchLocation = [NSString stringWithFormat:@"%@", self.nameSearchTextField.text];
+    }
     
     [self.dataSource.fetcher sourceTextHasChanged:searchLocation];
-    
 }
 
 @end

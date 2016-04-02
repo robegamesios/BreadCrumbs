@@ -8,10 +8,18 @@
 
 #import "GlobalLocalizations.h"
 
+static NSString *const GlobalLocationMessage = @"global localization message";
+static NSString *const GlobalLocationErrorMessage = @"global localization error message";
+
 @implementation GlobalLocalizations
 
 + (NSString *)localizedMessageNoResultsFound {
-    return NSLocalizedString(@"No results found", @"global localization message");
+    return NSLocalizedString(@"No results found", GlobalLocationMessage);
 }
 
+
+//Error Messages
++ (NSString *)localizedFaildToGetUserLocation {
+    return NSLocalizedString(@"Sorry but we could not determine your location", GlobalLocationErrorMessage);
+}
 @end

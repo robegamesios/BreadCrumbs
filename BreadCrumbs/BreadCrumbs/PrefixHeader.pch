@@ -15,4 +15,6 @@
 #import "GlobalConstants.h"
 #import "GlobalLocalizations.h"
 #import "UIStoryboard+Utility.h"
+#import "SingletonLocalService.h"
+
 #endif /* PrefixHeader_pch */
