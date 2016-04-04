@@ -22,7 +22,6 @@
     [super viewDidLoad];
  
     [self setupDataSource];
-    [self testJSON];
 }
 
 
@@ -43,18 +42,9 @@
     [self.tableView reloadData];
 }
 
-- (void)testJSON {
-    
-    [[NetworkService sharedNetworkService] queryStoreWithType:@"food" location:@"daly city" successHandler:^(id responseObject) {
-        
-        NSArray *array = [NSArray arrayWithArray:responseObject];
-        
-        self.dataSource.businessesArray = array;
-        [self.tableView reloadData];
-        
-    } errorHandler:^(NSString *errorString) {
-        NSLog(@"JSON Network error = %@", errorString);
-    }];
+- (void)updateResults {
+    self.dataSource.businessesArray = self.resultArray;
+    [self.tableView reloadData];
 }
 
 @end

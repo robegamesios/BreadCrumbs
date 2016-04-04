@@ -11,4 +11,8 @@
 
 @interface BusinessesMapViewController : UIViewController
 
+@property (copy, nonatomic) NSArray *resultArray;
+
+- (void)updateResults;
+
 @end

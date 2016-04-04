@@ -13,6 +13,11 @@
 #import "NSURLRequest+OAuth.h"
 #import "YelpBusiness.h"
 
+@interface NetworkService ()
+
+@property (strong, nonatomic) AFHTTPSessionManager *manager;
+@end
+
 @implementation NetworkService
 
 
@@ -29,15 +34,23 @@
     return sharedNetworkService;
 }
 
+
+#pragma mark - Accessors
+
+- (AFHTTPSessionManager *)manager {
+    if (!_manager) {
+        _manager = [AFHTTPSessionManager manager];
+    }
+    return _manager;
+}
+
 #pragma mark - Query
 
 - (void)queryStoreWithType:(NSString *)term location:(NSString *)location successHandler:(SuccessBlock)successHandler errorHandler:(ErrorBlock)errorHandler {
     
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    
     NSURLRequest *request = [self searchRequestWithTerm:term location:location];
     
-    [[manager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+    [[self.manager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         
         if (error) {
             if (errorHandler) {
@@ -45,7 +58,7 @@
             }
         } else {
             
-            NSMutableArray *parsedBusinessArray = [self getYelpBusinessesFromQuery:responseObject];
+            NSArray *parsedBusinessArray = [self getYelpBusinessesFromQuery:responseObject];
             
             if (successHandler) {
                 successHandler(parsedBusinessArray);
@@ -62,14 +75,15 @@
     
     if ([response  isKindOfClass: [NSDictionary class]]) {
         
-        NSMutableArray *yelpBusinesses = [[NSMutableArray alloc] initWithArray:[response objectForKey:@"businesses"]];
+        NSArray *yelpBusinesses = [NSArray arrayWithArray:[response objectForKey:kBusinessKey]];
         
         for (NSDictionary *item in yelpBusinesses) {
             
             YelpBusiness *newLocation= [[YelpBusiness alloc] initWithDictionary:item error:nil];
-            
-            [yelpLocations addObject:newLocation];
-            
+
+            if (newLocation) {
+                [yelpLocations addObject:newLocation];
+            }
         }
         
         return yelpLocations;

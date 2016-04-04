@@ -12,6 +12,7 @@
 @import OCMapView;
 #import "YelpBusiness.h"
 #import "YelpLocation.h"
+#import "MapUtility.h"
 
 
 //RE: TODO: change this later
@@ -42,6 +43,11 @@ static NSString *const ReuseIdentifierKey = @"singleAnnotationView";
         
         CLLocation *loc = [[CLLocation alloc]initWithLatitude:business.location.coordinate.coordLatitude longitude:business.location.coordinate.coordLongitude];
         
+        //Center location at first object result
+        if (self.businessesArray.firstObject) {
+            [MapUtility centerMap:self.mapView atLocation:loc.coordinate zoomLevel:1.0f];
+        }
+        
         MapAnnotation *annotation = [[MapAnnotation alloc] initWithCoordinate:loc.coordinate];
         annotation.title = business.name;
         annotation.subtitle = business.phone;
@@ -58,7 +64,6 @@ static NSString *const ReuseIdentifierKey = @"singleAnnotationView";
     }
     
     [self.mapView addAnnotations:[annotationsToAdd allObjects]];
-    
 }
 
 #pragma mark - map delegate

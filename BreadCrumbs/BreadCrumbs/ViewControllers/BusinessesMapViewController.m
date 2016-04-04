@@ -19,7 +19,6 @@
 //RE: TODO: change this later
 static NSString *const kTYPE1 = @"Banana";
 static NSString *const kTYPE2 = @"Orange";
-static CGFloat kDEFAULTCLUSTERSIZE = 0.2;
 
 @interface BusinessesMapViewController () <MKMapViewDelegate>
 
@@ -38,7 +37,6 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.2;
     
     [self setupUserLocation];
     [self setupDataSource];
-    [self testJSON];
 }
 
 #pragma mark - Accessors
@@ -68,50 +66,13 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.2;
     
 }
 
-- (void)testJSON {
-    
-    __weak typeof(self) weakSelf = self;
-    
-    [[NetworkService sharedNetworkService] queryStoreWithType:@"food" location:@"san francisco" successHandler:^(id responseObject) {
-        
-        NSArray *array = [NSArray arrayWithArray:responseObject];
-        weakSelf.dataSource.businessesArray = array;
-        
-        [weakSelf.dataSource setupView];
-
-    } errorHandler:^(NSString *errorString) {
-        NSLog(@"JSON Network error = %@", errorString);
-    }];
-}
-
 - (void)setupDataSource {
     self.dataSource.navigationController = self.navigationController;
 }
 
-- (void)setupView {
-    
-    self.mapView.clusterSize = kDEFAULTCLUSTERSIZE;
-
-    NSMutableSet *annotationsToAdd = [[NSMutableSet alloc] init];
-    
-    for (YelpBusiness *business in self.dataSource.businessesArray) {
-
-        CLLocation *loc = [[CLLocation alloc]initWithLatitude:business.location.coordinate.coordLatitude longitude:business.location.coordinate.coordLongitude];
-
-        MapAnnotation *annotation = [[MapAnnotation alloc] initWithCoordinate:loc.coordinate];
-
-        // add to group if specified
-        if (annotationsToAdd.count < (self.dataSource.businessesArray.count)/2.0) {
-            annotation.groupTag = kTYPE1;
-        } else {
-            annotation.groupTag = kTYPE2;
-        }
-        [annotationsToAdd addObject:annotation];
-
-    }
-    
-    [self.mapView addAnnotations:[annotationsToAdd allObjects]];
-
+- (void)updateResults {
+    self.dataSource.businessesArray = self.resultArray;
+    [self.dataSource setupView];
 }
 
 @end

@@ -33,7 +33,7 @@ NSString * const kAPIHost           = @"api.yelp.com";
 NSString * const kSearchPath        = @"/v2/search/";
 NSString * const kBusinessPath      = @"/v2/business/";
 NSString * const kSearchLimit       = @"10";
-
+NSString * const kBusinessKey       = @"businesses";
 
 #pragma mark - GlobalStrings
 

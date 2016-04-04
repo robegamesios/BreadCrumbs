@@ -15,6 +15,8 @@
 @property (strong, nonatomic) UINavigationController *navigationController;
 @property (strong, nonatomic) GMSAutocompleteFetcher *fetcher;
 
+@property (copy, nonatomic) void(^SearchResultBlock)(NSString *term, NSString *location);
+
 - (id)initWithTableView:(UITableView *)tableView;
 
 @end

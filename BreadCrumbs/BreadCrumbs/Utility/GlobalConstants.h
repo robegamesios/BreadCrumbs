@@ -40,7 +40,7 @@ extern NSString * const kAPIHost;
 extern NSString * const kSearchPath;
 extern NSString * const kBusinessPath;
 extern NSString * const kSearchLimit;
-
+extern NSString * const kBusinessKey;
 
 #pragma mark - GlobalStrings
 

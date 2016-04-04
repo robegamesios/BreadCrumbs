@@ -43,8 +43,9 @@ static NSInteger const DefaultRowHeight = 55;
     
     // Set up the autocomplete filter.
     GMSAutocompleteFilter *filter = [[GMSAutocompleteFilter alloc] init];
-    filter.type = kGMSPlacesAutocompleteTypeFilterEstablishment;
     
+    filter.type = kGMSPlacesAutocompleteTypeFilterNoFilter;
+  
     if ([[SingletonLocalService sharedManager] isLocationServicesAvailable]) {
         
         [[SingletonLocalService sharedManager] getUserLocationWithSuccessHandler:^(id responseObject) {
@@ -127,6 +128,16 @@ static NSInteger const DefaultRowHeight = 55;
     
     //RE: TODO:
     NSLog(@"search cell tapped");
+    
+    if (self.SearchResultBlock) {
+        NSString *currentResult = [self.resultsArray objectAtIndex:indexPath.row];
+        NSArray *currentResultArray = [currentResult componentsSeparatedByString:@":"];
+        
+        NSString *term = currentResultArray.firstObject;
+        NSString *location = currentResultArray.lastObject;
+
+        self.SearchResultBlock(term,location);
+    }
 }
 
 

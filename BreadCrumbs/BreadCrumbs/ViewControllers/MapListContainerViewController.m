@@ -10,6 +10,9 @@
 #import "BusinessesListTableViewController.h"
 #import "BusinessesMapViewController.h"
 #import "SearchViewController.h"
+#import "SearchViewControllerDataSource.h"
+#import "NetworkService.h"
+
 
 static NSString *const ListIconKey = @"list-icon";
 static NSString *const LocationIconKey = @"location-icon";
@@ -80,16 +83,43 @@ static NSString *const LocationIconKey = @"location-icon";
 }
 
 - (void)showSearchViewScreen {
-    SearchViewController *searchViewController = (SearchViewController *)[UIStoryboard instantiateViewControllerWithStoryboardName:StoryboardName.main screenStoryboardId:ScreenStoryboardId.searchViewController];
-    
-    
-//    GMSAutocompleteViewController *searchViewController = [[GMSAutocompleteViewController alloc] init];
-//    searchViewController.delegate = self;
-    
-    UINavigationController *navigationController =
-    [[UINavigationController alloc] initWithRootViewController:searchViewController];
+    SearchViewController *vc = (SearchViewController *)[UIStoryboard instantiateViewControllerWithStoryboardName:StoryboardName.main screenStoryboardId:ScreenStoryboardId.searchViewController];
 
-    [self presentViewController:navigationController animated:YES completion:nil];
+    __weak typeof(self) weakSelf = self;
+    __weak typeof(vc) weakVC = vc;
+    
+    vc.SearchResultBlock = ^(NSString *term, NSString *location) {
+        
+        NSLog(@"search results = %@ - %@",term, location);
+        [weakSelf searchTerm:term atLocation:location];
+
+        [weakVC.navigationController dismissViewControllerAnimated:YES completion:^{
+        }];
+    };
+    
+    UINavigationController *nc =
+    [[UINavigationController alloc] initWithRootViewController:vc];
+
+    [self presentViewController:nc animated:YES completion:nil];
+}
+
+- (void)searchTerm:(NSString *)term atLocation:(NSString *)location {
+    
+    __weak typeof(self) weakSelf = self;
+    
+    [[NetworkService sharedNetworkService] queryStoreWithType:term location:location successHandler:^(id responseObject) {
+        
+        NSArray *array = [NSArray arrayWithArray:responseObject];
+
+        weakSelf.mapViewController.resultArray = array;
+        [weakSelf.mapViewController updateResults];
+
+        weakSelf.listTableViewController.resultArray = array;
+        [weakSelf.listTableViewController updateResults];
+
+    } errorHandler:^(NSString *errorString) {
+        NSLog(@"JSON Network error = %@", errorString);
+    }];
 }
 
 

@@ -63,6 +63,12 @@
     self.tableView.dataSource = self.dataSource;
     self.dataSource.navigationController = self.navigationController;
     
+    __weak typeof(self) weakSelf = self;
+    
+    self.dataSource.SearchResultBlock = ^(NSString *term, NSString *location) {
+        weakSelf.SearchResultBlock(term, location);
+    };
+    
     [self.tableView reloadData];
 }
 

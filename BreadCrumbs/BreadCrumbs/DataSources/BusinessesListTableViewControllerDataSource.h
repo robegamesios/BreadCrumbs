@@ -13,7 +13,7 @@
 
 @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) UINavigationController *navigationController;
-@property (strong, nonatomic) NSArray *businessesArray;
+@property (copy, nonatomic) NSArray *businessesArray;
 
 - (id)initWithTableView:(UITableView *)tableView;
 
