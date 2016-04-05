@@ -7,6 +7,7 @@
 //
 
 #import "MapUtility.h"
+@import AddressBookUI;
 
 #define METERS_PER_MILE 1609.344
 
@@ -19,4 +20,25 @@
     [mapview setRegion:viewRegion animated:YES];
 }
 
++ (void)reverseGeocodeAddressWithCLLocation:(CLLocation *)location successHandler:(SuccessBlock)successHandler {
+
+    __block NSString *addressString;
+    
+    CLGeocoder *geocoder = [CLGeocoder new];
+    [geocoder reverseGeocodeLocation:location completionHandler:
+     ^(NSArray* placemarks, NSError* error) {
+         
+         if ([placemarks count] > 0) {
+             CLPlacemark *placeMark = [placemarks firstObject];
+             
+             NSArray *lines = placeMark.addressDictionary[@"FormattedAddressLines"];
+             addressString = [lines componentsJoinedByString:@","];
+             
+             if (successHandler) {
+                 successHandler(addressString);
+             }
+             
+         }
+     }];
+}
 @end

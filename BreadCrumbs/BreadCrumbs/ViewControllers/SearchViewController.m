@@ -9,7 +9,7 @@
 #import "SearchViewController.h"
 #import "SearchViewControllerDataSource.h"
 @import GoogleMaps;
-
+#import "MapUtility.h"
 
 @interface SearchViewController () <UITextFieldDelegate>
 
@@ -79,14 +79,34 @@
     
     NSString *searchLocation;
     
-    if (self.locationSearchTextField.text != nil) {
-        searchLocation = [NSString stringWithFormat:@"%@, %@", self.nameSearchTextField.text, self.locationSearchTextField.text];
-
-    } else {
-        searchLocation = [NSString stringWithFormat:@"%@", self.nameSearchTextField.text];
-    }
+    searchLocation = [NSString stringWithFormat:@"%@, %@", self.nameSearchTextField.text, self.locationSearchTextField.text];
     
     [self.dataSource.fetcher sourceTextHasChanged:searchLocation];
 }
+
+
+#pragma mark - IBActions
+
+- (IBAction)searchButtonTapped:(UIBarButtonItem *)sender {
+    
+    __weak typeof(self) weakSelf = self;
+    
+    if (self.SearchResultBlock) {
+        if ([[SingletonLocalService sharedManager] isLocationServicesAvailable]) {
+            [[SingletonLocalService sharedManager] getUserLocationWithSuccessHandler:^(id responseObject) {
+                CLLocation *result = responseObject;
+                
+                [MapUtility reverseGeocodeAddressWithCLLocation:result successHandler:^(id responseObject) {
+
+                    NSString *location = responseObject;
+                    
+                    weakSelf.SearchResultBlock(weakSelf.nameSearchTextField.text,location);
+                }];
+            }];
+        }
+    }
+}
+
+
 
 @end

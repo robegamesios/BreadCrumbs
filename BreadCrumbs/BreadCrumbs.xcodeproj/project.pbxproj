@@ -16,6 +16,7 @@
 		56359CC51C75949A00ED1001 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56359CC31C75949A00ED1001 /* LaunchScreen.storyboard */; };
 		56359CC61C75949A00ED1001 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56359CC41C75949A00ED1001 /* Main.storyboard */; };
 		564C1D8F1CAD0E4E00E06B07 /* SearchViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 564C1D8E1CAD0E4E00E06B07 /* SearchViewControllerDataSource.m */; };
+		565E22791CB3AD5D0060E69E /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565E22781CB3AD5D0060E69E /* AddressBookUI.framework */; };
 		56838EC51C8BCC1B0010F378 /* NetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838EC41C8BCC1B0010F378 /* NetworkService.m */; };
 		56838ECD1C8BCC660010F378 /* BusinessesMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838EC81C8BCC660010F378 /* BusinessesMapViewController.m */; };
 		56838ECE1C8BCC660010F378 /* BusinessDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838ECA1C8BCC660010F378 /* BusinessDetailsViewController.m */; };
@@ -58,6 +59,7 @@
 		56359CC41C75949A00ED1001 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		564C1D8D1CAD0E4E00E06B07 /* SearchViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewControllerDataSource.h; sourceTree = "<group>"; };
 		564C1D8E1CAD0E4E00E06B07 /* SearchViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewControllerDataSource.m; sourceTree = "<group>"; };
+		565E22781CB3AD5D0060E69E /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		56838EC31C8BCC1B0010F378 /* NetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkService.h; sourceTree = "<group>"; };
 		56838EC41C8BCC1B0010F378 /* NetworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkService.m; sourceTree = "<group>"; };
 		56838EC71C8BCC660010F378 /* BusinessesMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessesMapViewController.h; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				565E22791CB3AD5D0060E69E /* AddressBookUI.framework in Frameworks */,
 				56F73B7A1CAFA5A400D5FF16 /* CoreLocation.framework in Frameworks */,
 				1AF973C72F20689414B07D0F /* Pods_BreadCrumbs.framework in Frameworks */,
 			);
@@ -321,6 +324,7 @@
 		86351D491545CBF8D4B28BC7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				565E22781CB3AD5D0060E69E /* AddressBookUI.framework */,
 				56F73B791CAFA5A400D5FF16 /* CoreLocation.framework */,
 				E3FED0B1D1011768696C815A /* libPods.a */,
 				A5CA6AEAE24E5B73FCF0F78B /* Pods_BreadCrumbs.framework */,

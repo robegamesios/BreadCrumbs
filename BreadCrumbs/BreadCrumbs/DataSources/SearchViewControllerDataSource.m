@@ -143,6 +143,10 @@ static NSInteger const DefaultRowHeight = 55;
 
 #pragma mark - methods
 
+- (void)startSearch {
+    
+}
+
 - (void)showMessage: (NSString *)message {
     UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0,
                                                                       self.tableView.bounds.size.width,

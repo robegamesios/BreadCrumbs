@@ -464,7 +464,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Find a Place" id="Ply-Le-Rb5">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="TNJ-ns-nzG"/>
-                        <barButtonItem key="rightBarButtonItem" title="Search" id="wMz-Wr-i3Z"/>
+                        <barButtonItem key="rightBarButtonItem" title="Search" id="wMz-Wr-i3Z">
+                            <connections>
+                                <action selector="searchButtonTapped:" destination="BsJ-Qr-u1J" id="0VE-Ad-JWR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
