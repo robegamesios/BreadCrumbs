@@ -24,7 +24,6 @@ static NSString *const kTYPE2 = @"Orange";
 
 @property (weak, nonatomic) IBOutlet OCMapView *mapView;
 @property (strong, nonatomic) BusinessesMapViewControllerDataSource *dataSource;
-
 @end
 
 @implementation BusinessesMapViewController
@@ -57,7 +56,8 @@ static NSString *const kTYPE2 = @"Orange";
     if ([[SingletonLocalService sharedManager] isLocationServicesAvailable]) {
         [[SingletonLocalService sharedManager] getUserLocationWithSuccessHandler:^(id responseObject) {
             CLLocation *result = responseObject;
-            [MapUtility centerMap:self.mapView atLocation:result.coordinate zoomLevel:1.0f];
+            self.dataSource.currentLocation = result;
+            [MapUtility centerMap:self.mapView atLocation:result.coordinate zoomLevel:kDefaultMapZoomLevel];
         }];
         
     } else {
@@ -70,9 +70,9 @@ static NSString *const kTYPE2 = @"Orange";
     self.dataSource.navigationController = self.navigationController;
 }
 
-- (void)updateResults {
+- (void)updateResultsFromCurrentLocation:(BOOL)fromCurrentLocation {
     self.dataSource.businessesArray = self.resultArray;
-    [self.dataSource setupView];
+    [self.dataSource setupViewAndUseCurrentLocation:fromCurrentLocation];
 }
 
 @end

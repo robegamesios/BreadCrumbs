@@ -17,8 +17,9 @@
 @property (strong, nonatomic) OCMapView *mapView;
 @property (strong, nonatomic) UINavigationController *navigationController;
 @property (copy, nonatomic) NSArray *businessesArray;
+@property (strong, nonatomic) CLLocation *currentLocation;
 
 - (id)initWithMapView:(OCMapView *)mapView;
-- (void)setupView;
+- (void)setupViewAndUseCurrentLocation:(BOOL)useCurrentLocation;
 
 @end

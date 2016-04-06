@@ -10,6 +10,6 @@
 
 @interface SearchViewController : UIViewController
 
-@property (copy, nonatomic) void(^SearchResultBlock)(NSString *term, NSString *location);
+@property (copy, nonatomic) void(^SearchResultBlock)(NSString *term, NSString *location, BOOL fromCurrentLocation);
 
 @end

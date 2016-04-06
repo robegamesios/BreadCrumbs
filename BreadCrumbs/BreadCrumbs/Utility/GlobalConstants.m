@@ -35,7 +35,13 @@ NSString * const kBusinessPath      = @"/v2/business/";
 NSString * const kSearchLimit       = @"10";
 NSString * const kBusinessKey       = @"businesses";
 
+
 #pragma mark - GlobalStrings
 
 NSString * const kMapMarkerRed = @"marker-red";
+
+
+#pragma mark - Default values
+
+const double kDefaultMapZoomLevel = 2.f;
 

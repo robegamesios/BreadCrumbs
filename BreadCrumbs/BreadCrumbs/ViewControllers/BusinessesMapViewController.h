@@ -13,6 +13,6 @@
 
 @property (copy, nonatomic) NSArray *resultArray;
 
-- (void)updateResults;
+- (void)updateResultsFromCurrentLocation:(BOOL)fromCurrentLocation;
 
 @end

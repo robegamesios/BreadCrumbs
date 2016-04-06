@@ -11,7 +11,7 @@
 @interface GlobalLocalizations : NSObject
 
 + (NSString *)localizedMessageNoResultsFound;
-
++ (NSString *)localizedPlaceholderCurrentLocation;
 
 //Error Messages
 + (NSString *)localizedFaildToGetUserLocation;

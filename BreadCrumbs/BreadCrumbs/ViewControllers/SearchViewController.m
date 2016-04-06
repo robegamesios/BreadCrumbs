@@ -9,7 +9,7 @@
 #import "SearchViewController.h"
 #import "SearchViewControllerDataSource.h"
 @import GoogleMaps;
-#import "MapUtility.h"
+#import "LMGeocoder.h"
 
 @interface SearchViewController () <UITextFieldDelegate>
 
@@ -54,7 +54,7 @@
     [self.locationSearchTextField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
 
     if ([[SingletonLocalService sharedManager] isLocationServicesAvailable]) {
-        self.locationSearchTextField.placeholder = @"Current Location";
+        self.locationSearchTextField.placeholder = [GlobalLocalizations localizedPlaceholderCurrentLocation];
     }
 
 }
@@ -66,7 +66,7 @@
     __weak typeof(self) weakSelf = self;
     
     self.dataSource.SearchResultBlock = ^(NSString *term, NSString *location) {
-        weakSelf.SearchResultBlock(term, location);
+        weakSelf.SearchResultBlock(term, location, NO);
     };
     
     [self.tableView reloadData];
@@ -96,11 +96,15 @@
             [[SingletonLocalService sharedManager] getUserLocationWithSuccessHandler:^(id responseObject) {
                 CLLocation *result = responseObject;
                 
-                [MapUtility reverseGeocodeAddressWithCLLocation:result successHandler:^(id responseObject) {
-
-                    NSString *location = responseObject;
+                [[LMGeocoder sharedInstance]reverseGeocodeCoordinate:result.coordinate service:kLMGeocoderAppleService completionHandler:^(NSArray *results, NSError *error) {
                     
-                    weakSelf.SearchResultBlock(weakSelf.nameSearchTextField.text,location);
+                    if (results.count && !error) {
+                        LMAddress *address = [results firstObject];
+                        weakSelf.SearchResultBlock(weakSelf.nameSearchTextField.text,address.formattedAddress, YES);
+                        
+                    } else {
+                        NSLog(@"SearchViewController searchButtonTapped, reverse geocoding error");
+                    }
                 }];
             }];
         }

@@ -42,7 +42,12 @@ extern NSString * const kBusinessPath;
 extern NSString * const kSearchLimit;
 extern NSString * const kBusinessKey;
 
+
 #pragma mark - GlobalStrings
 
 extern NSString * const kMapMarkerRed;
 
+
+#pragma mark - Default values
+
+extern const double kDefaultMapZoomLevel;

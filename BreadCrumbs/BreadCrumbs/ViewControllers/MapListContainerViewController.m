@@ -88,10 +88,10 @@ static NSString *const LocationIconKey = @"location-icon";
     __weak typeof(self) weakSelf = self;
     __weak typeof(vc) weakVC = vc;
     
-    vc.SearchResultBlock = ^(NSString *term, NSString *location) {
+    vc.SearchResultBlock = ^(NSString *term, NSString *location, BOOL fromCurrentLocation) {
         
         NSLog(@"search results = %@ - %@",term, location);
-        [weakSelf searchTerm:term atLocation:location];
+        [weakSelf searchTerm:term atLocation:location fromCurrentLocation:fromCurrentLocation];
 
         [weakVC.navigationController dismissViewControllerAnimated:YES completion:^{
         }];
@@ -103,7 +103,7 @@ static NSString *const LocationIconKey = @"location-icon";
     [self presentViewController:nc animated:YES completion:nil];
 }
 
-- (void)searchTerm:(NSString *)term atLocation:(NSString *)location {
+- (void)searchTerm:(NSString *)term atLocation:(NSString *)location fromCurrentLocation:(BOOL)fromCurrentLocation {
     
     __weak typeof(self) weakSelf = self;
     
@@ -112,7 +112,7 @@ static NSString *const LocationIconKey = @"location-icon";
         NSArray *array = [NSArray arrayWithArray:responseObject];
 
         weakSelf.mapViewController.resultArray = array;
-        [weakSelf.mapViewController updateResults];
+        [weakSelf.mapViewController updateResultsFromCurrentLocation:fromCurrentLocation];
 
         weakSelf.listTableViewController.resultArray = array;
         [weakSelf.listTableViewController updateResults];

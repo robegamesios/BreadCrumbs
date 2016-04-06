@@ -34,7 +34,11 @@ static NSString *const ReuseIdentifierKey = @"singleAnnotationView";
     return self;
 }
 
-- (void)setupView {
+- (void)setupViewAndUseCurrentLocation:(BOOL)useCurrentLocation {
+    
+    //Remove all map annotations, if any
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    
     self.mapView.clusterSize = kDEFAULTCLUSTERSIZE;
     
     NSMutableSet *annotationsToAdd = [[NSMutableSet alloc] init];
@@ -43,11 +47,17 @@ static NSString *const ReuseIdentifierKey = @"singleAnnotationView";
         
         CLLocation *loc = [[CLLocation alloc]initWithLatitude:business.location.coordinate.coordLatitude longitude:business.location.coordinate.coordLongitude];
         
-        //Center location at first object result
-        if (self.businessesArray.firstObject) {
-            [MapUtility centerMap:self.mapView atLocation:loc.coordinate zoomLevel:1.0f];
+        if (useCurrentLocation) {
+            //Center map at user location
+            [MapUtility centerMap:self.mapView atLocation:self.currentLocation.coordinate zoomLevel:kDefaultMapZoomLevel];
+
+        } else {
+            //Center map at first object result location
+            if (self.businessesArray.firstObject) {
+                [MapUtility centerMap:self.mapView atLocation:loc.coordinate zoomLevel:kDefaultMapZoomLevel];
+            }
         }
-        
+
         MapAnnotation *annotation = [[MapAnnotation alloc] initWithCoordinate:loc.coordinate];
         annotation.title = business.name;
         annotation.subtitle = business.phone;

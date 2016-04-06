@@ -13,6 +13,4 @@
 
 + (void)centerMap:(MKMapView *)mapview atLocation:(CLLocationCoordinate2D)coordinate zoomLevel:(double)zoomLevel;
 
-+ (void)reverseGeocodeAddressWithCLLocation:(CLLocation *)location successHandler:(SuccessBlock)successHandler;
-
 @end
