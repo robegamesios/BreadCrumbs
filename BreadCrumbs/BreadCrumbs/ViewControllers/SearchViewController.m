@@ -16,6 +16,9 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UITextField *nameSearchTextField;
 @property (weak, nonatomic) IBOutlet UITextField *locationSearchTextField;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *searchBarButtonItem;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelBarButtonItem;
+
 
 @property (strong, nonatomic) SearchViewControllerDataSource *dataSource;
 
@@ -82,12 +85,14 @@
     searchLocation = [NSString stringWithFormat:@"%@, %@", self.nameSearchTextField.text, self.locationSearchTextField.text];
     
     [self.dataSource.fetcher sourceTextHasChanged:searchLocation];
+    
+    self.searchBarButtonItem.enabled = ![self.nameSearchTextField.text isEqualToString: @""];
 }
 
 
 #pragma mark - IBActions
 
-- (IBAction)searchButtonTapped:(UIBarButtonItem *)sender {
+- (IBAction)searchBarButtonItemTapped:(UIBarButtonItem *)sender {
     
     __weak typeof(self) weakSelf = self;
     
@@ -111,6 +116,11 @@
     }
 }
 
+- (IBAction)cancelBarButtonItemTapped:(UIBarButtonItem *)sender {
+    if (self.CancelBlock) {
+        self.CancelBlock();
+    }
+}
 
 
 @end

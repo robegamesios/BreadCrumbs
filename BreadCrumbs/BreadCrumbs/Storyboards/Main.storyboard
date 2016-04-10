@@ -463,17 +463,23 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Find a Place" id="Ply-Le-Rb5">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="TNJ-ns-nzG"/>
-                        <barButtonItem key="rightBarButtonItem" title="Search" id="wMz-Wr-i3Z">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="TNJ-ns-nzG">
                             <connections>
-                                <action selector="searchButtonTapped:" destination="BsJ-Qr-u1J" id="0VE-Ad-JWR"/>
+                                <action selector="cancelBarButtonItemTapped:" destination="BsJ-Qr-u1J" id="CNg-bd-W2A"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Search" id="wMz-Wr-i3Z">
+                            <connections>
+                                <action selector="searchBarButtonItemTapped:" destination="BsJ-Qr-u1J" id="mbl-lS-oCt"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="cancelBarButtonItem" destination="TNJ-ns-nzG" id="UAw-bg-ods"/>
                         <outlet property="locationSearchTextField" destination="RXJ-Pq-rNU" id="hWa-xT-EPr"/>
                         <outlet property="nameSearchTextField" destination="Kt1-ht-2x4" id="wah-ov-Avb"/>
+                        <outlet property="searchBarButtonItem" destination="wMz-Wr-i3Z" id="vVu-1j-xcG"/>
                         <outlet property="tableView" destination="Uk3-bT-054" id="i1A-PD-by8"/>
                     </connections>
                 </viewController>

@@ -16,6 +16,7 @@
 		56359CC51C75949A00ED1001 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56359CC31C75949A00ED1001 /* LaunchScreen.storyboard */; };
 		56359CC61C75949A00ED1001 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56359CC41C75949A00ED1001 /* Main.storyboard */; };
 		564C1D8F1CAD0E4E00E06B07 /* SearchViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 564C1D8E1CAD0E4E00E06B07 /* SearchViewControllerDataSource.m */; };
+		565D26AC1CB79EB2000FBA8B /* MapAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 565D26AB1CB79EB2000FBA8B /* MapAnnotationView.m */; };
 		565E22791CB3AD5D0060E69E /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565E22781CB3AD5D0060E69E /* AddressBookUI.framework */; };
 		56838EC51C8BCC1B0010F378 /* NetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838EC41C8BCC1B0010F378 /* NetworkService.m */; };
 		56838ECD1C8BCC660010F378 /* BusinessesMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838EC81C8BCC660010F378 /* BusinessesMapViewController.m */; };
@@ -36,6 +37,7 @@
 		56838F271C8D30C20010F378 /* BusinessesMapViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838F261C8D30C20010F378 /* BusinessesMapViewControllerDataSource.m */; };
 		56838F2A1C8D38A20010F378 /* BusinessesListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56838F291C8D38A20010F378 /* BusinessesListTableViewCell.m */; };
 		5690BFC51CAE57A300F8AA06 /* GlobalLocalizations.m in Sources */ = {isa = PBXBuildFile; fileRef = 5690BFC41CAE57A300F8AA06 /* GlobalLocalizations.m */; };
+		56AA1A051CB79841005B7D84 /* MapAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56AA1A041CB79841005B7D84 /* MapAnnotationView.xib */; };
 		56E0B7AA1C92C16700C806BF /* MapListContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E0B7A91C92C16700C806BF /* MapListContainerViewController.m */; };
 		56E0B7AD1C92C3E600C806BF /* UIStoryboard+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E0B7AC1C92C3E600C806BF /* UIStoryboard+Utility.m */; };
 		56F73B7A1CAFA5A400D5FF16 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F73B791CAFA5A400D5FF16 /* CoreLocation.framework */; };
@@ -59,6 +61,8 @@
 		56359CC41C75949A00ED1001 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		564C1D8D1CAD0E4E00E06B07 /* SearchViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewControllerDataSource.h; sourceTree = "<group>"; };
 		564C1D8E1CAD0E4E00E06B07 /* SearchViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewControllerDataSource.m; sourceTree = "<group>"; };
+		565D26AA1CB79EB2000FBA8B /* MapAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotationView.h; sourceTree = "<group>"; };
+		565D26AB1CB79EB2000FBA8B /* MapAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotationView.m; sourceTree = "<group>"; };
 		565E22781CB3AD5D0060E69E /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		56838EC31C8BCC1B0010F378 /* NetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkService.h; sourceTree = "<group>"; };
 		56838EC41C8BCC1B0010F378 /* NetworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkService.m; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 		568967BD1C86E5E400A9F4DE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		5690BFC31CAE57A300F8AA06 /* GlobalLocalizations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalLocalizations.h; sourceTree = "<group>"; };
 		5690BFC41CAE57A300F8AA06 /* GlobalLocalizations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalLocalizations.m; sourceTree = "<group>"; };
+		56AA1A041CB79841005B7D84 /* MapAnnotationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapAnnotationView.xib; sourceTree = "<group>"; };
 		56E0B7A81C92C16700C806BF /* MapListContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapListContainerViewController.h; sourceTree = "<group>"; };
 		56E0B7A91C92C16700C806BF /* MapListContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapListContainerViewController.m; sourceTree = "<group>"; };
 		56E0B7AB1C92C3E600C806BF /* UIStoryboard+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Utility.h"; sourceTree = "<group>"; };
@@ -191,10 +196,12 @@
 		56359CBA1C75942600ED1001 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				56359CBB1C75942600ED1001 /* MapAnnotation.h */,
-				56359CBC1C75942600ED1001 /* MapAnnotation.m */,
 				56838F281C8D38A20010F378 /* BusinessesListTableViewCell.h */,
 				56838F291C8D38A20010F378 /* BusinessesListTableViewCell.m */,
+				56359CBB1C75942600ED1001 /* MapAnnotation.h */,
+				56359CBC1C75942600ED1001 /* MapAnnotation.m */,
+				565D26AA1CB79EB2000FBA8B /* MapAnnotationView.h */,
+				565D26AB1CB79EB2000FBA8B /* MapAnnotationView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,6 +211,7 @@
 			children = (
 				56359CC31C75949A00ED1001 /* LaunchScreen.storyboard */,
 				56359CC41C75949A00ED1001 /* Main.storyboard */,
+				56AA1A041CB79841005B7D84 /* MapAnnotationView.xib */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -395,6 +403,7 @@
 			files = (
 				56359CC61C75949A00ED1001 /* Main.storyboard in Resources */,
 				5603AFDA1C742FA5001DA97F /* Assets.xcassets in Resources */,
+				56AA1A051CB79841005B7D84 /* MapAnnotationView.xib in Resources */,
 				56359CC51C75949A00ED1001 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,6 +479,7 @@
 				5614BC471CABB8C300388C24 /* SearchViewController.m in Sources */,
 				5690BFC51CAE57A300F8AA06 /* GlobalLocalizations.m in Sources */,
 				56F7A3891C900ED500F06739 /* MapUtility.m in Sources */,
+				565D26AC1CB79EB2000FBA8B /* MapAnnotationView.m in Sources */,
 				56838F011C8D09B90010F378 /* YelpGiftCertificateOptions.m in Sources */,
 				56359CBD1C75942600ED1001 /* MapAnnotation.m in Sources */,
 				56838ECD1C8BCC660010F378 /* BusinessesMapViewController.m in Sources */,

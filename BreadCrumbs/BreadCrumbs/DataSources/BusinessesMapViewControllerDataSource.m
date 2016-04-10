@@ -13,7 +13,7 @@
 #import "YelpBusiness.h"
 #import "YelpLocation.h"
 #import "MapUtility.h"
-
+#import "MapAnnotationView.h"
 
 //RE: TODO: change this later
 static NSString *const kTYPE1 = @"Banana";
@@ -59,8 +59,8 @@ static NSString *const ReuseIdentifierKey = @"singleAnnotationView";
         }
 
         MapAnnotation *annotation = [[MapAnnotation alloc] initWithCoordinate:loc.coordinate];
-        annotation.title = business.name;
-        annotation.subtitle = business.phone;
+        annotation.name = business.name;
+        annotation.location = business.phone;
         annotation.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:business.imageUrl]]];
         
         // add to group if specified
@@ -78,9 +78,9 @@ static NSString *const ReuseIdentifierKey = @"singleAnnotationView";
 
 #pragma mark - map delegate
 
-- (MKAnnotationView *)mapView:(MKMapView *)aMapView viewForAnnotation:(MapAnnotation *)annotation
+- (MapAnnotationView *)mapView:(MKMapView *)aMapView viewForAnnotation:(MapAnnotation *)annotation
 {
-    MKAnnotationView *annotationView;
+    MapAnnotationView *annotationView;
 
     //RE: use the default blue dot for user location
     if ([annotation isKindOfClass:[MKUserLocation class]]) {
@@ -92,9 +92,9 @@ static NSString *const ReuseIdentifierKey = @"singleAnnotationView";
         
         OCAnnotation *clusterAnnotation = (OCAnnotation *)annotation;
         
-        annotationView = (MKAnnotationView *)[aMapView dequeueReusableAnnotationViewWithIdentifier:@"ClusterView"];
+        annotationView = (MapAnnotationView *)[aMapView dequeueReusableAnnotationViewWithIdentifier:@"ClusterView"];
         if (!annotationView) {
-            annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"ClusterView"];
+            annotationView = [[MapAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"ClusterView"];
             annotationView.canShowCallout = YES;
             annotationView.centerOffset = CGPointMake(0, -20);
         }
@@ -129,38 +129,42 @@ static NSString *const ReuseIdentifierKey = @"singleAnnotationView";
         
         MapAnnotation *singleAnnotation = (MapAnnotation *)annotation;
         
-        annotationView = (MKAnnotationView *)[aMapView dequeueReusableAnnotationViewWithIdentifier:ReuseIdentifierKey];
+        annotationView = (MapAnnotationView *)[aMapView dequeueReusableAnnotationViewWithIdentifier:ReuseIdentifierKey];
         
         if (!annotationView) {
-            annotationView = [[MKAnnotationView alloc] initWithAnnotation:singleAnnotation reuseIdentifier:ReuseIdentifierKey];
-            annotationView.canShowCallout = YES;
-            annotationView.centerOffset = CGPointMake(0, -20);
+            annotationView = [[MapAnnotationView alloc] initWithAnnotation:singleAnnotation reuseIdentifier:ReuseIdentifierKey];
             
+            annotationView.canShowCallout = NO;
+            
+            annotationView.nameLabel.text = singleAnnotation.name;
+            annotationView.addressLabel.text = singleAnnotation.location;
+            annotationView.starRatingLabel.text = @"3";
+
             //show default annotationView image
             annotationView.image = [UIImage imageNamed:kMapMarkerRed];
-            
-            //shows a right accessory button
-            annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-            
-            //shows an image on the left side of annotationView
-            annotationView.leftCalloutAccessoryView =  [[UIImageView alloc] initWithImage:annotation.image];
         }
+        
+        annotationView.AnnotationSelectedBlock = ^{
+            
+            [MapUtility centerMap:aMapView atLocation:singleAnnotation.coordinate];
+        };
+
     }
     
     // Error
     else {
         //TODO: might not be need, maybe show alert controller instead
-        annotationView = (MKPinAnnotationView *)[aMapView dequeueReusableAnnotationViewWithIdentifier:@"errorAnnotationView"];
-        if (!annotationView) {
-            annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"errorAnnotationView"];
-            annotationView.canShowCallout = NO;
-        }
+//        annotationView = (MKPinAnnotationView *)[aMapView dequeueReusableAnnotationViewWithIdentifier:@"errorAnnotationView"];
+//        if (!annotationView) {
+//            annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"errorAnnotationView"];
+//            annotationView.canShowCallout = NO;
+//        }
     }
     
     return annotationView;
 }
 
-- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+- (void)mapView:(MKMapView *)mapView annotationView:(MapAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     
     //RE: TODO: use this to show the photos detail view
     NSLog(@"annotation accessory= %@ control =%@",view, control);

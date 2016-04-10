@@ -12,4 +12,6 @@
 
 @property (copy, nonatomic) void(^SearchResultBlock)(NSString *term, NSString *location, BOOL fromCurrentLocation);
 
+@property (copy, nonatomic) VoidBlock CancelBlock;
+
 @end

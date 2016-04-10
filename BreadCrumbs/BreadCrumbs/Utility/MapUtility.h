@@ -13,4 +13,6 @@
 
 + (void)centerMap:(MKMapView *)mapview atLocation:(CLLocationCoordinate2D)coordinate zoomLevel:(double)zoomLevel;
 
++ (void)centerMap:(MKMapView *)mapview atLocation:(CLLocationCoordinate2D)coordinate;
+
 @end

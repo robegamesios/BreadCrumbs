@@ -10,8 +10,15 @@
 
 @interface GlobalLocalizations : NSObject
 
+//Strings
++ (NSString *)localizedStringList;
++ (NSString *)localizedStringMap;
+
+
+//Messages
 + (NSString *)localizedMessageNoResultsFound;
 + (NSString *)localizedPlaceholderCurrentLocation;
+
 
 //Error Messages
 + (NSString *)localizedFaildToGetUserLocation;

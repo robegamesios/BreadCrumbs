@@ -19,5 +19,20 @@
     [mapview setRegion:viewRegion animated:YES];
 }
 
++ (void)centerMap:(MKMapView *)mapview atLocation:(CLLocationCoordinate2D)coordinate {
+    
+    void (^Animations)(void) = ^{
+        mapview.centerCoordinate = coordinate;
+    };
+    
+    [UIView transitionWithView:mapview
+                      duration:0.5f
+                       options:UIViewAnimationOptionCurveLinear
+                    animations:Animations
+     
+                    completion:nil];
+
+    
+}
 
 @end

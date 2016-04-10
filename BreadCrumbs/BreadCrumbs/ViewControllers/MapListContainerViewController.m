@@ -14,8 +14,8 @@
 #import "NetworkService.h"
 
 
-static NSString *const ListIconKey = @"list-icon";
-static NSString *const LocationIconKey = @"location-icon";
+//static NSString *const ListIconKey = @"list-icon";
+//static NSString *const LocationIconKey = @"location-icon";
 
 @interface MapListContainerViewController ()
 
@@ -67,19 +67,20 @@ static NSString *const LocationIconKey = @"location-icon";
 - (void)showListViewScreen {
     self.listTableViewController.view.hidden = NO;
     self.mapViewController.view.hidden = YES;
-    
-    UIImage *image = [UIImage imageNamed:LocationIconKey];
-    
-    [self.toggleButton setBackgroundImage:image forState:UIControlStateNormal];
+    [self.toggleButton setTitle:[GlobalLocalizations localizedStringMap] forState:UIControlStateNormal];
+//    UIImage *image = [UIImage imageNamed:LocationIconKey];
+//    
+//    [self.toggleButton setBackgroundImage:image forState:UIControlStateNormal];
 }
 
 - (void)showMapViewScreen {
     self.listTableViewController.view.hidden = YES;
     self.mapViewController.view.hidden = NO;
+    [self.toggleButton setTitle:[GlobalLocalizations localizedStringList] forState:UIControlStateNormal];
     
-    UIImage *image = [UIImage imageNamed:ListIconKey];
-    
-    [self.toggleButton setBackgroundImage:image forState:UIControlStateNormal];
+//    UIImage *image = [UIImage imageNamed:ListIconKey];
+//    
+//    [self.toggleButton setBackgroundImage:image forState:UIControlStateNormal];
 }
 
 - (void)showSearchViewScreen {
@@ -95,6 +96,10 @@ static NSString *const LocationIconKey = @"location-icon";
 
         [weakVC.navigationController dismissViewControllerAnimated:YES completion:^{
         }];
+    };
+    
+    vc.CancelBlock = ^{
+        [weakSelf dismissViewControllerAnimated:YES completion:nil];
     };
     
     UINavigationController *nc =
