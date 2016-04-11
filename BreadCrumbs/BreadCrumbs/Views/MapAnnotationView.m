@@ -46,7 +46,6 @@ static NSString * const kMapAnnotationViewKey = @"MapAnnotationView";
     
     if(selected) {
         if (self.AnnotationSelectedBlock) {
-            
             self.customBubbleCalloutView.hidden = NO;
             self.AnnotationSelectedBlock();
         }

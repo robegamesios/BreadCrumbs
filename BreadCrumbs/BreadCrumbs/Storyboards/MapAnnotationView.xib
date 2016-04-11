@@ -8,65 +8,101 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapAnnotationView">
             <connections>
                 <outlet property="addressLabel" destination="kbV-Rz-kT7" id="8zr-FF-BbE"/>
+                <outlet property="availabilityStatusLabel" destination="FiX-uv-8ph" id="Wuu-Ui-yeh"/>
+                <outlet property="dealsLabel" destination="Who-Ws-Rvv" id="ZuE-xb-oUd"/>
+                <outlet property="distanceLabel" destination="C3q-G7-Qnh" id="JQY-Ap-poR"/>
                 <outlet property="nameLabel" destination="hcb-Ix-dir" id="llc-NZ-u7I"/>
-                <outlet property="starRatingLabel" destination="tZs-aW-JBk" id="tNJ-BN-9WB"/>
+                <outlet property="phoneLabel" destination="mQ6-0W-8bW" id="aTG-bB-39D"/>
+                <outlet property="ratingsImage" destination="z1e-ao-YOl" id="TE6-Yj-fCv"/>
+                <outlet property="reviewsLabel" destination="tZs-aW-JBk" id="OFV-Fi-hdl"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="Fns-9R-RbG">
-            <rect key="frame" x="0.0" y="0.0" width="220" height="60"/>
+        <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" id="Fns-9R-RbG">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="73"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EbH-kD-6Ar">
-                    <rect key="frame" x="0.0" y="0.0" width="50" height="60"/>
+                    <rect key="frame" x="0.0" y="0.0" width="36" height="73"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="50" id="Lk1-nK-R6z"/>
-                        <constraint firstAttribute="height" constant="60" id="u0x-lg-oaA"/>
+                        <constraint firstAttribute="width" constant="36" id="Lk1-nK-R6z"/>
+                        <constraint firstAttribute="height" constant="70" id="u0x-lg-oaA"/>
                     </constraints>
                     <state key="normal" title="Add"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="u0x-lg-oaA"/>
+                        </mask>
+                    </variation>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcb-Ix-dir">
-                    <rect key="frame" x="58" y="0.0" width="120" height="14"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="120" id="cTK-Pn-kdQ"/>
-                        <constraint firstAttribute="height" constant="14" id="hD6-OM-SGT"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcb-Ix-dir">
+                    <rect key="frame" x="44" y="2" width="164" height="15"/>
+                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="13"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbV-Rz-kT7">
-                    <rect key="frame" x="58" y="12" width="120" height="16"/>
-                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbV-Rz-kT7">
+                    <rect key="frame" x="44" y="14" width="164" height="14"/>
+                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="11"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Star" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZs-aW-JBk">
-                    <rect key="frame" x="58" y="30" width="120" height="16"/>
-                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Deals" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Who-Ws-Rvv">
+                    <rect key="frame" x="44" y="48" width="164" height="14"/>
+                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="11"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Closed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FiX-uv-8ph">
+                    <rect key="frame" x="44" y="59" width="153" height="14"/>
+                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="11"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5 mi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3q-G7-Qnh">
+                    <rect key="frame" x="187" y="2" width="60" height="14"/>
+                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yelp-logo-small" translatesAutoresizingMaskIntoConstraints="NO" id="7gF-R8-05V">
+                    <rect key="frame" x="205" y="54" width="37" height="19"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z1e-ao-YOl">
+                    <rect key="frame" x="43" y="36" width="70" height="14"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQ6-0W-8bW">
+                    <rect key="frame" x="43" y="25" width="164" height="14"/>
+                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="11"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5000 Reviews" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZs-aW-JBk">
+                    <rect key="frame" x="116" y="36" width="81" height="14"/>
+                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="11"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="kbV-Rz-kT7" firstAttribute="top" secondItem="Fns-9R-RbG" secondAttribute="top" constant="12" id="976-XM-0Kj"/>
                 <constraint firstItem="EbH-kD-6Ar" firstAttribute="leading" secondItem="Fns-9R-RbG" secondAttribute="leading" id="Ldq-pB-Cy2"/>
-                <constraint firstItem="kbV-Rz-kT7" firstAttribute="leading" secondItem="hcb-Ix-dir" secondAttribute="leading" id="Sac-lb-Rqr"/>
-                <constraint firstItem="kbV-Rz-kT7" firstAttribute="trailing" secondItem="hcb-Ix-dir" secondAttribute="trailing" id="auI-7M-7hR"/>
-                <constraint firstItem="tZs-aW-JBk" firstAttribute="trailing" secondItem="kbV-Rz-kT7" secondAttribute="trailing" id="jc7-nc-J4v"/>
-                <constraint firstItem="tZs-aW-JBk" firstAttribute="leading" secondItem="kbV-Rz-kT7" secondAttribute="leading" id="jq2-SI-6R2"/>
-                <constraint firstItem="tZs-aW-JBk" firstAttribute="top" secondItem="kbV-Rz-kT7" secondAttribute="bottom" constant="2" id="oZ0-OM-nC8"/>
-                <constraint firstItem="hcb-Ix-dir" firstAttribute="leading" secondItem="EbH-kD-6Ar" secondAttribute="trailing" constant="8" id="oma-Zh-GUD"/>
                 <constraint firstAttribute="bottom" secondItem="EbH-kD-6Ar" secondAttribute="bottom" id="pU6-EB-yj4"/>
-                <constraint firstItem="hcb-Ix-dir" firstAttribute="top" secondItem="Fns-9R-RbG" secondAttribute="top" id="tzb-ix-kTs"/>
                 <constraint firstItem="EbH-kD-6Ar" firstAttribute="top" secondItem="Fns-9R-RbG" secondAttribute="top" id="udf-3o-Ru8"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="278" y="121"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="278" y="114.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="yelp-logo-small" width="62" height="32"/>
+    </resources>
 </document>

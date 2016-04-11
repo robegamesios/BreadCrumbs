@@ -30,7 +30,7 @@
     return (self.coordinate.latitude == annotation.coordinate.latitude &&
             self.coordinate.longitude == annotation.coordinate.longitude &&
             [self.name isEqualToString:annotation.title] &&
-            [self.location isEqualToString:annotation.subtitle] &&
+            [self.address isEqualToString:annotation.subtitle] &&
             [self.groupTag isEqualToString:annotation.groupTag]);   
 }
 

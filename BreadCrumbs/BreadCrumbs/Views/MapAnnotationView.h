@@ -12,8 +12,12 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
-
-@property (weak, nonatomic) IBOutlet UILabel *starRatingLabel;
+@property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *ratingsImage;
+@property (weak, nonatomic) IBOutlet UILabel *reviewsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dealsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *availabilityStatusLabel;
+@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 
 @property (copy, nonatomic) VoidBlock AnnotationSelectedBlock;
 

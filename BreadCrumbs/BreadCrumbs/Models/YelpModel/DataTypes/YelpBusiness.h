@@ -61,7 +61,7 @@
 
 
 //Distance that business is from search location in meters, if a latitude/longitude is specified.
-//@property (strong, nonatomic) NSNumber *distanceInMeters;
+@property (strong, nonatomic) NSNumber *distanceInMeters;
 
 
 

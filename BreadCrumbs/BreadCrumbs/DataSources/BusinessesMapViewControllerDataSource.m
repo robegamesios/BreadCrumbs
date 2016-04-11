@@ -12,6 +12,7 @@
 @import OCMapView;
 #import "YelpBusiness.h"
 #import "YelpLocation.h"
+#import "YelpDeal.h"
 #import "MapUtility.h"
 #import "MapAnnotationView.h"
 
@@ -60,8 +61,16 @@ static NSString *const ReuseIdentifierKey = @"singleAnnotationView";
 
         MapAnnotation *annotation = [[MapAnnotation alloc] initWithCoordinate:loc.coordinate];
         annotation.name = business.name;
-        annotation.location = business.phone;
-        annotation.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:business.imageUrl]]];
+        annotation.address = business.location.address.firstObject;
+        annotation.phone = business.displayPhone;
+        annotation.ratingImageUrl = business.ratingImgUrlSmall;
+        annotation.reviews = [NSString stringWithFormat:@"%@ reviews", business.reviewCount];
+        
+        YelpDeal *deal = business.deals.firstObject;
+        annotation.deals = deal.title;
+        
+        //Todo check distance
+        annotation.distance = [NSString stringWithFormat:@"%.2f",business.distanceInMeters.doubleValue];
         
         // add to group if specified
         if (annotationsToAdd.count < (self.businessesArray.count)/2.0) {
@@ -137,8 +146,13 @@ static NSString *const ReuseIdentifierKey = @"singleAnnotationView";
             annotationView.canShowCallout = NO;
             
             annotationView.nameLabel.text = singleAnnotation.name;
-            annotationView.addressLabel.text = singleAnnotation.location;
-            annotationView.starRatingLabel.text = @"3";
+            annotationView.addressLabel.text = singleAnnotation.address;
+            annotationView.phoneLabel.text = singleAnnotation.phone;
+            annotationView.ratingsImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:singleAnnotation.ratingImageUrl]]];
+            annotationView.reviewsLabel.text = singleAnnotation.reviews;
+            annotationView.dealsLabel.text = singleAnnotation.deals;
+            annotationView.availabilityStatusLabel.text = singleAnnotation.availabilityStatus;
+            annotationView.distanceLabel.text = singleAnnotation.distance;
 
             //show default annotationView image
             annotationView.image = [UIImage imageNamed:kMapMarkerRed];

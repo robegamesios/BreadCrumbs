@@ -17,7 +17,7 @@
 + (JSONKeyMapper*)keyMapper
 {
     NSDictionary *map = @{ @"id" : @"yelpId",
-//                           @"distance" : @"distanceInMeters",
+                           @"distance" : @"distanceInMeters",
                            @"is_claimed" : @"isClaimed",
                            @"is_closed" : @"isClosed",
                            @"image_url" : @"imageUrl",
