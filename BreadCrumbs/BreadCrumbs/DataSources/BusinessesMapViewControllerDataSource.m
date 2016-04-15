@@ -35,23 +35,12 @@ static NSString *const ReuseIdentifierKey = @"singleAnnotationView";
     //Remove all map annotations, if any
     [self.mapView removeAnnotations:self.mapView.annotations];
     
-    NSMutableSet *annotationsToAdd = [[NSMutableSet alloc] init];
+    NSMutableArray *annotationsToAdd = [[NSMutableArray alloc] init];
     
     for (YelpBusiness *business in self.businessesArray) {
         
         CLLocation *loc = [[CLLocation alloc]initWithLatitude:business.location.coordinate.coordLatitude longitude:business.location.coordinate.coordLongitude];
         
-        if (useCurrentLocation) {
-            //Center map at user location
-            [MapUtility centerMap:self.mapView atLocation:self.currentLocation.coordinate zoomLevel:kDefaultMapZoomLevel];
-
-        } else {
-            //Center map at first object result location
-            if (self.businessesArray.firstObject) {
-                [MapUtility centerMap:self.mapView atLocation:loc.coordinate zoomLevel:kDefaultMapZoomLevel];
-            }
-        }
-
         MapAnnotation *annotation = [[MapAnnotation alloc] initWithCoordinate:loc.coordinate];
         annotation.name = business.name;
         annotation.address = [NSString stringWithFormat:@"%@, %@", business.location.address.firstObject, business.location.city];
@@ -86,7 +75,21 @@ static NSString *const ReuseIdentifierKey = @"singleAnnotationView";
         
     }
     
-    [self.mapView addAnnotations:[annotationsToAdd allObjects]];
+    if (useCurrentLocation) {
+        //Center map at user location
+        [MapUtility centerMap:self.mapView atLocation:self.currentLocation.coordinate zoomLevel:kDefaultMapZoomLevel];
+        
+    } else {
+        //Center map at first object result location
+        if (annotationsToAdd.firstObject) {
+            
+            MapAnnotation *loc = annotationsToAdd.firstObject;
+            
+            [MapUtility centerMap:self.mapView atLocation:loc.coordinate zoomLevel:kDefaultMapZoomLevel];
+        }
+    }
+
+    [self.mapView addAnnotations:annotationsToAdd];
 }
 
 #pragma mark - map delegate
