@@ -10,16 +10,14 @@
 @import UIKit;
 @import MapKit;
 
-@class OCMapView;
-
 @interface BusinessesMapViewControllerDataSource : NSObject <MKMapViewDelegate>
 
-@property (strong, nonatomic) OCMapView *mapView;
+@property (strong, nonatomic) MKMapView *mapView;
 @property (strong, nonatomic) UINavigationController *navigationController;
 @property (copy, nonatomic) NSArray *businessesArray;
 @property (strong, nonatomic) CLLocation *currentLocation;
 
-- (id)initWithMapView:(OCMapView *)mapView;
+- (id)initWithMapView:(MKMapView *)mapView;
 - (void)setupViewAndUseCurrentLocation:(BOOL)useCurrentLocation;
 
 @end

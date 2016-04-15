@@ -9,23 +9,18 @@
 #import "BusinessesMapViewControllerDataSource.h"
 #import "BusinessesListTableViewController.h"
 #import "MapAnnotation.h"
-@import OCMapView;
 #import "YelpBusiness.h"
 #import "YelpLocation.h"
 #import "YelpDeal.h"
+#import "YelpCategory.h"
 #import "MapUtility.h"
 #import "MapAnnotationView.h"
-
-//RE: TODO: change this later
-static NSString *const kTYPE1 = @"Banana";
-static NSString *const kTYPE2 = @"Orange";
-static CGFloat kDEFAULTCLUSTERSIZE = 0.2;
 
 static NSString *const ReuseIdentifierKey = @"singleAnnotationView";
 
 @implementation BusinessesMapViewControllerDataSource
 
-- (id)initWithMapView:(OCMapView *)mapView {
+- (id)initWithMapView:(MKMapView *)mapView {
     self = [super init];
     
     if (self) {
@@ -39,8 +34,6 @@ static NSString *const ReuseIdentifierKey = @"singleAnnotationView";
     
     //Remove all map annotations, if any
     [self.mapView removeAnnotations:self.mapView.annotations];
-    
-    self.mapView.clusterSize = kDEFAULTCLUSTERSIZE;
     
     NSMutableSet *annotationsToAdd = [[NSMutableSet alloc] init];
     
@@ -61,23 +54,25 @@ static NSString *const ReuseIdentifierKey = @"singleAnnotationView";
 
         MapAnnotation *annotation = [[MapAnnotation alloc] initWithCoordinate:loc.coordinate];
         annotation.name = business.name;
-        annotation.address = business.location.address.firstObject;
+        annotation.address = [NSString stringWithFormat:@"%@, %@", business.location.address.firstObject, business.location.city];
         annotation.phone = business.displayPhone;
         annotation.ratingImageUrl = business.ratingImgUrlSmall;
         annotation.reviews = [NSString stringWithFormat:@"%@ reviews", business.reviewCount];
+
+        NSNumber *distance = [NSNumber numberWithFloat: business.distanceInMeters.floatValue*3.2808f/5280.0f];
+        annotation.distance = [NSString stringWithFormat:@"%.2f mi", distance.floatValue];
         
-        YelpDeal *deal = business.deals.firstObject;
-        annotation.deals = deal.title;
+        YelpCategory *category = business.categories.firstObject;
         
-        //Todo check distance
-        annotation.distance = [NSString stringWithFormat:@"%.2f",business.distanceInMeters.doubleValue];
-        
-        // add to group if specified
-        if (annotationsToAdd.count < (self.businessesArray.count)/2.0) {
-            annotation.groupTag = kTYPE1;
+        if (business.categories.count >1) {
+            YelpCategory *category2 = business.categories.lastObject;
+            
+            annotation.category = [NSString stringWithFormat:@"%@, %@", category.name, category2.name];
+
         } else {
-            annotation.groupTag = kTYPE2;
+            annotation.category = [NSString stringWithFormat:@"%@", category.name];
         }
+
         [annotationsToAdd addObject:annotation];
         
     }
@@ -88,53 +83,17 @@ static NSString *const ReuseIdentifierKey = @"singleAnnotationView";
 #pragma mark - map delegate
 
 - (MapAnnotationView *)mapView:(MKMapView *)aMapView viewForAnnotation:(MapAnnotation *)annotation
+
+
 {
     MapAnnotationView *annotationView;
-
+    
     //RE: use the default blue dot for user location
     if ([annotation isKindOfClass:[MKUserLocation class]]) {
         return nil;
     }
     
-    // if it's a cluster
-    if ([annotation isKindOfClass:[OCAnnotation class]]) {
-        
-        OCAnnotation *clusterAnnotation = (OCAnnotation *)annotation;
-        
-        annotationView = (MapAnnotationView *)[aMapView dequeueReusableAnnotationViewWithIdentifier:@"ClusterView"];
-        if (!annotationView) {
-            annotationView = [[MapAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"ClusterView"];
-            annotationView.canShowCallout = YES;
-            annotationView.centerOffset = CGPointMake(0, -20);
-        }
-        
-        // set title
-        clusterAnnotation.title = @"Cluster";
-        clusterAnnotation.subtitle = [NSString stringWithFormat:@"Containing annotations: %zd", [clusterAnnotation.annotationsInCluster count]];
-        
-        // set its image
-        annotationView.image = [UIImage imageNamed:@"icon_regular.png"];
-        
-        // change pin image for group
-        if (self.mapView.clusterByGroupTag) {
-            if ([clusterAnnotation.groupTag isEqualToString:kTYPE1]) {
-                annotationView.image = [UIImage imageNamed:@"icon_bananas.png"];
-            }
-            else if([clusterAnnotation.groupTag isEqualToString:kTYPE2]){
-                annotationView.image = [UIImage imageNamed:@"icon_oranges.png"];
-            }
-            clusterAnnotation.title = clusterAnnotation.groupTag;
-        }
-        
-        //show radius of cluster
-        //TODO: set the radius size based on the cluster size perimeter
-        MKCircle *circleoverlay = [MKCircle circleWithCenterCoordinate:annotation.coordinate radius:100];
-        [aMapView addOverlay:circleoverlay];
-
-    }
-    
-    // If it's a single annotation
-    else if([annotation isKindOfClass:[MapAnnotation class]]){
+    if([annotation isKindOfClass:[MapAnnotation class]]){
         
         MapAnnotation *singleAnnotation = (MapAnnotation *)annotation;
         
@@ -150,10 +109,10 @@ static NSString *const ReuseIdentifierKey = @"singleAnnotationView";
             annotationView.phoneLabel.text = singleAnnotation.phone;
             annotationView.ratingsImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:singleAnnotation.ratingImageUrl]]];
             annotationView.reviewsLabel.text = singleAnnotation.reviews;
-            annotationView.dealsLabel.text = singleAnnotation.deals;
+            annotationView.categoryLabel.text = singleAnnotation.category;
             annotationView.availabilityStatusLabel.text = singleAnnotation.availabilityStatus;
             annotationView.distanceLabel.text = singleAnnotation.distance;
-
+            
             //show default annotationView image
             annotationView.image = [UIImage imageNamed:kMapMarkerRed];
         }
@@ -162,17 +121,7 @@ static NSString *const ReuseIdentifierKey = @"singleAnnotationView";
             
             [MapUtility centerMap:aMapView atLocation:singleAnnotation.coordinate];
         };
-
-    }
-    
-    // Error
-    else {
-        //TODO: might not be need, maybe show alert controller instead
-//        annotationView = (MKPinAnnotationView *)[aMapView dequeueReusableAnnotationViewWithIdentifier:@"errorAnnotationView"];
-//        if (!annotationView) {
-//            annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"errorAnnotationView"];
-//            annotationView.canShowCallout = NO;
-//        }
+        
     }
     
     return annotationView;
@@ -204,7 +153,7 @@ static NSString *const ReuseIdentifierKey = @"singleAnnotationView";
 
 - (void)mapView:(MKMapView *)aMapView regionDidChangeAnimated:(BOOL)animated{
     [self.mapView removeOverlays:self.mapView.overlays];
-    [self.mapView doClustering];
+//    [self.mapView doClustering];
 }
 
 #pragma mark - StoreItemsTableViewController

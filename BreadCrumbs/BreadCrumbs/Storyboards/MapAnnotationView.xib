@@ -9,7 +9,7 @@
             <connections>
                 <outlet property="addressLabel" destination="kbV-Rz-kT7" id="8zr-FF-BbE"/>
                 <outlet property="availabilityStatusLabel" destination="FiX-uv-8ph" id="Wuu-Ui-yeh"/>
-                <outlet property="dealsLabel" destination="Who-Ws-Rvv" id="ZuE-xb-oUd"/>
+                <outlet property="categoryLabel" destination="Who-Ws-Rvv" id="aEb-Eb-ONj"/>
                 <outlet property="distanceLabel" destination="C3q-G7-Qnh" id="JQY-Ap-poR"/>
                 <outlet property="nameLabel" destination="hcb-Ix-dir" id="llc-NZ-u7I"/>
                 <outlet property="phoneLabel" destination="mQ6-0W-8bW" id="aTG-bB-39D"/>
@@ -47,29 +47,29 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Deals" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Who-Ws-Rvv">
-                    <rect key="frame" x="44" y="48" width="164" height="14"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Who-Ws-Rvv">
+                    <rect key="frame" x="44" y="50" width="164" height="14"/>
                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="11"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Closed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FiX-uv-8ph">
-                    <rect key="frame" x="44" y="59" width="153" height="14"/>
+                    <rect key="frame" x="44" y="61" width="153" height="14"/>
                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="11"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5 mi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3q-G7-Qnh">
-                    <rect key="frame" x="187" y="2" width="60" height="14"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10.00 mi" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3q-G7-Qnh">
+                    <rect key="frame" x="185" y="2" width="60" height="14"/>
                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yelp-logo-small" translatesAutoresizingMaskIntoConstraints="NO" id="7gF-R8-05V">
-                    <rect key="frame" x="205" y="54" width="37" height="19"/>
+                    <rect key="frame" x="205" y="56" width="37" height="19"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z1e-ao-YOl">
-                    <rect key="frame" x="43" y="36" width="70" height="14"/>
+                    <rect key="frame" x="43" y="38" width="70" height="14"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQ6-0W-8bW">
                     <rect key="frame" x="43" y="25" width="164" height="14"/>
@@ -78,13 +78,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5000 Reviews" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZs-aW-JBk">
-                    <rect key="frame" x="116" y="36" width="81" height="14"/>
+                    <rect key="frame" x="116" y="38" width="81" height="14"/>
                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="11"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="EbH-kD-6Ar" firstAttribute="leading" secondItem="Fns-9R-RbG" secondAttribute="leading" id="Ldq-pB-Cy2"/>
                 <constraint firstAttribute="bottom" secondItem="EbH-kD-6Ar" secondAttribute="bottom" id="pU6-EB-yj4"/>

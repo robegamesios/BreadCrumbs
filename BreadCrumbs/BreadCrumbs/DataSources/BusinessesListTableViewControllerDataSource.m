@@ -48,7 +48,7 @@ static NSInteger const DefaultRowHeight = 250;
     YelpBusiness *currentBusiness = [self.businessesArray objectAtIndex:indexPath.row];
     
     cell.name.text = currentBusiness.name;
-    cell.phoneNumber.text = currentBusiness.location.city;
+    cell.phoneNumber.text = [NSString stringWithFormat:@"%@, %@",currentBusiness.location.address.firstObject, currentBusiness.location.city];
     
     //RE: Configure photoImage
     UIImage *photoImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:currentBusiness.imageUrl]]];

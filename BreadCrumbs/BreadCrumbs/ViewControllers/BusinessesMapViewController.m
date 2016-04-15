@@ -11,7 +11,6 @@
 #import "MapAnnotation.h"
 #import "MapUtility.h"
 #import "NetworkService.h"
-@import OCMapView;
 #import "YelpBusiness.h"
 #import "YelpLocation.h"
 
@@ -22,7 +21,7 @@ static NSString *const kTYPE2 = @"Orange";
 
 @interface BusinessesMapViewController () <MKMapViewDelegate>
 
-@property (weak, nonatomic) IBOutlet OCMapView *mapView;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) BusinessesMapViewControllerDataSource *dataSource;
 @end
 

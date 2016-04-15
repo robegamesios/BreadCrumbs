@@ -15,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *ratingsImage;
 @property (weak, nonatomic) IBOutlet UILabel *reviewsLabel;
-@property (weak, nonatomic) IBOutlet UILabel *dealsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
 @property (weak, nonatomic) IBOutlet UILabel *availabilityStatusLabel;
 @property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 
