@@ -59,8 +59,11 @@ static NSString *const ReuseIdentifierKey = @"singleAnnotationView";
         annotation.ratingImageUrl = business.ratingImgUrlSmall;
         annotation.reviews = [NSString stringWithFormat:@"%@ reviews", business.reviewCount];
 
-        NSNumber *distance = [NSNumber numberWithFloat: business.distanceInMeters.floatValue*3.2808f/5280.0f];
-        annotation.distance = [NSString stringWithFormat:@"%.2f mi", distance.floatValue];
+        if (business.distanceInMeters) {
+            NSNumber *distance = [NSNumber numberWithFloat: business.distanceInMeters.floatValue*3.2808f/5280.0f];
+            annotation.distance = [NSString stringWithFormat:@"%.2f mi", distance.floatValue];
+            
+        }
         
         YelpCategory *category = business.categories.firstObject;
         
@@ -69,10 +72,16 @@ static NSString *const ReuseIdentifierKey = @"singleAnnotationView";
             
             annotation.category = [NSString stringWithFormat:@"%@, %@", category.name, category2.name];
 
-        } else {
+        } else if (business.categories.count) {
             annotation.category = [NSString stringWithFormat:@"%@", category.name];
         }
 
+        YelpDeal *deal = business.deals.firstObject;
+        
+        if (deal) {
+            annotation.availabilityStatus = [NSString stringWithFormat:@"%@", deal.title];
+        }
+        
         [annotationsToAdd addObject:annotation];
         
     }
@@ -82,10 +91,8 @@ static NSString *const ReuseIdentifierKey = @"singleAnnotationView";
 
 #pragma mark - map delegate
 
-- (MapAnnotationView *)mapView:(MKMapView *)aMapView viewForAnnotation:(MapAnnotation *)annotation
-
-
-{
+- (MapAnnotationView *)mapView:(MKMapView *)aMapView viewForAnnotation:(MapAnnotation *)annotation {
+    
     MapAnnotationView *annotationView;
     
     //RE: use the default blue dot for user location
@@ -104,19 +111,19 @@ static NSString *const ReuseIdentifierKey = @"singleAnnotationView";
             
             annotationView.canShowCallout = NO;
             
-            annotationView.nameLabel.text = singleAnnotation.name;
-            annotationView.addressLabel.text = singleAnnotation.address;
-            annotationView.phoneLabel.text = singleAnnotation.phone;
-            annotationView.ratingsImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:singleAnnotation.ratingImageUrl]]];
-            annotationView.reviewsLabel.text = singleAnnotation.reviews;
-            annotationView.categoryLabel.text = singleAnnotation.category;
-            annotationView.availabilityStatusLabel.text = singleAnnotation.availabilityStatus;
-            annotationView.distanceLabel.text = singleAnnotation.distance;
-            
             //show default annotationView image
             annotationView.image = [UIImage imageNamed:kMapMarkerRed];
         }
-        
+
+        annotationView.nameLabel.text = singleAnnotation.name;
+        annotationView.addressLabel.text = singleAnnotation.address;
+        annotationView.phoneLabel.text = singleAnnotation.phone;
+        annotationView.ratingsImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:singleAnnotation.ratingImageUrl]]];
+        annotationView.reviewsLabel.text = singleAnnotation.reviews;
+        annotationView.categoryLabel.text = singleAnnotation.category;
+        annotationView.availabilityStatusLabel.text = singleAnnotation.availabilityStatus;
+        annotationView.distanceLabel.text = singleAnnotation.distance;
+
         annotationView.AnnotationSelectedBlock = ^{
             
             [MapUtility centerMap:aMapView atLocation:singleAnnotation.coordinate];

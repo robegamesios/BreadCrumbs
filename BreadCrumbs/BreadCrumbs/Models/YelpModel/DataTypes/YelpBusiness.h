@@ -36,7 +36,7 @@
 @property (strong, nonatomic) NSString *name;
 
 //URL of photo for this business
-@property (strong, nonatomic) NSString *imageUrl;
+@property (strong, nonatomic) NSString<Optional> *imageUrl;
 
 //URL for business page on Yelp
 @property (strong, nonatomic) NSString *url;
@@ -61,7 +61,7 @@
 
 
 //Distance that business is from search location in meters, if a latitude/longitude is specified.
-@property (strong, nonatomic) NSNumber *distanceInMeters;
+@property (strong, nonatomic) NSNumber<Optional>*distanceInMeters;
 
 
 

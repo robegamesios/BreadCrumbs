@@ -97,21 +97,29 @@
     __weak typeof(self) weakSelf = self;
     
     if (self.SearchResultBlock) {
-        if ([[SingletonLocalService sharedManager] isLocationServicesAvailable]) {
-            [[SingletonLocalService sharedManager] getUserLocationWithSuccessHandler:^(id responseObject) {
-                CLLocation *result = responseObject;
-                
-                [[LMGeocoder sharedInstance]reverseGeocodeCoordinate:result.coordinate service:kLMGeocoderAppleService completionHandler:^(NSArray *results, NSError *error) {
+        
+        if ([self.locationSearchTextField.text isEqualToString:@""]) {
+            
+            if ([[SingletonLocalService sharedManager] isLocationServicesAvailable]) {
+                [[SingletonLocalService sharedManager] getUserLocationWithSuccessHandler:^(id responseObject) {
+                    CLLocation *result = responseObject;
                     
-                    if (results.count && !error) {
-                        LMAddress *address = [results firstObject];
-                        weakSelf.SearchResultBlock(weakSelf.nameSearchTextField.text,address.formattedAddress, YES);
+                    [[LMGeocoder sharedInstance]reverseGeocodeCoordinate:result.coordinate service:kLMGeocoderAppleService completionHandler:^(NSArray *results, NSError *error) {
                         
-                    } else {
-                        NSLog(@"SearchViewController searchButtonTapped, reverse geocoding error");
-                    }
+                        if (results.count && !error) {
+                            LMAddress *address = [results firstObject];
+                            weakSelf.SearchResultBlock(weakSelf.nameSearchTextField.text,address.formattedAddress, YES);
+                            
+                        } else {
+                            NSLog(@"SearchViewController searchButtonTapped, reverse geocoding error");
+                        }
+                    }];
                 }];
-            }];
+            }
+
+        } else {
+            self.SearchResultBlock(weakSelf.nameSearchTextField.text,weakSelf.locationSearchTextField.text, NO);
+            
         }
     }
 }
