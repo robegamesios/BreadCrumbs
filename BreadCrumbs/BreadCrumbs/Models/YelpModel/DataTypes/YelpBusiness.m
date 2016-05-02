@@ -40,7 +40,7 @@
 
 #pragma mark - Custom Property Transformers
 
-- (void)setCategoriesWithNSArray:(NSArray*)array{
+- (void)setCategoriesWithNSArray:(NSArray*)array {
     
     NSMutableArray *newCategories = [NSMutableArray new];
     

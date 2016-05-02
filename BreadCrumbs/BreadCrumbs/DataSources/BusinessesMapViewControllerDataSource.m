@@ -65,10 +65,11 @@ static NSString *const ReuseIdentifierKey = @"singleAnnotationView";
             annotation.category = [NSString stringWithFormat:@"%@", category.name];
         }
 
-        YelpDeal *deal = business.deals.firstObject;
         
+        YelpDeal *deal = business.deals.firstObject;
+
         if (deal) {
-            annotation.availabilityStatus = [NSString stringWithFormat:@"%@", deal.title];
+            annotation.deal = [NSString stringWithFormat:@"%@", deal.title];
         }
         
         [annotationsToAdd addObject:annotation];
@@ -124,7 +125,7 @@ static NSString *const ReuseIdentifierKey = @"singleAnnotationView";
         annotationView.ratingsImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:singleAnnotation.ratingImageUrl]]];
         annotationView.reviewsLabel.text = singleAnnotation.reviews;
         annotationView.categoryLabel.text = singleAnnotation.category;
-        annotationView.availabilityStatusLabel.text = singleAnnotation.availabilityStatus;
+        annotationView.dealsLabel.text = singleAnnotation.deal;
         annotationView.distanceLabel.text = singleAnnotation.distance;
 
         annotationView.AnnotationSelectedBlock = ^{

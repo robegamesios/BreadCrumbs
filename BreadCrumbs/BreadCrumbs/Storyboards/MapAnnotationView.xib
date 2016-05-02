@@ -7,9 +7,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapAnnotationView">
             <connections>
+                <outlet property="addButton" destination="EbH-kD-6Ar" id="6Fw-LM-gyx"/>
                 <outlet property="addressLabel" destination="kbV-Rz-kT7" id="8zr-FF-BbE"/>
-                <outlet property="availabilityStatusLabel" destination="FiX-uv-8ph" id="Wuu-Ui-yeh"/>
                 <outlet property="categoryLabel" destination="Who-Ws-Rvv" id="aEb-Eb-ONj"/>
+                <outlet property="dealsLabel" destination="FiX-uv-8ph" id="Qcz-eA-SlT"/>
                 <outlet property="distanceLabel" destination="C3q-G7-Qnh" id="JQY-Ap-poR"/>
                 <outlet property="nameLabel" destination="hcb-Ix-dir" id="llc-NZ-u7I"/>
                 <outlet property="phoneLabel" destination="mQ6-0W-8bW" id="aTG-bB-39D"/>
@@ -19,14 +20,15 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" id="Fns-9R-RbG">
-            <rect key="frame" x="0.0" y="0.0" width="250" height="73"/>
+            <rect key="frame" x="0.0" y="0.0" width="280" height="80"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EbH-kD-6Ar">
-                    <rect key="frame" x="0.0" y="0.0" width="36" height="73"/>
+                    <rect key="frame" x="0.0" y="0.0" width="40" height="36"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="36" id="Lk1-nK-R6z"/>
+                        <constraint firstAttribute="height" constant="36" id="QCW-Ze-gjN"/>
                         <constraint firstAttribute="height" constant="70" id="u0x-lg-oaA"/>
+                        <constraint firstAttribute="width" constant="40" id="zip-mP-Vum"/>
                     </constraints>
                     <state key="normal" title="Add"/>
                     <variation key="default">
@@ -34,47 +36,71 @@
                             <exclude reference="u0x-lg-oaA"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="addButtonTapped:" destination="-1" eventType="touchUpInside" id="Wzt-6v-ceF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5K-Ke-lyb">
+                    <rect key="frame" x="0.0" y="44" width="40" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="9K0-Nz-BbT"/>
+                        <constraint firstAttribute="height" constant="36" id="H1j-eV-w7k"/>
+                        <constraint firstAttribute="width" constant="40" id="Tyn-9e-mq7"/>
+                    </constraints>
+                    <state key="normal" title="Call"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="9K0-Nz-BbT"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="callButtonTapped:" destination="-1" eventType="touchUpInside" id="3h1-wr-EpX"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcb-Ix-dir">
-                    <rect key="frame" x="44" y="2" width="164" height="15"/>
+                    <rect key="frame" x="44" y="2" width="180" height="15"/>
                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="13"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbV-Rz-kT7">
-                    <rect key="frame" x="44" y="14" width="164" height="14"/>
+                    <rect key="frame" x="44" y="14" width="180" height="14"/>
                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="11"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Who-Ws-Rvv">
-                    <rect key="frame" x="44" y="50" width="164" height="14"/>
+                    <rect key="frame" x="44" y="50" width="180" height="14"/>
                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="11"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Closed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FiX-uv-8ph">
-                    <rect key="frame" x="44" y="61" width="153" height="14"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="deals" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FiX-uv-8ph">
+                    <rect key="frame" x="44" y="65" width="180" height="14"/>
                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="11"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10.00 mi" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3q-G7-Qnh">
-                    <rect key="frame" x="185" y="2" width="60" height="14"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.00 mi" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3q-G7-Qnh">
+                    <rect key="frame" x="216" y="2" width="60" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="cve-rf-c7P"/>
+                        <constraint firstAttribute="height" constant="14" id="muv-8j-TP3"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yelp-logo-small" translatesAutoresizingMaskIntoConstraints="NO" id="7gF-R8-05V">
-                    <rect key="frame" x="205" y="56" width="37" height="19"/>
+                    <rect key="frame" x="237" y="60" width="37" height="19"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z1e-ao-YOl">
                     <rect key="frame" x="43" y="38" width="70" height="14"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQ6-0W-8bW">
-                    <rect key="frame" x="43" y="25" width="164" height="14"/>
+                    <rect key="frame" x="43" y="25" width="154" height="14"/>
                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="11"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5000 Reviews" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZs-aW-JBk">
@@ -83,12 +109,34 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Joy-iE-MqP">
+                    <rect key="frame" x="232" y="22" width="48" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="GOM-Vm-ZtX"/>
+                        <constraint firstAttribute="height" constant="36" id="bFA-bJ-q6X"/>
+                        <constraint firstAttribute="height" constant="70" id="beG-OO-vZH"/>
+                    </constraints>
+                    <state key="normal" title="Info"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="beG-OO-vZH"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="moreInfoButtonTapped:" destination="-1" eventType="touchUpInside" id="BtK-hF-fZH"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="EbH-kD-6Ar" firstAttribute="leading" secondItem="Fns-9R-RbG" secondAttribute="leading" id="Ldq-pB-Cy2"/>
-                <constraint firstAttribute="bottom" secondItem="EbH-kD-6Ar" secondAttribute="bottom" id="pU6-EB-yj4"/>
-                <constraint firstItem="EbH-kD-6Ar" firstAttribute="top" secondItem="Fns-9R-RbG" secondAttribute="top" id="udf-3o-Ru8"/>
+                <constraint firstItem="C3q-G7-Qnh" firstAttribute="top" secondItem="Fns-9R-RbG" secondAttribute="top" constant="2" id="49b-d4-Iul"/>
+                <constraint firstAttribute="trailing" secondItem="C3q-G7-Qnh" secondAttribute="trailing" constant="4" id="P4B-n9-bbq"/>
+                <constraint firstItem="K5K-Ke-lyb" firstAttribute="leading" secondItem="Fns-9R-RbG" secondAttribute="leading" id="SCw-yR-pER"/>
+                <constraint firstItem="Joy-iE-MqP" firstAttribute="top" secondItem="C3q-G7-Qnh" secondAttribute="bottom" constant="6" id="Y8t-f0-Eh7"/>
+                <constraint firstItem="EbH-kD-6Ar" firstAttribute="top" secondItem="Fns-9R-RbG" secondAttribute="top" id="gKC-ta-UOG"/>
+                <constraint firstItem="EbH-kD-6Ar" firstAttribute="leading" secondItem="Fns-9R-RbG" secondAttribute="leading" id="hzv-6T-yJz"/>
+                <constraint firstAttribute="bottom" secondItem="K5K-Ke-lyb" secondAttribute="bottom" id="lKH-Tp-twV"/>
+                <constraint firstAttribute="trailing" secondItem="Joy-iE-MqP" secondAttribute="trailing" id="luD-6F-mdN"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
@@ -98,8 +146,14 @@
                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                     <integer key="value" value="10"/>
                 </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                    <integer key="value" value="1"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                    <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
-            <point key="canvasLocation" x="278" y="114.5"/>
+            <point key="canvasLocation" x="278" y="114"/>
         </view>
     </objects>
     <resources>

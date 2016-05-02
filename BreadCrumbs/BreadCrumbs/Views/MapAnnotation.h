@@ -18,7 +18,7 @@
 @property (copy, nonatomic) NSString *ratingImageUrl;
 @property (copy, nonatomic) NSString *reviews;
 @property (copy, nonatomic) NSString *category;
-@property (copy, nonatomic) NSString *availabilityStatus;
+@property (copy, nonatomic) NSString *deal;
 @property (copy, nonatomic) NSString *distance;
 @property (copy, nonatomic) UIImage *image;
 
